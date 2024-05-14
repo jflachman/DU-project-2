@@ -1,5 +1,7 @@
 # DU-project-2
 
+- [Project Instructions](project-2-overview.md)
+
 ## Team
  - Jeff Flachman
  - Raisha Rawal
