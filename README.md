@@ -3,9 +3,10 @@
 - [Project Instructions](project-2-overview.md)
 
 ## Team
+ - Michael Bolens
  - Jeff Flachman
- - Raisha Rawal
- - Jed Murphy
+ - Ava Lee
+ - Elia Porter
 
 
  ## Potential Datasets
