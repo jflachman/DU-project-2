@@ -30,3 +30,21 @@
     - [18 top datasets for classification](https://www.interviewquery.com/p/classification-projects)
 Remember that the quality of your machine learning model depends on the quality of your training data. 
 
+
+More DataSets:
+
+- https://www.analyticsvidhya.com/blog/2022/07/step-by-step-exploratory-data-analysis-eda-using-python/
+- https://archive.ics.uci.edu/
+- https://chartio.com/learn/data-analytics/where-to-find-free-datasets/
+- https://data.cityofnewyork.us/Public-Safety/NYPD-Complaint-Data-Historic/qgea-i56i/about_data
+- https://data.world/search
+- https://dataportals.org/portal/denver
+- https://datasetsearch.research.google.com/
+- https://davenport.libguides.com/data/public-data
+- https://www.freecodecamp.org/news/
+- [medium free code camp open data sources](https-medium-freecodecamp-org-best-free-open-data-sources-anyone-can-use-a65b514b0f2d/)
+- https://github.com/awesomedata/awesome-public-datasets
+- https://www.kaggle.com/datasets
+- https://learn.g2.com/open-data-sources
+- https://libguides.tru.ca/opendata/repositories
+- https://www.octoparse.com/blog/big-data-70-amazing-free-data-sources-you-should-know-for-2021
