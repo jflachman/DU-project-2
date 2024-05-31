@@ -48,3 +48,10 @@ More DataSets:
 - https://learn.g2.com/open-data-sources
 - https://libguides.tru.ca/opendata/repositories
 - https://www.octoparse.com/blog/big-data-70-amazing-free-data-sources-you-should-know-for-2021
+
+
+
+DataSets
+- [Diabetes 130-US Hospitals for Years 1999-2008](https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008)
+- [CDC Diabetes Health Indicators](https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators)
+- [Indicators of heart disease](https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease)
