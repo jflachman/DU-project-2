@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 import fastparquet as fp
 import os
+import pickle
 
 # --------------------------------------
 # ------- File components
@@ -222,17 +223,94 @@ def select_feature_candidates(start_item, brfss_codebook_list):
     return i, brfss_codebook_list
 
 # --------------------------------------
-# ------- 
+# ------- Read Codebooks for 2019 and 2022
 # ---------- 
 # --------------------------------------
+def read_codebook( codebook_data ):
+    codebook_list = []
+    #for i in range(2, 8, 2):
+    for i in range(2, len(codebook_data), 2):
+        df = codebook_data[i]
+    #     print(df)
+        labels = df.columns[1][0].replace(': ',':').split(' ')
+        df.columns = [col[1] for col in df.columns.values]
+        dict = get_label_dict( i, labels)
+        dict['table'] = df
+        codebook_list.append(dict)
+    return codebook_list
+
+# --------------------------------------
+# ------- read_codebook_pdf_html (2020 & 2021)
+# ---------- Use for pdf codebooks that were saved as HTML files
+# --------------------------------------
+def read_codebook_pdf_html( codebook_data):
+    label_list = ['Label', 'candidate', 'Section Name', 'Section Number', 'Core Section Number', 'Module Number', 'Question Number', 'Column', 'Type of Variable', 'SAS Variable Name', 'Question Prologue', 'Question', 'table']
+
+    codebook_list = []
+
+    for i in range(0, len(codebook_data)):
+        df = codebook_data[1]
+        labels = df[0][0]
+
+        labels = labels.replace(': ',':')
+        for label in label_list:
+            labels = labels.replace(label, ':'+label)
+        labels = labels.replace('  ',' ').replace(' :',':')
+        labels = labels.replace('::',':').split(':')
+        labels.remove('')
+
+        new_header = df.iloc[1]
+        df = df[2:]
+        df.columns = new_header
+        dict = get_label_dict( i, labels)
+        dict['table'] = df
+        codebook_list.append(dict)
+
+    return codebook_list
+
+
 
 
 # --------------------------------------
-# ------- 
+# ------- Create summary of features for year.
 # ---------- 
 # --------------------------------------
+def codebook_summary( source_file, destination_file):
 
+    print(f"----------------------------------------------------")
+    print(f"Codebook details read from {source_file}")
 
+    # Load list/dict/dataframe structure from  file
+    with open(source_file, 'rb') as file: brfss_survey_list = pickle.load(file)
+
+    #for i in range(0,2):
+    codebook_list = []
+    key_list = ['Label', 'candidate', 'Section Name', 'Section Number', 'Core Section Number', 'Module Number', 'Question Number', 'Column', 'Type of Variable', 'SAS Variable Name', 'Question Prologue', 'Question', 'table']
+    key_list_section = ['Section Number', 'Core Section Number', 'Module Number']
+    for i in range(0, len(brfss_survey_list)):
+        dict = brfss_survey_list[i]
+        temp_list = []
+        for key in key_list:
+            if key in dict.keys():
+                if key in key_list_section:
+                    temp_list.append(dict[key])
+                elif key == 'table':
+                    A = 1
+                else:
+                    temp_list.append(dict[key])
+            else:
+                if key == 'candidate':
+                    temp_list.append('n')
+                else:
+                    if key not in key_list_section:
+                        print(f'Missing Key: {key}')
+                    
+        codebook_list.append( temp_list )
+    df = pd.DataFrame(codebook_list, columns=['Label', 'candidate', 'Section Name', 'Section Number', 'Question Number', 'Column', 'Type of Variable', 'SAS Variable Name', 'Question Prologue', 'Question'])
+    df.to_csv(destination_file)
+
+    print(f"Results written to {destination_file}")
+    print(f"----------------------------------------------------")
 
 # ------------------------------------------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------------------------------------------
@@ -242,45 +320,3 @@ def select_feature_candidates(start_item, brfss_codebook_list):
 # ------------------------------------------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------------------------------------------
 
-
-# --------------------------------------
-# ------- get_label_dict
-# ---------- 
-# --------------------------------------
-def get_label_dict_old( index, labels ):
-    dict = {}
-    for label in labels:
-        item = label.replace('\xa0', ' ').split(':')
-        if len(item) == 2:
-            dict[ item[0] ] = item[1]
-        elif len(item) == 1:
-            dict[ item[0] ] = ''
-        elif len(item) == 3:
-            if (item[0] == 'Question Prologue'):
-                if item[1] == 'Question':
-                    dict[ item[0] ] = ''
-                    dict[ item[1] ] = item[2]
-                else:
-                    dict[ item[0] ] = item[1]
-                    dict[ item[2] ] = ''
-            else:
-                print(f"Error {index}: Don't know how to process {item}")
-                print(f" Label: {dict['Label']}")
-        elif len(item) > 3:
-            if (item[0] == 'Question Prologue'):
-                if item[1] == 'Question':
-                    dict[ item[0] ] = ''
-                    dict[ item[1] ] = " ".join(item[1:])
-                else:
-                    dict[ item[0] ] = item[1]
-                    if (len(item) > 4):
-                        dict[ item[2] ] = " ".join(item[2:])
-                    else:
-                        dict[ item[2] ] = ''
-            else:
-                print(f"Error {index}: Don't know how to process {item}")
-                print(f" Label: {dict['Label']}")
-        else: 
-            print(f"Error {index}: Don't know how to parse dictionary info: {item}")
-            print(f" Label: {dict['Label']}")
-    return dict
