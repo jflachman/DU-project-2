@@ -1,0 +1,343 @@
+,Label,candidate,Section Name,Section Number,Question Number,Column,Type of Variable,SAS Variable Name,Question Prologue,Question
+0,State FIPS Code,n,Record Identification,0,1,1-2,Num,_STATE,,State FIPS Code
+1,File Month,n,Record Identification,0,8,17-18,Num,FMONTH,,File Month
+2,Interview Date,n,Record Identification,0,9,19-26,Char,IDATE,,Interview Date
+3,Interview Month,n,Record Identification,0,10,19-20,Char,IMONTH,,Interview Month
+4,Interview Day,n,Record Identification,0,11,21-22,Char,IDAY,,Interview Day
+5,Interview Year,n,Record Identification,0,12,23-26,Char,IYEAR,,Interview Year
+6,Final Disposition,n,Record Identification,0,14,32-35,Num,DISPCODE,,Final Disposition
+7,Annual Sequence Number,n,Record Identification,0,15,36-45,Char,SEQNO,,Annual Sequence Number
+8,Primary Sampling Unit,n,Record Identification,0,16,36-45,Num,_PSU,,Primary Sampling Unit (Equal to Annual Sequence Number)
+9,Correct telephone number?,n,Land Line Introduction,0,1,63,Num,CTELENM1,Variable only on the land line survey,Is this: (phone number): ?
+10,Private Residence?,n,Land Line Introduction,0,2,64,Num,PVTRESD1,Variable only on the land line survey,"Is this a private residence?: [READ ONLY IF NECESSARY: ï¿½By private residence, we mean someplace like a house or apartment.ï¿½]"
+11,Do you live in college housing?,n,Land Line Introduction,0,3,65,Num,COLGHOUS,Variable only on the land line survey,Do you live in college housing?
+12,Resident of State,n,Land Line Introduction,0,4,66,Num,STATERE1,Variable only on the land line survey,Do you currently live in: ____(state)____?
+13,Cellular Telephone,n,Land Line Introduction,0,5,67,Num,CELPHONE,Variable only on the land line survey,"Is this a cell telephone?: (Telephone service over the internet counts as landline service (includes Vonage, Magic Jack and other home-based phone services).)[Read only if necessary: ï¿½By cellular (or cell) telephone we mean a telephone that is mobile and usable outside of your neighborhood.ï¿½]"
+14,Are you 18 years of age or older?,n,Land Line Introduction,0,6,68,Num,LADULT1,Variable only on the land line survey,Are you 18 years of age or older?
+15,Are you male or female?,n,Land Line Introduction,0,7,69,Num,COLGSEX,,Are you male or female?
+16,Number of Adults in Household,n,Land Line Introduction,0,8,70-71,Num,NUMADULT,Variable only on the land line survey,"I need to randomly select one adult who lives in your household to be interviewed. Excluding adults living away from home, such as students away at college, how many members of your household, including yourself, are 18 years of age or older?"
+17,Are you male or female?,n,Land Line Introduction,0,9,72,Num,LANDSEX,,Are you male or female?
+18,Number of Adult men in Household,n,Land Line Introduction,0,10,73-74,Num,NUMMEN,Variable only on the land line survey,How many of these adults are men?
+19,Number of Adult women in Household,n,Land Line Introduction,0,11,75-76,Num,NUMWOMEN,Variable only on the land line survey,So the number of women in the household is [X]. Is that correct?
+20,Respondent selection,n,Land Line Introduction,0,12,77,Num,RESPSLCT,,The person in your household that I need to speak with is [XXX]. Are you the [XXX] in this household
+21,Safe time to talk,n,Cell Phone Introduction,0,1,78,Num,SAFETIME,Variable only on the cell phone survey,Is this a safe time to talk with you?
+22,Correct Phone Number?,n,Cell Phone Introduction,0,2,79,Num,CTELNUM1,Variable only on the cell phone survey,Is this: (phone number): ?
+23,Is this a cell phone?,n,Cell Phone Introduction,0,3,80,Num,CELLFON5,Variable only on the cell phone survey,Is this a cell phone?
+24,Are you 18 years of age or older?,n,Cell Phone Introduction,0,4,81,Num,CADULT1,Variable only on the cell phone survey,Are you 18 years of age or older?
+25,Are you male or female?,n,Cell Phone Introduction,0,5,82,Num,CELLSEX,,Are you male or female?
+26,Do you live in a private residence?,n,Cell Phone Introduction,0,6,83,Num,PVTRESD3,Variable only on the cell phone survey,"Do you live in a private residence?: (By private residence, we mean someplace like a house or apartment.)"
+27,Do you live in college housing?,n,Cell Phone Introduction,0,7,84,Num,CCLGHOUS,Variable only on the cell phone survey,Do you live in college housing?
+28,Do you currently live in,n,Cell Phone Introduction,0,8,85,Num,CSTATE1,Variable only on the cell phone survey,Do you currently live in: ____(state)____?
+29,Do you also have a landline telephone?,n,Cell Phone Introduction,0,10,88,Num,LANDLINE,Variable only on the cell phone survey,Do you also have a landline telephone in your home that is used to make and receive calls?
+30,Number of Adults in Household,n,Cell Phone Introduction,0,11,89-90,Num,HHADULT,Variable only on the cell phone survey,"How many members of your household, including yourself, are 18 years of age or older?"
+31,Sex of Respondent,n,Respondent Sex,0,1,91,Num,SEXVAR,,Sex of Respondent
+32,General Health,n,Health Status,1,1,101,Num,GENHLTH,,Would you say that in general your health is: 
+33,Number of Days Physical Health Not Good,n,Healthy Days,2,1,102-103,Num,PHYSHLTH,,"Now thinking about your physical health, which includes physical illness and injury, for how many days during the past 30 days was your physical health not good?"
+34,Number of Days Mental Health Not Good,n,Healthy Days,2,2,104-105,Num,MENTHLTH,,"Now thinking about your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 days was your mental health not good?"
+35,Poor Physical or Mental Health,n,Healthy Days,2,3,106-107,Num,POORHLTH,,"During the past 30 days, for about how many days did poor physical or mental health keep you from doing your usual activities, such as self-care, work, or recreation?"
+36,Have any health care coverage,n,Health Care Access,3,1,108,Num,HLTHPLN1,,"Do you have any kind of health care coverage, including health insurance, prepaid plans such as HMOs, or government plans such as Medicare, or Indian Health Service?"
+37,Multiple Health Care Professionals,n,Health Care Access,3,2,109,Num,PERSDOC2,,Do you have one person you think of as your personal doctor or health care provider?: (If ï¿½Noï¿½ ask ï¿½Is there more than one or is there no person who you think of as your personal doctor or health care provider?ï¿½.)
+38,Could Not See Doctor Because of Cost,n,Health Care Access,3,3,110,Num,MEDCOST,,Was there a time in the past 12 months when you needed to see a doctor but could not because of cost?
+39,Length of time since last routine checkup,n,Health Care Access,3,4,111,Num,CHECKUP1,,"About how long has it been since you last visited a doctor for a routine checkup?: [A routine checkup is a general physical exam, not an exam for a specific injury, illness, or condition.]"
+40,Ever Told Blood Pressure High,n,Hypertension Awareness,4,1,112,Num,BPHIGH4,,"Have you ever been told by a doctor, nurse or other health professional that you have high blood pressure?: (If ï¿½Yesï¿½ and respondent is female, ask ï¿½Was this only when you were pregnant?ï¿½.)"
+41,Currently Taking Blood Pressure Medication,n,Hypertension Awareness,4,2,113,Num,BPMEDS,,Are you currently taking medicine for your high blood pressure?
+42,How Long since Cholesterol Checked,n,Cholesterol Awareness,5,1,114,Num,CHOLCHK2,Blood cholesterol is a fatty substance found in the blood.,About how long has it been since you last had your blood cholesterol checked?
+43,Ever Told Blood Cholesterol High,n,Cholesterol Awareness,5,2,115,Num,TOLDHI2,,"Have you ever been told by a doctor, nurse or other health professional that your blood cholesterol is high?"
+44,Currently taking medicine for high cholesterol,n,Cholesterol Awareness,5,3,116,Num,CHOLMED2,,Are you currently taking medicine prescribed by your doctor or other health professional for your blood cholesterol?
+45,Ever Diagnosed with Heart Attack,n,Chronic Health Conditions,6,1,117,Num,CVDINFR4,"Has a doctor, nurse, or other health professional ever told you that you had any of the following? For each, tell me ï¿½Yesï¿½, ï¿½Noï¿½, or youï¿½re ï¿½Not sureï¿½","(Ever told) you had a heart attack, also called a myocardial infarction?"
+46,Ever Diagnosed with Angina or Coronary Heart Disease,n,Chronic Health Conditions,6,2,118,Num,CVDCRHD4,,(Ever told) you had angina or coronary heart disease?
+47,Ever Diagnosed with a Stroke,n,Chronic Health Conditions,6,3,119,Num,CVDSTRK3,,(Ever told) you had a stroke.
+48,Ever Told Had Asthma,n,Chronic Health Conditions,6,4,120,Num,ASTHMA3,,(Ever told) you had asthma?
+49,Still Have Asthma,n,Chronic Health Conditions,6,5,121,Num,ASTHNOW,,Do you still have asthma?
+50,(Ever told) you had skin cancer?,n,Chronic Health Conditions,6,6,122,Num,CHCSCNCR,,(Ever told) you had skin cancer?
+51,(Ever told) you had any other types of cancer?,n,Chronic Health Conditions,6,7,123,Num,CHCOCNCR,,(Ever told) you had any other types of cancer?
+52,"(Ever told) (you had) chronic obstructive pulmonary disease, C.O.P.D., emphysema or chronic bronchitis?",n,Chronic Health Conditions,6,8,124,Num,CHCCOPD2,,"(Ever told) (you had) chronic obstructive pulmonary disease, C.O.P.D., emphysema or chronic bronchitis?"
+53,(Ever told) you had a depressive disorder,n,Chronic Health Conditions,6,9,125,Num,ADDEPEV3,,"(Ever told) (you had) a depressive disorder (including depression, major depression, dysthymia, or minor depression)?"
+54,Ever told you have kidney disease?,n,Chronic Health Conditions,6,10,126,Num,CHCKDNY2,,"Not including kidney stones, bladder infection or incontinence, were you ever told you had kidney disease?"
+55,(Ever told) you had diabetes,n,Chronic Health Conditions,6,11,127,Num,DIABETE4,,"(Ever told) (you had) diabetes?: (If ï¿½Yesï¿½ and respondent is female, ask ï¿½Was this only when you were pregnant?ï¿½. If Respondent says pre-diabetes or borderline diabetes, use response code 4.)"
+56,Age When Told Had Diabetes,n,Chronic Health Conditions,6,12,128-129,Num,DIABAGE3,,How old were you when you were told you had diabetes?
+57,Told Had Arthritis,n,Arthritis,7,1,130,Num,HAVARTH4,,"(Ever told) (you had) some form of arthritis, rheumatoid arthritis, gout, lupus, or fibromyalgia?: (Arthritis diagnoses include: rheumatism, polymyalgia rheumatica; osteoarthritis (not osteporosis); tendonitis, bursitis, bunion, tennis elbow; carpal tunnel syndrome, tarsal tunnel syndrome; joint infection, etc.)"
+58,Dr. Suggest Use of Physical Activity or Exercise for Arthritis or Joint Symptoms,n,Arthritis,7,2,131,Num,ARTHEXER,,"Has a doctor or other health professional ever suggested physical activity or exercise to help your arthritis or joint symptoms?: (If the respondent is unclear about whether this means an increase or decrease in physical activity, this means increase.)"
+59,Ever Taken Class in Managing Arthritis or Joint Symptoms,n,Arthritis,7,3,132,Num,ARTHEDU,,Have you ever taken an educational course or class to teach you how to manage problems related to your arthritis or joint symptoms?
+60,Limited Because of Joint Symptoms,n,Arthritis,7,4,133,Num,LMTJOIN3,,Are you now limited in any way in any of your usual activities because of arthritis or joint symptoms?
+61,Does Arthritis Affect Whether You Work,n,Arthritis,7,5,134,Num,ARTHDIS2,In this next question we are referring to work for pay.,"Do arthritis or joint symptoms now affect whether you work, the type of work you do or the amount of work you do?"
+62,How Bad Was Joint Pain,n,Arthritis,7,6,135-136,Num,JOINPAI2,"Please think about the past 30 days, keeping in mind all of your joint pain or aching and whether or not you have taken medication.","During the past 30 days, how bad was your joint pain on average on a scale of 0 to 10 where 0 is no pain and 10 is pain or aching as bad as it can be?"
+63,Marital Status,n,Demographics,8,5,173,Num,MARITAL,,Are you: (marital status)
+64,Education Level,n,Demographics,8,6,174,Num,EDUCA,,What is the highest grade or year of school you completed?
+65,Own or Rent Home,n,Demographics,8,7,175,Num,RENTHOM1,,Do you own or rent your home?
+66,Household Telephones,n,Demographics,8,10,184,Num,NUMHHOL3,,"Not including cell phones or numbers used for computers, fax machines or security systems, do you have more than one telephone number in your household?"
+67,Residential Phones,n,Demographics,8,11,185,Num,NUMPHON3,,How many of these telephone numbers are residential numbers?
+68,Do you have a cell phone for personal use?,n,Demographics,8,12,186,Num,CPDEMO1B,,How many cell phones do you have for personal use?
+69,Are You A Veteran,n,Demographics,8,13,187,Num,VETERAN3,,"Have you ever served on active duty in the United States Armed Forces, either in the regular military or in a National Guard or military reserve unit?"
+70,Employment Status,n,Demographics,8,14,188,Num,EMPLOY1,,Are you currentlyï¿½?
+71,Number of Children in Household,n,Demographics,8,15,189-190,Num,CHILDREN,,How many children less than 18 years of age live in your household?
+72,Income Level,n,Demographics,8,16,191-192,Num,INCOME2,,"Is your annual household income from all sources: (If respondent refuses at any income level, code ï¿½Refused.ï¿½)"
+73,Reported Weight in Pounds,n,Demographics,8,17,193-196,Num,WEIGHT2,,"About how much do you weigh without shoes?: (If respondent answers in metrics, put a 9 in the first column)[Round fractions up.]"
+74,Reported Height in Feet and Inches,n,Demographics,8,18,197-200,Num,HEIGHT3,,"About how tall are you without shoes?: (If respondent answers in metrics, put a 9 in the first column)[Round fractions down.]"
+75,Pregnancy Status,n,Demographics,8,19,201,Num,PREGNANT,,"To your knowledge, are you now pregnant?"
+76,Are you deaf or do you have serious difficulty hearing?,n,Demographics,8,20,202,Num,DEAF,,Are you deaf or do you have serious difficulty hearing?
+77,Blind or Difficulty seeing,n,Demographics,8,21,203,Num,BLIND,,"Are you blind or do you have serious difficulty seeing, even when wearing glasses?"
+78,Difficulty Concentrating or Remembering,n,Demographics,8,22,204,Num,DECIDE,,"Because of a physical, mental, or emotional condition, do you have serious difficulty concentrating, remembering, or making decisions?"
+79,Difficulty Walking or Climbing Stairs,n,Demographics,8,23,205,Num,DIFFWALK,,Do you have serious difficulty walking or climbing stairs?
+80,Difficulty Dressing or Bathing,n,Demographics,8,24,206,Num,DIFFDRES,,Do you have difficulty dressing or bathing?
+81,Difficulty Doing Errands Alone,n,Demographics,8,25,207,Num,DIFFALON,,"Because of a physical, mental, or emotional condition, do you have difficulty doing errands alone such as visiting a doctorï¿½s office or shopping?"
+82,Smoked at Least 100 Cigarettes,n,Tobacco Use,9,1,208,Num,SMOKE100,,Have you smoked at least 100 cigarettes in your entire life?: [Note: 5 packs = 100 cigarettes]
+83,Frequency of Days Now Smoking,n,Tobacco Use,9,2,209,Num,SMOKDAY2,,"Do you now smoke cigarettes every day, some days, or not at all?"
+84,Stopped Smoking in past 12 months,n,Tobacco Use,9,3,210,Num,STOPSMK2,,"During the past 12 months, have you stopped smoking for one day or longer because you were trying to quit smoking?"
+85,Interval Since Last Smoked,n,Tobacco Use,9,4,211-212,Num,LASTSMK2,,"How long has it been since you last smoked a cigarette, even one or two puffs?"
+86,Use of Smokeless Tobacco Products,n,Tobacco Use,9,5,213,Num,USENOW3,,"Do you currently use chewing tobacco, snuff, or snus every day, some days, or not at all?: (Snus (Swedish for snuff) is a moist smokeless tobacco, usually sold in small pouches that are placed under the lip against the gum.)[Snus (rhymes with ï¿½gooseï¿½)]"
+87,Days in past 30 had alcoholic beverage,n,Alcohol Consumption,10,1,214-216,Num,ALCDAY5,,"During the past 30 days, how many days per week or per month did you have at least one drink of any alcoholic beverage such as beer, wine, a malt beverage or liquor?"
+88,Avg alcoholic drinks per day in past 30,n,Alcohol Consumption,10,2,217-218,Num,AVEDRNK3,,"One drink is equivalent to a 12-ounce beer, a 5-ounce glass of wine, or a drink with one shot of liquor. During the past 30 days, on the days when you drank, about how many drinks did you drink on the average?: (A 40 ounce beer would count as 3 drinks, or a cocktail drink with 2 shots would count as 2 drinks.)"
+89,Binge Drinking,n,Alcohol Consumption,10,3,219-220,Num,DRNK3GE5,,"Considering all types of alcoholic beverages, how many times during the past 30 days did you have 5 or more drinks for men or 4 or more drinks for women on an occasion?"
+90,Most drinks on single occasion past 30 days,n,Alcohol Consumption,10,4,221-222,Num,MAXDRNKS,,"During the past 30 days, what is the largest number of drinks you had on any occasion?"
+91,Exercise in Past 30 Days,n,Exercise (Physical Activity),11,1,223,Num,EXERANY2,,"During the past month, other than your regular job, did you participate in any physical activities or exercises such as running, calisthenics, golf, gardening, or walking for exercise?"
+92,Type of Physical Activity,n,Exercise (Physical Activity),11,2,224-225,Num,EXRACT11,,What type of physical activity or exercise did you spend the most time doing during the past month?
+93,"How Many Times Walking, Running, Jogging, or Swimming",n,Exercise (Physical Activity),11,3,226-228,Num,EXEROFT1,,How many times per week or per month did you take part in this activity during the past month?
+94,"Minutes or Hours Walking, Running, Jogging, or Swimming",n,Exercise (Physical Activity),11,4,229-231,Num,EXERHMM1,,"And when you took part in this activity, for how many minutes or hours did you usually keep at it?"
+95,Other Type of Physical Activity Giving Most Exercise During Past Month,n,Exercise (Physical Activity),11,5,232-233,Num,EXRACT21,,What other type of physical activity gave you the next most exercise during the past month?
+96,"How Many Times Walking, Running, Jogging, or Swimming",n,Exercise (Physical Activity),11,6,234-236,Num,EXEROFT2,,How many times per week or per month did you take part in this activity during the past month?
+97,"Minutes or Hours Walking, Running, Jogging, or Swimming",n,Exercise (Physical Activity),11,7,237-239,Num,EXERHMM2,,"And when you took part in this activity, for how many minutes or hours did you usually keep at it?"
+98,How many times did you do physical activities or exercises to STRENGTHEN your muscles?,n,Exercise (Physical Activity),11,8,240-242,Num,STRENGTH,,"During the past month, how many times per week or per month did you do physical activities or exercises to STRENGTHEN your muscles?: [Do NOT count aerobic activities like walking, running, or bicycling. Count activities using your own body weight like yoga, sit-ups or push-ups and those using weight machines, free weights, or elastic bands.]"
+99,How many times did you eat fruit?,n,Fruits & Vegetables,12,1,243-245,Num,FRUIT2,,"Not including juices, how often did you eat fruit?"
+100,How many times did you drink 100 percent PURE fruit juices?,n,Fruits & Vegetables,12,2,246-248,Num,FRUITJU2,,"Not including fruit-flavored drinks or fruit juices with added sugar, how often did you drink 100% fruit juice such as apple or orange juice?"
+101,How many times did you eat dark green vegetables?,n,Fruits & Vegetables,12,3,249-251,Num,FVGREEN1,,"How often did you eat a green leafy or lettuce salad, with or without other vegetables?"
+102,How often do you eat french fries or fried potatoes?,n,Fruits & Vegetables,12,4,252-254,Num,FRENCHF1,,"How often did you eat any kind of fried potatoes, including french fries, home fries, or hash browns?"
+103,How Often Do You Eat Potatoes,n,Fruits & Vegetables,12,5,255-257,Num,POTATOE1,,"How often did you eat any other kind of potatoes, or sweet potatoes, such as baked, boiled, mashed potatoes, or potato salad?"
+104,How many times did you eat OTHER vegetables?,n,Fruits & Vegetables,12,6,258-260,Num,VEGETAB2,,"Not including lettuce salads and potatoes, how often did you eat other vegetables?"
+105,Adult flu shot/spray past 12 mos,n,Immunization,13,1,261,Num,FLUSHOT7,,"During the past 12 months, have you had either flu vaccine that was sprayed in your nose or flu shot injected into your arm?"
+106,When did you receive your most recent seasonal flu shot/spray?,n,Immunization,13,2,262-267,Num,FLSHTMY3,,During what month and year did you receive your most recent flu vaccine that was sprayed in your nose or flu shot injected into your arm?
+107,Received Tetanus Shot Since 2005?,n,Immunization,13,3,268,Num,TETANUS1,,"Have you received a tetanus shot in the past 10 years?: (If yes, ask: ï¿½Was this Tdap, the tetanus shot that also has pertussis or whooping cough vaccine?ï¿½)"
+108,Pneumonia shot ever,n,Immunization,13,4,269,Num,PNEUVAC4,,Have you ever had a pneumonia shot also known as a pneumococcal vaccine?
+109,Ever tested H.I.V.,n,HIV/AIDS,14,1,270,Num,HIVTST7,,"Including fluid testing from your mouth, but not including tests you may have had for blood donation, have you ever been tested for H.I.V?"
+110,Month and Year of Last HIV Test,n,HIV/AIDS,14,2,271-276,Num,HIVTSTD3,,"Not including blood donations, in what month and year was your last H.I.V. test?: (If response is before January 1985, code ï¿½777777ï¿½.)"
+111,Do Any High Risk Situations Apply,n,HIV/AIDS,14,3,277,Num,HIVRISK5,,"I am going to read you a list. When I am done, please tell me if any of the situations apply to you. You do not need to tell me which one. You have injected any drug other than those prescribed for you in the past year. You have been treated for a sexually transmitted disease or STD in the past year.: You have given or received money or drugs in exchange for sex in the past year."
+112,Had a test for high blood sugar or diabetes in the past three years?,n,Pre-Diabetes,1,1,278,Num,PDIABTST,,Have you had a test for high blood sugar or diabetes within the past three years?
+113,Ever been told by a doctor or other health professional that you have pre-diabetes or borderline diabetes?,n,Pre-Diabetes,1,2,279,Num,PREDIAB1,,"Have you ever been told by a doctor or other health professional that you have pre-diabetes or borderline diabetes?: (If ï¿½Yesï¿½ and respondent is female, ask: ï¿½Was this only when you were pregnant?ï¿½)"
+114,Now Taking Insulin,n,Diabetes,2,1,280,Num,INSULIN1,,Are you now taking insulin?
+115,How Often Check Blood for Glucose,n,Diabetes,2,2,281-283,Num,BLDSUGAR,,"About how often do you check your blood for glucose or sugar?: [Include times when checked by a family member or friend, but do NOT include times when checked by a health professional.]"
+116,How Often Check Feet for Sores or Irritations,n,Diabetes,2,3,284-286,Num,FEETCHK3,,"Including times when checked by a family member or friend, about how often do you check your feet for any sores or irritations?"
+117,Times Seen Health Professional for Diabetes,n,Diabetes,2,4,287-288,Num,DOCTDIAB,,"About how many times in the past 12 months have you seen a doctor, nurse, or other health professional for your diabetes?"
+118,Times Checked for Glycosylated Hemoglobin,n,Diabetes,2,5,289-290,Num,CHKHEMO3,,"About how many times in the past 12 months has a doctor, nurse, or other health professional checked you for A-one-C?"
+119,Times Feet Check for Sores/irritations,n,Diabetes,2,6,291-292,Num,FEETCHK,,About how many times in the past 12 months has a health professional checked your feet for any sores or irritations?
+120,Last Eye Exam Where Pupils Were Dilated,n,Diabetes,2,7,293,Num,EYEEXAM1,,"When was the last time you had an eye exam in which the pupils were dilated, making you temporarily sensitive to bright light?"
+121,Ever Told Diabetes Has Affected Eyes,n,Diabetes,2,8,294,Num,DIABEYE,,Has a doctor ever told you that diabetes has affected your eyes or that you had retinopathy?
+122,Ever Taken Class in Managing Diabetes,n,Diabetes,2,9,295,Num,DIABEDU,,Have you ever taken a course or class in how to manage your diabetes yourself?
+123,Told had Chronic Fatigue Syndrome (CFS) or (Myalgic Encephalomyelitis) ME,n,ME/CFS,3,1,296,Num,TOLDCFS,,Have you ever been told by a doctor or other health professional that you had Chronic Fatigue Syndrome (CFS) or (Myalgic Encephalomyelitis) ME?
+124,Still have Chronic Fatigue Syndrome or Myalgic Encephalomyelitis,n,ME/CFS,3,2,297,Num,HAVECFS,,Do you still have Chronic Fatigue Syndrome (CFS) or (Myalgic Encephalomyelitis) ME?
+125,How many hours a week are you been able to work,n,ME/CFS,3,3,298,Num,WORKCFS,,"Thinking about your CFS or ME, during the past 6 months, how many hours a week on average have you been able to work at a job or business for pay?"
+126,Told had Hepatitis C,n,Hepatitis Treatment,4,1,299,Num,TOLDHEPC,,Have you ever been told by a doctor or other health professional that you had Hepatitis C?
+127,Treated for Hepatitis C,n,Hepatitis Treatment,4,2,300,Num,TRETHEPC,,Were you treated for Hepatitis C in 2015 or after?
+128,Were you treated for Hepatitis C prior to 2015,n,Hepatitis Treatment,4,3,301,Num,PRIRHEPC,,Were you treated for Hepatitis C prior to 2015?
+129,Still have Hepatitis C,n,Hepatitis Treatment,4,4,302,Num,HAVEHEPC,,Do you still have Hepatitis C?
+130,Told,n,Hepatitis Treatment,4,5,303,Num,HAVEHEPB,The next question is about Hepatitis B.,"Has a doctor, nurse, or other health professional ever told you that you had hepatitis B?"
+131,Currently taking medicine for hepatitis B,n,Hepatitis Treatment,4,6,304,Num,MEDSHEPB,,Are you currently taking medicine to treat hepatitis B?
+132,Have you ever had the HPV vaccination?,n,HPV Vaccination,5,1,305,Num,HPVADVC3,"A vaccine to prevent the human papilloma virus or HPV infection is available and is called the cervical cancer or genital warts vaccine, HPV shot, [Fill",Have you ever had the Human Papilloma virus vaccination or HPV vaccination?
+133,How many HPV shots did you receive?,n,HPV Vaccination,5,2,306-307,Num,HPVADSHT,,How many HPV shots did you receive?
+134,Where did you get your last flu shot/vaccine?,n,Place of Flu Vaccination,6,1,308-309,Num,IMFVPLA1,,At what kind of place did you get your last flu shot or vaccine?
+135,Have you ever had the shingles or zoster vaccine?,n,Shingles Vaccination,7,1,310,Num,SHINGLE2,,Have you ever had the shingles or zoster vaccine?
+136,How old when you first started smoking?,n,Lung Cancer Screening,8,1,311-313,Num,LCSFIRST,,How old were you when you first started to smoke cigarettes regularly
+137,How old when you last smoked?,n,Lung Cancer Screening,8,2,314-316,Num,LCSLAST,,How old were you when you last smoked cigarettes regularly?
+138,"On average, how many cigarettes do you smoke each day?",n,Lung Cancer Screening,8,3,317-319,Num,LCSNUMCG,,"On average, when you {smoke/smoked} regularly, about how many cigarettes {do/did} you usually smoke each day?"
+139,Did you have a CT or CAT scan?,n,Lung Cancer Screening,8,4,320,Num,LCSCTSCN,,"In the last 12 months, did you have a CT or CAT scan?"
+140,Have You Ever Had a Mammogram,n,Breast and Cervical Cancer Screening,9,1,321,Num,HADMAM,,Have you ever had a mammogram?
+141,How Long since Last Mammogram,n,Breast and Cervical Cancer Screening,9,2,322,Num,HOWLONG,,How long has it been since you had your last mammogram?
+142,Ever Had a Pap Test,n,Breast and Cervical Cancer Screening,9,3,323,Num,HADPAP2,,Have you ever had a Pap test?
+143,How Long Since Last Pap Test,n,Breast and Cervical Cancer Screening,9,4,324,Num,LASTPAP2,,How long has it been since you had your last Pap test?
+144,Have you ever had an HPV test?,n,Breast and Cervical Cancer Screening,9,5,325,Num,HPVTEST,,An H.P.V. test is sometimes given with the Pap test for cervical cancer screening. Have you ever had an H.P.V. test?
+145,How long since your last HPV test?,n,Breast and Cervical Cancer Screening,9,6,326,Num,HPLSTTST,,How long has it been since you had your last H.P.V. test?
+146,Had Hysterectomy,n,Breast and Cervical Cancer Screening,9,7,327,Num,HADHYST2,,Have you had a hysterectomy?: (A hysterectomy is an operation to remove the uterus (womb).)
+147,Has a health professional EVER talked with you about the advantages of the PSA test?,n,Prostate Cancer Screening,10,1,328,Num,PCPSAAD3,,"Has a doctor, nurse, or other health professional ever talked with you about the advantages of the Prostate-Specific Antigen or P.S.A. test?"
+148,Has a health professional EVER talked with you about the disadvantages of the PSA test?,n,Prostate Cancer Screening,10,2,329,Num,PCPSADI1,,"Has a doctor, nurse, or other health professional ever talked with you about the disadvantages of the PSA test?"
+149,Has a doctor EVER recommended that you have a PSA test?,n,Prostate Cancer Screening,10,3,330,Num,PCPSARE1,,"Has a doctor, nurse, or other health professional ever recommended that you have a P.S.A. test?"
+150,Ever Had PSA Test,n,Prostate Cancer Screening,10,4,331,Num,PSATEST1,,Have you ever had a P.S.A. test?
+151,Time Since Last PSA Test,n,Prostate Cancer Screening,10,5,332,Num,PSATIME,,How long has it been since you had your last P.S.A. test?
+152,What was the MAIN reason you had this PSA test?,n,Prostate Cancer Screening,10,6,333,Num,PCPSARS1,,What was the MAIN reason you had this P.S.A. test ï¿½ was it ï¿½?
+153,Why was PSA test done?,n,Prostate Cancer Screening Decision Making,11,1,334,Num,PCPSADE1,,Which of the following best describes the decision to have the P.S.A. test done?
+154,Who made the decision with you to have PSA test?,n,Prostate Cancer Screening Decision Making,11,2,335,Num,PCDMDEC1,,Who made the decision with you?
+155,Ever Had Blood Stool Test Using Home Kit,n,Colorectal Cancer Screening,12,1,336,Num,BLDSTOOL,,A blood stool test is a test that may use a special kit at home to determine whether the stool contains blood.: Have you ever had this test using a home kit?
+156,Time Since Last Blood Stool Test,n,Colorectal Cancer Screening,12,2,337,Num,LSTBLDS3,,How long has it been since you had your last blood stool test using a home kit?
+157,Ever Had Sigmoidoscopy/Colonoscopy,n,Colorectal Cancer Screening,12,3,338,Num,HADSIGM3,,Sigmoidoscopy and colonoscopy are exams in which a tube is inserted in the rectum to view the colon for signs of cancer or other health problems. Have you ever had either of these exams?
+158,Was your last test a sigmoidoscopy or colonoscopy?,n,Colorectal Cancer Screening,12,4,339,Num,HADSGCO1,,"For a sigmoidoscopy, a flexible tube is inserted into the rectum to look for problems. A colonoscopy is similar, but uses a longer tube, and you are usually given medication through a needle in your arm to make you sleepy and told to have someone else drive you home after the test. Was your most recent exam a sigmoidoscopy or a colonoscopy?"
+159,Time Since Last Sigmoidoscopy/Colonoscopy,n,Colorectal Cancer Screening,12,5,340,Num,LASTSIG3,,How long has it been since you had your last sigmoidoscopy or colonoscopy?
+160,How Many Types of Cancer?,n,Cancer Survivorship,13,1,341,Num,CNCRDIFF,,How many different types of cancer have you had?
+161,Age Told Had Cancer,n,Cancer Survivorship,13,2,342-343,Num,CNCRAGE,,"At what age were you told that you had cancer?: (If Response = 2 (Two) or 3 (Three or more), ask: ï¿½At what age was your first diagnosis of cancer?ï¿½)"
+162,Type of Cancer,n,Cancer Survivorship,13,3,344-345,Num,CNCRTYP1,,"What type of cancer was it?: (If Response = 2 (Two) or 3 (Three or more), ask: ï¿½With your most recent diagnoses of cancer, what type of cancer was it?ï¿½)"
+163,Currently Receiving Treatment for Cancer,n,Cancer Survivorship,13,4,346,Num,CSRVTRT3,,Are you currently receiving treatment for cancer?
+164,What Type of Doctor Provides Majority of Your Care,n,Cancer Survivorship,13,5,347-348,Num,CSRVDOC1,,What type of doctor provides the majority of your health care?
+165,Did You Receive a Summary of Cancer Treatments Received,n,Cancer Survivorship,13,6,349,Num,CSRVSUM,,"Did any doctor, nurse, or other health professional ever give you a written summary of all the cancer treatments that you received?"
+166,Ever Receive Instructions From A Doctor For Follow-Up Check-Ups,n,Cancer Survivorship,13,7,350,Num,CSRVRTRN,,"Have you ever received instructions from a doctor, nurse, or other health professional about where you should return or who you should see for routine cancer check-ups after completing treatment for cancer?"
+167,Instructions Written or Printed,n,Cancer Survivorship,13,8,351,Num,CSRVINST,,Were these instructions written down or printed on paper for you?
+168,Did Health Insurance Pay For All Of Your Cancer Treatment,n,Cancer Survivorship,13,9,352,Num,CSRVINSR,,"With your most recent diagnosis of cancer, did you have health insurance that paid for all or part of your cancer treatment?: (ï¿½Health insuranceï¿½ also includes Medicare, Medicaid, or other types of state health programs.)"
+169,Ever Denied Insurance Coverage Because Of Your Cancer?,n,Cancer Survivorship,13,10,353,Num,CSRVDEIN,,Were you ever denied health insurance or life insurance coverage because of your cancer?
+170,Participate In Clinical Trial As Part Of Cancer Treatment?,n,Cancer Survivorship,13,11,354,Num,CSRVCLIN,,Did you participate in a clinical trial as part of your cancer treatment?
+171,Currently Have Physical Pain From Cancer Or Treatment?,n,Cancer Survivorship,13,12,355,Num,CSRVPAIN,,Do you currently have physical pain caused by your cancer or cancer treatment?
+172,Is Pain Under Control?,n,Cancer Survivorship,13,13,356,Num,CSRVCTL2,,Would you say your pain is currently under controlï¿½?
+173,Primary Health Insurance Coverage,n,Health Care Access,14,1,357-358,Num,HLTHCVR1,,What is the primary source of your health care coverage? Is itï¿½
+174,How often do you take an aspirin,n,Aspirin for CVD Prevention,15,1,359,Num,ASPIRIN,,"How often do you take an aspirin to prevent or control heart disease, heart attacks or stroke?: Would you sayï¿½."
+175,Told check blood pressure at home,n,Home/ Self-measured Blood Pressure,16,1,360,Num,HOMBPCHK,,Has your doctor nurse or other health professional recommended you check your blood pressure outside of the office or at home?
+176,Regularly check blood pressure at home,n,Home/ Self-measured Blood Pressure,16,2,361,Num,HOMRGCHK,,Do you regularly check your blood pressure outside of your healthcare professionalï¿½s office or at home?
+177,Where do you get blood pressure taken,n,Home/ Self-measured Blood Pressure,16,3,362,Num,WHEREBP,,"Do you take it mostly at home or on a machine at a pharmacy, grocery or similar location?"
+178,How do you share your blood pressure numbers,n,Home/ Self-measured Blood Pressure,16,4,363,Num,SHAREBP,,"How do you share your blood pressure numbers that you collected with your health professional? Is it mostly by telephone, other methods such as emails, internet portal or fax, or in person?"
+179,Watching Sodium or Salt Intake,n,Sodium or Salt-Related Behavior,17,1,364,Num,WTCHSALT,,Are you currently watching or reducing your sodium or salt intake?
+180,Doctor Advised Reduced Sodium/Salt Intake,n,Sodium or Salt-Related Behavior,17,2,365,Num,DRADVISE,,Has a doctor or other health professional ever advised you to reduce sodium or salt intake?
+181,Times used an indoor tanning device,n,Indoor Tanning,18,1,366-368,Num,INDORTAN,,"Not including spray-on tans, during the past 12 months, how many times have you used an indoor tanning device such as a sunlamp, tanning bed, or booth?"
+182,Number Of Sunburns In Past 12 Months,n,Excess Sun Exposure,19,1,369-371,Num,NUMBURN3,,"During the past 12 months, how many times have you had a sunburn?"
+183,How often protect yourself from the sun,n,Excess Sun Exposure,19,2,372,Num,SUNPRTCT,,"When you go outside on a warm sunny day for more than one hour, how often do you protect yourself from the sun? Is thatï¿½."
+184,How often outside on weekdays,n,Excess Sun Exposure,19,3,373-374,Num,WKDAYOUT,,"On weekdays, in the summer, how long are you outside per day between 10am and 4pm?"
+185,How often outside on weekends,n,Excess Sun Exposure,19,4,375-376,Num,WKENDOUT,,"On weekends in the summer, how long are you outside each day between 10am and 4pm?"
+186,Have you experienced confusion or memory loss that is happening more often or is getting worse?,n,Cognitive Decline,20,1,377,Num,CIMEMLOS,,"During the past 12 months, have you experienced confusion or memory loss that is happening more often or is getting worse?"
+187,Given up day-to-day chores due to confusion or memory loss,n,Cognitive Decline,20,2,378,Num,CDHOUSE,,"During the past 12 months, as a result of confusion or memory loss, how often have you given up day-to-day household activities or chores you used to do, such as cooking, cleaning, taking medications, driving, or paying bills?"
+188,Need assistance with day-to_day activities due to confusion or memory loss,n,Cognitive Decline,20,3,379,Num,CDASSIST,,"As a result of confusion or memory loss, how often do you need assistance with these day-to-day activities?"
+189,When you need help with day-to-day activities are you able to get it,n,Cognitive Decline,20,4,380,Num,CDHELP,,"When you need help with these day-to-day activities, how often are you able to get the help that you need?"
+190,Does confusion or memory loss interfere with work or social activities,n,Cognitive Decline,20,5,381,Num,CDSOCIAL,,"During the past 12 months, how often has confusion or memory loss interfered with your ability to work, volunteer, or engage in social activities outside the home?"
+191,Have you discussed your confusion or memory loss with a health care professional?,n,Cognitive Decline,20,6,382,Num,CDDISCUS,,Have you or anyone else discussed your confusion or memory loss with a health care professional?
+192,Provided regular care for family or friend,n,Caregiver,21,1,383,Num,CAREGIV1,,"During the past 30 days, did you provide regular care or assistance to a friend or family member who has a health problem or disability?"
+193,Relationship Of Person To Whom You Are Giving Care?,n,Caregiver,21,2,384-385,Num,CRGVREL3,,What is his/her relationship to you?
+194,How Long Provided Care For Person.,n,Caregiver,21,3,386,Num,CRGVLNG1,,For how long have you provided care for that person?
+195,How Many Hours Do You Provide Care For Person?,n,Caregiver,21,4,387,Num,CRGVHRS1,,"In an average week, how many hours do you provide care or assistance?"
+196,"What Is The Major Health Problem, Illness, Disability For Care For Person?",n,Caregiver,21,5,388-389,Num,CRGVPRB3,,"What is the main health problem, long-term illness, or disability that the person you care for has?"
+197,Does Person Being Cared For Have Alzheimerï¿½s Disease?,n,Caregiver,21,6,390,Num,CRGVALZD,,"Does the person you care for also have Alzheimerï¿½s disease, dementia or other cognitive impairment disorder?"
+198,Managed personal care,n,Caregiver,21,7,391,Num,CRGVPER1,,"In the past 30 days, did you provide care for this person by managing personal care such as giving medications, feeding, dressing, or bathing?"
+199,Managed household tasks,n,Caregiver,21,8,392,Num,CRGVHOU1,,"In the past 30 days, did you provide care for this person by managing household tasks such as cleaning, managing money, or preparing meals?"
+200,Do you expect to have a relative you will need to provide care for?,n,Caregiver,21,9,393,Num,CRGVEXPT,,"In the next 2 years, do you expect to provide care or assistance to a friend or family member who has a health problem or disability?"
+201,"Live With Anyone Depressed, Mentally Ill, Or Suicidal?",n,Adverse Childhood Experience,22,1,394,Num,ACEDEPRS,,"Did you live with anyone who was depressed, mentally ill, or suicidal?"
+202,Live With a Problem Drinker/Alcoholic?,n,Adverse Childhood Experience,22,2,395,Num,ACEDRINK,,Did you live with anyone who was a problem drinker or alcoholic?
+203,Live With Anyone Who Used Illegal Drugs or Abused Prescriptions?,n,Adverse Childhood Experience,22,3,396,Num,ACEDRUGS,,Did you live with anyone who used illegal street drugs or who abused prescription medications?
+204,Live With Anyone Who Served TIme in Prison or Jail?,n,Adverse Childhood Experience,22,4,397,Num,ACEPRISN,,"Did you live with anyone who served time or was sentenced to serve time in a prison, jail, or other correctional facility?"
+205,Were Your Parents Divorced/Seperated?,n,Adverse Childhood Experience,22,5,398,Num,ACEDIVRC,,Were your parents separated or divorced?
+206,How Often Did Your Parents Beat Each Other Up?,n,Adverse Childhood Experience,22,6,399,Num,ACEPUNCH,,"How often did your parents or adults in your home ever slap, hit, kick, punch or beat each other up?"
+207,How Often Did A Parent Physically Hurt You In Any Way?,n,Adverse Childhood Experience,22,7,400,Num,ACEHURT1,,"Not including spanking, (before age 18), how often did a parent or adult in your home ever hit, beat, kick, or physically hurt you in any way? Was itï¿½"
+208,How Often Did A Parent Swear At You?,n,Adverse Childhood Experience,22,8,401,Num,ACESWEAR,,"How often did a parent or adult in your home ever swear at you, insult you, or put you down?"
+209,How Often Did Anyone Ever Touch You Sexually?,n,Adverse Childhood Experience,22,9,402,Num,ACETOUCH,,"How often did anyone at least 5 years older than you or an adult, ever touch you sexually?"
+210,How Often Did Anyone Make You Touch Them Sexually?,n,Adverse Childhood Experience,22,10,403,Num,ACETTHEM,,"How often did anyone at least 5 years older than you or an adult, try to make you touch them sexually?"
+211,How Often Did Anyone Ever Force You to Have Sex?,n,Adverse Childhood Experience,22,11,404,Num,ACEHVSEX,,"How often did anyone at least 5 years older than you or an adult, force you to have sex?"
+212,Did you do anything to keep from getting pregnant?,n,Family Planning,23,1,405,Num,PFPPRVN3,,"The last time you had sex with a man, did you or your partner do anything to keep you from getting pregnant?"
+213,What did you do to keep you from getting pregnant?,n,Family Planning,23,2,406-407,Num,TYPCNTR8,,"The last time you had sex with a man, what did you or your partner do to keep you from getting pregnant?"
+214,What was main reason for not doing anything to keep you from getting pregnant?,n,Family Planning,23,3,408-409,Num,NOBCUSE7,,What was your main reason for not using a method to prevent pregnancy the last time you had sex with a man?
+215,Asked during checkup if you drink alchohol,n,Alcohol Screening & Brief Intervention (ASBI),24,1,410,Num,ASBIALCH,,"You told me earlier that your last routine checkup was [within the past year/within the past 2 years]. At that checkup, were you asked in person or on a form if you drink alcohol?"
+216,Asked in person or by form how much you drink?,n,Alcohol Screening & Brief Intervention (ASBI),24,2,411,Num,ASBIDRNK,,Did the health care provider ask you in person or on a form how much you drink?
+217,Asked whether you drank [5 FOR MEN /4 FOR WOMEN] or more alcoholic drinks on an occasion?,n,Alcohol Screening & Brief Intervention (ASBI),24,3,412,Num,ASBIBING,,Did the healthcare provider specifically ask whether you drank [5 FOR MEN /4 FOR WOMEN] or more alcoholic drinks on an occasion?
+218,Offered advice about what level of drinking is harmful or risky?,n,Alcohol Screening & Brief Intervention (ASBI),24,4,413,Num,ASBIADVC,,Were you offered advice about what level of drinking is harmful or risky for your health?
+219,Were you advised to reduce or quit your drinking?,n,Alcohol Screening & Brief Intervention (ASBI),24,5,414,Num,ASBIRDUC,Healthcare providers may also advise patients to drink less for various reasons.,"At your last routine checkup, were you advised to reduce or quit your drinking?"
+220,"During the past 30 days, on how many days did you use marijuana or hashish?",n,Marijuana Use,25,1,415-416,Num,MARIJAN1,,"During the past 30 days, on how many days did you use marijuana or cannabis?"
+221,"During the past 30 days, how did you primarily use marijuana?",n,Marijuana Use,25,2,417,Num,USEMRJN2,,"During the past 30 days, which one of the following ways did you use marijuana the most often? Did you usuallyï¿½: [Please select one. Did youï¿½]"
+222,What was the reason you used marijuana?,n,Marijuana Use,25,3,418,Num,RSNMRJN1,,"When you used marijuana or cannabis during the past 30 days, was it usually: "
+223,In the past 12 months have you received food stamps,n,Food Stamps,27,1,619,Num,FOODSTMP,,"In the past 12 months, have you received food stamps, also called SNAP, the Supplemental Nutrition Assistance Program on an EBT card?"
+224,Are you male or female?,n,Sex at Birth,28,1,620,Num,BIRTHSEX,,What was your sex at birth? Was it male or female?
+225,Sexual orientation,n,Sexual Orientation and Gender Identity (SOGI),29,1a,621,Num,SOMALE,,Which of the following best represents how you think of yourself?
+226,Sexual orientation,n,Sexual Orientation and Gender Identity (SOGI),29,1b,622,Num,SOFEMALE,,Which of the following best represents how you think of yourself?
+227,Do you consider yourself to be transgender?,n,Sexual Orientation and Gender Identity (SOGI),29,2,623,Num,TRNSGNDR,,"Do you consider yourself to be transgender?: (If yes, ask ï¿½Do you consider yourself to be male-to-female, female-to-male, or gender non-conforming?)"
+228,Gender of child,n,Random Child Selection,30,2,630,Num,RCSGENDR,,Is the child a boy or a girl?
+229,Relationship to child,n,Random Child Selection,30,6,665,Num,RCSRLTN2,,How are you related to the child?
+230,Hlth pro ever said child has asthma,n,Childhood Asthma Prevalence,31,1,666,Num,CASTHDX2,,"Has a doctor, nurse or other health professional EVER said that the child has asthma?"
+231,Child still have asthma?,n,Childhood Asthma Prevalence,31,2,667,Num,CASTHNO2,,Does the child still have asthma?
+232,Questionnaire Version Identifier,n,Questionnaire Version,1,1,672-673,Num,QSTVER,,Questionnaire Version Identifier
+233,Language identifier,n,Questionnaire Language,1,1,674-675,Num,QSTLANG,,Language identifier
+234,Metropolitan Status,n,Urban Rural,1,2,1402,Num,_METSTAT,,Metropolitan Status
+235,Urban/Rural Status,n,Urban Rural,1,3,1403,Num,_URBSTAT,,Urban/Rural Status
+236,Metropolitan Status Code,n,Weighting Variables,1,2,1409,Num,MSCODE,,Metropolitan Status Code
+237,Sample Design Stratification Variable,n,Weighting Variables,1,3,1410-1415,Num,_STSTR,,"Sample Design Stratification Variable: (Prior to 2011: _STSTR is a five digit number that combines the values for _STATE (first two characters), _GEOSTR (third and fourth character), and _DENSTR2 (final character).)"
+238,Stratum weight,n,Weighting Variables,1,4,1416-1425,Num,_STRWT,,Stratum weight: (Number of records in a stratum (NRECSTR) divided by the number of records selected (NRECSEL).)
+239,Raw weighting factor used in raking,n,Weighting Variables,1,7,1446-1455,Num,_RAWRAKE,,"Raw weighting factor used in raking: (Number of adults in the household (NUMADULT, maximum of 5) divided by the imputed number of phones (_IMPNPH, maximum of 3).)"
+240,Design weight use in raking,n,Weighting Variables,1,8,1456-1465,Num,_WT2RAKE,,Design weight used in raking: (Stratum weight (_STRWT) multiplied by the raw weighting factor (_RAWRAKE).)
+241,Imputed race/ethnicity value,n,Weighting Variables,1,12,1471-1472,Num,_IMPRACE,,"Imputed race/ethnicity value: (This value is the reported race/ethnicity or an imputed race/ethnicity, if the respondent refused to give a race/ethnicity. The value of the imputed race/ethnicity will be the most common race/ethnicity response for that region of the state)"
+242,"Child Hispanic, Latino/a, or Spanish origin calculated variable",n,Child Demographic Variables,1,01,1482,Num,_CHISPNC,,"Child Hispanic, Latino/a, or Spanish origin calculated variable"
+243,Child Non-Hispanic Race including Multiracial,n,Child Demographic Variables,1,04,1539-1540,Num,_CRACE1,,Child multiracial race categorization
+244,Preferred Child Race Categories,n,Child Demographic Variables,1,05,1541-1542,Num,_CPRACE,,Preferred Child Race Categories
+245,Final child weight,n,Child Weighting Variables,1,5,1585-1594,Num,_CLLCPWT,,Final child weight: Land-line and Cell-Phone data: (Raking derived weight)
+246,Dual Phone Use Categories,n,Weighting Variables,1,2,1682,Num,_DUALUSE,,Dual Phone Use Categories
+247,Dual Phone Use Correction Factor,n,Weighting Variables,1,3,1683-1692,Num,_DUALCOR,,Dual phone use correction factor
+248,Truncated design weight used in adult combined land line and cell phone raking,n,Weighting Variables,1,4,1693-1702,Num,_LLCPWT2,,Truncated design weight used in adult combined land line and cell phone raking
+249,Final weight,n,Weighting Variables,1,21,1751-1760,Num,_LLCPWT,,Final weight assigned to each: respondent: Land-line and cell-phone data: (Raking derived weight)
+250,Adults with good or better health,n,Calculated Variables,1,1,1899,Num,_RFHLTH,,Adults with good or better health
+251,Computed Physical Health Status,n,Calculated Variables,2,1,1900,Num,_PHYS14D,,"3 level not good physical health status: 0 days, 1-13 days, 14-30 days"
+252,Computed Mental Health Status,n,Calculated Variables,2,2,1901,Num,_MENT14D,,"3 level not good mental health status: 0 days, 1-13 days, 14-30 days"
+253,Respondents aged 18-64 with health care coverage,n,Calculated Variables,3,1,1902,Num,_HCVU651,,Respondents aged 18-64 who have any form of health care coverage
+254,High Blood Pressure Calculated Variable,n,Calculated Variables,4,1,1903,Num,_RFHYPE5,,"Adults who have been told they have high blood pressure by a doctor, nurse, or other health professional"
+255,Cholesterol Checked Calculated Variable,n,Calculated Variables,5,1,1904,Num,_CHOLCH2,,Cholesterol check within past five years
+256,High Cholesterol Calculated Variable,n,Calculated Variables,5,2,1905,Num,_RFCHOL2,,"Adults who have had their cholesterol checked and have been told by a doctor, nurse, or other health professional that it was high"
+257,Ever had CHD or MI,n,Calculated Variables,6,1,1906,Num,_MICHD,,Respondents that have ever reported having coronary heart disease (CHD) or myocardial infarction (MI)
+258,Lifetime Asthma Calculated Variable,n,Calculated Variables,6,2,1907,Num,_LTASTH1,,Adults who have ever been told they have asthma
+259,Current Asthma Calculated Variable,n,Calculated Variables,6,3,1908,Num,_CASTHM1,,Adults who have been told they currently have asthma
+260,Computed Asthma Status,n,Calculated Variables,6,4,1909,Num,_ASTHMS1,,Computed asthma status
+261,Respondents diagnosed with arthritis,n,Calculated Variables,6,5,1910,Num,_DRDXAR2,,Respondents who have had a doctor diagnose them as having some form of arthritis
+262,Limited usual activities,n,Calculated Variables,7,1,1911,Num,_LMTACT2,,Limited usual activities
+263,Limited work activities,n,Calculated Variables,7,2,1912,Num,_LMTWRK2,,Limited work activities
+264,Computed Preferred Race,n,Calculated Race Variables,8,3,1969-1970,Num,_PRACE1,,Preferred race category
+265,Calculated non-Hispanic Race including multiracial,n,Calculated Race Variables,8,4,1971-1972,Num,_MRACE1,,Calculated multiracial race categorization
+266,"Hispanic, Latino/a, or Spanish origin calculated variable",n,Calculated Race Variables,8,6,1975,Num,_HISPANC,,"Hispanic, Latino/a, or Spanish origin calculated variable"
+267,Computed Race-Ethnicity grouping,n,Calculated Race Variables,8,7,1976,Num,_RACE,,Race/ethnicity categories
+268,Create Computed Non-Hispanic Whites/All Others Race Categories Race/Ethnic Group Codes Used In Post-Stratification Variable,n,Calculated Race Variables,8,8,1977,Num,_RACEG21,,White non-Hispanic race group
+269,Computed Five level race/ethnicity category.,n,Calculated Race Variables,8,9,1978,Num,_RACEGR3,,Five-level race/ethnicity category
+270,Computed race groups used for internet prevalence tables,n,Calculated Race Variables,8,10,1979,Num,_RACE_G1,,Race groups used for internet prevalence tables
+271,Calculated sex variable,n,Calculated Variables,8,11,1980,Num,_SEX,,Calculated sex variable
+272,Reported age in five-year age categories calculated variable,n,Calculated Variables,8,12,1981-1982,Num,_AGEG5YR,,Fourteen-level age category
+273,Reported age in two age groups calculated variable,n,Calculated Variables,8,13,1983,Num,_AGE65YR,,Two-level age category
+274,Imputed Age value collapsed above 80,n,Calculated Variables,8,14,1984-1985,Num,_AGE80,,Imputed Age value collapsed above 80
+275,Imputed age in six groups,n,Calculated Variables,8,15,1986,Num,_AGE_G,,Six-level imputed age category
+276,Computed Height in Inches,n,Calculated Variables,8,16,1987-1989,Num,HTIN4,,Reported height in inches
+277,Computed Height in Meters,n,Calculated Variables,8,17,1990-1992,Num,HTM4,,Reported height in meters
+278,Computed Weight in Kilograms,n,Calculated Variables,8,18,1993-1997,Num,WTKG3,,Reported weight in kilograms
+279,Computed body mass index,n,Calculated Variables,8,19,1998-2001,Num,_BMI5,,Body Mass Index (BMI)
+280,Computed body mass index categories,n,Calculated Variables,8,20,2002,Num,_BMI5CAT,,Four-categories of Body Mass Index (BMI)
+281,Overweight or obese calculated variable,n,Calculated Variables,8,21,2003,Num,_RFBMI5,,Adults who have a body mass index greater than 25.00 (Overweight or Obese)
+282,Computed number of children in household,n,Calculated Variables,8,22,2004,Num,_CHLDCNT,,Number of children in household
+283,Computed level of education completed categories,n,Calculated Variables,8,23,2005,Num,_EDUCAG,,Level of education completed
+284,Computed income categories,n,Calculated Variables,8,24,2006,Num,_INCOMG,,Income categories
+285,Computed Smoking Status,n,Calculated Variables,9,1,2007,Num,_SMOKER3,,"Four-level smoker status: Everyday smoker, Someday smoker, Former smoker, Non-smoker"
+286,Current Smoking Calculated Variable,n,Calculated Variables,9,2,2008,Num,_RFSMOK3,,Adults who are current smokers
+287,Drink any alcoholic beverages in past 30 days,n,Calculated Variables,10,1,2009,Num,DRNKANY5,,Adults who reported having had at least one drink of alcohol in the past 30 days.
+288,Computed drink-occasions-per-day,n,Calculated Variables,10,2,2010-2012,Num,DROCDY3_,,Drink-occasions-per-day
+289,Binge Drinking Calculated Variable,n,Calculated Variables,10,3,2013,Num,_RFBING5,,"Binge drinkers (males having five or more drinks on one occasion, females having four or more drinks on one occasion)"
+290,Computed number of drinks of alcohol beverages per week,n,Calculated Variables,10,4,2014-2018,Num,_DRNKWK1,,Calculated total number of alcoholic beverages consumed per week
+291,Heavy Alcohol Consumption,n,Calculated Variables,10,5,2019,Num,_RFDRHV7,,Heavy drinkers (adult men having more than 14 drinks per week and adult women having more than 7 drinks per week)
+292,Leisure Time Physical Activity Calculated Variable,n,Calculated Variables,11,1,2020,Num,_TOTINDA,,Adults who reported doing physical activity or exercise during the past 30 days other than their regular job
+293,Activity MET Value for First Activity,n,Calculated Variables,11,2,2021-2023,Num,METVL11_,,Activity MET Value for First Activity
+294,Activity MET Value for Second Activity,n,Calculated Variables,11,3,2024-2026,Num,METVL21_,,Activity MET Value for Second Activity
+295,Estimated Age-Gender Specific Maximum Oxygen Consumption,n,Calculated Variables,11,4,2027-2031,Num,MAXVO21_,,Estimated Age-Gender Specific Maximum Oxygen Consumption
+296,Estimated Functional Capacity,n,Calculated Variables,11,5,2032-2036,Num,FC601_,,Estimated Functional Capacity
+297,Estimated Activity Intensity for First Activity,n,Calculated Variables,11,6,2037,Num,ACTIN12_,,Estimated Activity Intensity for First Activity
+298,Estimated Activity Intensity for Second Activity,n,Calculated Variables,11,7,2038,Num,ACTIN22_,,Estimated Activity Intensity for Second Activity
+299,Minutes of First Activity,n,Calculated Variables,11,8,2039-2041,Num,PADUR1_,,Minutes of First Activity
+300,Minutes of Second Activity,n,Calculated Variables,11,9,2042-2044,Num,PADUR2_,,Minutes of Second Activity
+301,Physical Activity Frequency per Week for First Activity,n,Calculated Variables,11,10,2045-2049,Num,PAFREQ1_,,Physical Activity Frequency per Week for First Activity
+302,Physical Activity Frequency per Week for Second Activity,n,Calculated Variables,11,11,2050-2054,Num,PAFREQ2_,,Physical Activity Frequency per Week for Second Activity
+303,Minutes of Physical Activity per week for First Activity,n,Calculated Variables,11,12,2055-2059,Num,_MINAC11,,Minutes of Physical Activity per week for First Activity
+304,Minutes of Physical Activity per week for Second Activity,n,Calculated Variables,11,13,2060-2064,Num,_MINAC21,,Minutes of Physical Activity per week for Second Activity
+305,Strength Activity Frequency per Week,n,Calculated Variables,11,14,2065-2069,Num,STRFREQ_,,Strength Activity Frequency per Week
+306,Missing Physical Activity Data,n,Calculated Variables,11,15,2070,Num,PAMISS2_,,Missing Physical Activity Data
+307,Minutes of Physical Activity per week for First Activity,n,Calculated Variables,11,16,2071-2075,Num,PAMIN12_,,Minutes of Physical Activity per week for First Activity
+308,Minutes of Physical Activity per week for Second Activity,n,Calculated Variables,11,17,2076-2080,Num,PAMIN22_,,Minutes of Physical Activity per week for Second Activity
+309,Minutes of total Physical Activity per week,n,Calculated Variables,11,18,2081-2085,Num,PA2MIN_,,Minutes of total Physical Activity per week
+310,Minutes of Vigorous Physical Activity per week for First Activity,n,Calculated Variables,11,19,2086-2090,Num,PAVIG12_,,Minutes of Vigorous Physical Activity per week for First Activity
+311,Minutes of Vigorous Physical Activity per week for Second Activity,n,Calculated Variables,11,20,2091-2095,Num,PAVIG22_,,Minutes of Vigorous Physical Activity per week for Second Activity
+312,Minutes of total Vigorous Physical Activity per week,n,Calculated Variables,11,21,2096-2100,Num,PA2VIGM_,,Minutes of total Vigorous Physical Activity per week
+313,Physical Activity Categories,n,Calculated Variables,11,22,2101,Num,_PACAT2,,Physical Activity Categories
+314,Physical Activity Index,n,Calculated Variables,11,23,2102,Num,_PAINDX2,,Physical Activity Index
+315,150 Minute Physical Activity Calculated Variable,n,Calculated Variables,11,24,2103,Num,_PA150R3,,Adults that participated in 150 minutes (or vigorous equivalent minutes) of physical activity per week.
+316,300 Minute Physical Activity Calculated Variable,n,Calculated Variables,11,25,2104,Num,_PA300R3,,Adults that participated in 300 minutes: (or vigorous equivalent minutes) of physical activity per week.
+317,300 Minute Physical Activity 2-Level Calculated Variable,n,Calculated Variables,11,26,2105,Num,_PA30022,,Adults that participated in 300 minutes: (or vigorous equivalent minutes) of physical activity per week (2-levels).
+318,Muscle Strengthening Recommendation,n,Calculated Variables,11,27,2106,Num,_PASTRNG,,Muscle Strengthening Recommendation
+319,Aerobic and Strengthening Guideline,n,Calculated Variables,11,28,2107,Num,_PAREC2,,Aerobic and Strengthening Guideline
+320,Aerobic and Strengthening (2-level),n,Calculated Variables,11,29,2108,Num,_PASTAE2,,Aerobic and Strengthening (2-level)
+321,Computed Fruit Juice intake in times per day,n,Calculated Variables,12,1,2109-2112,Num,FTJUDA2_,,Fruit juice intake in times per day
+322,Computed Fruit intake in times per day,n,Calculated Variables,12,2,2113-2116,Num,FRUTDA2_,,Fruit intake in times per day
+323,Computed Dark Green Vegetable intake in times per day,n,Calculated Variables,12,3,2117-2120,Num,GRENDA1_,,Dark green vegetable intake in times per day
+324,Computed French Fry intake in times per day,n,Calculated Variables,12,4,2121-2124,Num,FRNCHDA_,,French Fry intake in times per day
+325,Computed Potato Servings per day,n,Calculated Variables,12,5,2125-2128,Num,POTADA1_,,Potato servings per day
+326,Computed Other Vegetable intake in times per,n,Calculated Variables,12,6,2129-2132,Num,VEGEDA2_,,Other vegetable intake in times per day
+327,The number of missing fruit responses,n,Calculated Variables,12,7,2133,Num,_MISFRT1,,The number of missing fruit responses
+328,The number of missing vegetable responses,n,Calculated Variables,12,8,2134,Num,_MISVEG1,,The number of missing vegetable responses
+329,Missing any fruit responses,n,Calculated Variables,12,9,2135,Num,_FRTRES1,,Missing any fruit responses
+330,Missing any vegetable responses,n,Calculated Variables,12,10,2136,Num,_VEGRES1,,Missing any vegetable responses
+331,Total fruits consumed per day,n,Calculated Variables,12,11,2137-2142,Num,_FRUTSU1,,Total fruits consumed per day
+332,Total vegetables consumed per day,n,Calculated Variables,12,12,2143-2148,Num,_VEGESU1,,Total vegetables consumed per day
+333,Consume Fruit 1 or more times per day,n,Calculated Variables,12,13,2149,Num,_FRTLT1A,,Consume Fruit 1 or more times per day
+334,Consume Vegetables 1 or more times per day,n,Calculated Variables,12,14,2150,Num,_VEGLT1A,,Consume Vegetables 1 or more times per day
+335,Reported consuming Fruit >16 per day,n,Calculated Variables,12,15,2151,Num,_FRT16A,,Reported consuming Fruit >16 per day
+336,Reported consuming Vegetables >23 per day,n,Calculated Variables,12,16,2152,Num,_VEG23A,,Reported consuming Vegetables >23 per day
+337,Fruit Exclusion from analyses,n,Calculated Variables,12,17,2153,Num,_FRUITE1,,Fruit Exclusion from analyses
+338,Vegetable Exclusion from analyses,n,Calculated Variables,12,18,2154,Num,_VEGETE1,,Vegetable Exclusion from analyses
+339,Flu Shot Calculated Variable,n,Calculated Variables,13,1,2155,Num,_FLSHOT7,,Adults aged 65+ who have had a flu shot within the past year
+340,Pneumonia Vaccination Calculated Variable,n,Calculated Variables,13,2,2156,Num,_PNEUMO3,,Adults aged 65+ who have ever had a pneumonia vaccination
+341,Ever been tested for HIV calculated variable,n,Calculated Variables,14,1,2157,Num,_AIDTST4,,Adults who have ever been tested for HIV

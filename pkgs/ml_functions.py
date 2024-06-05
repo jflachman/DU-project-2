@@ -249,7 +249,7 @@ def read_codebook_pdf_html( codebook_data):
     codebook_list = []
 
     for i in range(0, len(codebook_data)):
-        df = codebook_data[1]
+        df = codebook_data[i]
         labels = df[0][0]
 
         labels = labels.replace(': ',':')
@@ -311,6 +311,49 @@ def codebook_summary( source_file, destination_file):
 
     print(f"Results written to {destination_file}")
     print(f"----------------------------------------------------")
+
+
+
+# --------------------------------------
+# ------- create_feature_markdown_file
+# ---------- Read codebook, match with diabetes features and create feature markdown file
+# --------------------------------------
+def create_feature_markdown_file(brfss_codebook_list, feature_list):
+    #for i in range(0,2):
+    for i in range(start_item, len(brfss_codebook_list)):
+        os.system('clear')
+        print(f"\n\n-----------------------------------")
+        item_dict = brfss_codebook_list[i]
+        for key in item_dict.keys():
+            if (key == 'Section Name'):
+                print(f"-----------------------------------")
+                print(f"{key}:       {item_dict[key]}\n")
+            elif(key == 'Question'):
+                print(f"{key}:       {item_dict[key]}\n")
+            elif(key == 'Label'):
+                print(f"{i:3d}: {key}:       {item_dict[key]}\n")
+            elif(key == 'table'):
+    #            A=1
+                print(item_dict[key])
+            else:
+                print(f"{key}:       {item_dict[key]}")
+
+        notDone = True
+        while notDone:
+            select = input('\nSurvey Item for Diabetes Study (y/n/q): ')
+            select = select.lower()
+            if (select == 'y' or select == 'n'):
+                notDone = False
+                brfss_codebook_list[i]['candidate'] = select
+            elif (select == 'q'):
+                notDone = False
+
+        if select == 'q':
+            i -= 1
+            break
+    return i, brfss_codebook_list
+
+
 
 # ------------------------------------------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------------------------------------------
