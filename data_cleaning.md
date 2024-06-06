@@ -9,6 +9,11 @@
 - [Variable Layout](https://www.cdc.gov/brfss/annual_data/2022/llcp_varlayout_22_onecolumn.html)
 - [Building Risk Prediction Models for Type 2 Diabetes Using Machine Learning Techniques](https://www.cdc.gov/pcd/issues/2019/19_0109.htm)
 
+Other analysis:
+- [CDC Diabetes Health Indicators](https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators)
+- [Diabetes Health Indicators Dataset](https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset)
+
+
 References:
 - [National Diabetes Statistics Report](https://www.cdc.gov/diabetes/php/data-research/index.html) - See Risk Factors towards the end of the report
 - [Building Risk Prediction Models for Type 2 Diabetes Using Machine Learning Techniques](https://www.cdc.gov/pcd/issues/2019/19_0109.htm)
