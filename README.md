@@ -37,15 +37,12 @@ We have concentrated our efforts on the following risk factors for diabetes.
  
    There are many risk factors for developing type 2 diabetes, including:
 
-      ${\color{blue}Age}$ Being over 40 increases your risk.    
-
-      ${\color{blue}Family history}$ A parent, sibling, or other relative with type 1 or 2 diabetes increases your  
+   ${\color{blue}Age}$ Being over 40 increases your risk.    
+   ${\color{blue}Family history}$ A parent, sibling, or other relative with type 1 or 2 diabetes increases your  
        risk.
-
-    ${\color{blue}Ethnicity}$ People of certain races and ethnicities, including African Americans, Hispanics,  
+   ${\color{blue}Ethnicity}$ People of certain races and ethnicities, including African Americans, Hispanics,  
      American Indians, and Asian Americans, are more likely to develop type 2 diabetes.
-
-    ${\color{blue}Inactivity}$ The less active you are, the greater your risk.
+   ${\color{blue}Inactivity}$ The less active you are, the greater your risk.
 
     ${\color{blue}Weight}$ Being overweight or obese increases your risk. You can estimate your risk by measuring   
       your waist circumference. Men have a higher risk if their waist circumference is more than 40 inches, while  
