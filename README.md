@@ -61,28 +61,28 @@ We have concentrated our efforts on the following risk factors for diabetes.
 
    ***Indicators***
  
-    Diabetes is a chronic condition that can be diagnosed by a medical professional. While it often has no symptoms, 
+   Diabetes is a chronic condition that can be diagnosed by a medical professional. While it often has no symptoms, 
     some indicators include:
 
-    ${\color{blue}Urination}$ Frequent urination, especially at night
+   ${\color{blue}Urination}$ Frequent urination, especially at night
 
-    ${\color{blue}Thirst}$ Excessive thirst
+   ${\color{blue}Thirst}$ Excessive thirst
 
-    ${\color{blue}Hunger}$ Increased hunger, even when eating
+   ${\color{blue}Hunger}$ Increased hunger, even when eating
 
-    ${\color{blue}Weight loss}$ Unintentional weight loss
+   ${\color{blue}Weight loss}$ Unintentional weight loss
 
-    ${\color{blue}Fatigue}$ Feeling more tired than usual
+   ${\color{blue}Fatigue}$ Feeling more tired than usual
 
-    ${\color{blue}Vision}$ Blurred vision
+   ${\color{blue}Vision}$ Blurred vision
 
-    ${\color{blue}Wounds}$ Cuts and bruises that take longer to heal
+   ${\color{blue}Wounds}$ Cuts and bruises that take longer to heal
 
-    ${\color{blue}Skin}$ Itchy skin or genital itching
+   ${\color{blue}Skin}$ Itchy skin or genital itching
 
-    ${\color{blue}Infections}$ Urinary tract infections (UTIs) or yeast infections
+   ${\color{blue}Infections}$ Urinary tract infections (UTIs) or yeast infections
 
-    ${\color{blue}Sensations}$ Unusual sensations like tingling, burning, or prickling
+   ${\color{blue}Sensations}$ Unusual sensations like tingling, burning, or prickling
 
 - Please see the following link for more details: [data_cleaning.md](data_cleaning.md)
 ### Approach
