@@ -78,8 +78,9 @@ ${\color{blue}Sensations}$ Unusual sensations like tingling, burning, or prickli
 - Please see the following link for more details: [data_cleaning.md](data_cleaning.md)
 ### Approach
 
-We focused on the following risk factors for diabetes in our efforts. Below are the selected feature descriptions.
+In our efforts, we focused on the following risk factors for diabetes. Below are the selected feature abbreviations.
 [diabetes_features.md](diabetes_features.md)
+
 ### DataCleaning 
 
 - Jeff will write
