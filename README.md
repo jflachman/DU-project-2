@@ -33,7 +33,7 @@ The Diabetes Health Indicators Dataset contains healthcare statistics and lifest
 The selected dataset is the 2021 CDC dataset.
 We have concentrated our efforts on the following risk factors for diabetes.
 
-***${\color{blue}Risk Factors}$*** 
+***Risk Factors*** 
  There are many risk factors for developing type 2 diabetes, including:
 
 ${\color{blue}Age}$ Being over 40 increases your risk.    
@@ -52,7 +52,7 @@ ${\color{blue}Cholesterol}$ High cholesterol can raise your risk for diabetes an
 
 ${\color{blue}Smoking}$ Smokers are 30-40% more likely than non-smokers to develop type 2 diabetes.
 
-***__Indicators__***
+***Indicators***
 Diabetes is a chronic condition that can be diagnosed by a medical professional. While it often has no symptoms, some indicators include:
 
 ${\color{blue}Urination}$ Frequent urination, especially at night
