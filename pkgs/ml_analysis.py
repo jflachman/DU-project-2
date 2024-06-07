@@ -48,10 +48,10 @@ def knn_plot( data ):
 # --------------------------------------
 def test_model(model, data):
     X_train, X_test, y_train, y_test = data
-    reg = model.fit(X_train, y_train)
-    print(f'Model: {type(reg).__name__}')
-    print(f'Train score: {reg.score(X_train, y_train)}')
-    print(f'Test Score: {reg.score(X_test, y_test)}\n')
+    model = model.fit(X_train, y_train)
+    print(f'Model: {type(model).__name__}')
+    print(f'Train score: {model.score(X_train, y_train)}')
+    print(f'Test Score: {model.score(X_test, y_test)}\n')
     # Add balancedscore
     # Add Classification Report
     plt.show()
@@ -66,9 +66,9 @@ def run_classification_models(data, k_value):
     print(f"-------- Classification Models")
     print(f"----------------------------------------------------------------")
 
-    test_model(SVC(kernel='linear'), data)
-    test_model(KNeighborsClassifier(n_neighbors=k_value), data)
-    test_model(tree.DecisionTreeClassifier(), data)
+#    test_model(SVC(kernel='linear'), data)
+#    test_model(KNeighborsClassifier(n_neighbors=k_value), data)
+#    test_model(tree.DecisionTreeClassifier(), data)
     test_model(RandomForestClassifier(), data)
     test_model(ExtraTreesClassifier(random_state=1), data)
     test_model(GradientBoostingClassifier(random_state=1), data)
