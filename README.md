@@ -11,8 +11,13 @@ This project aims to analyze the factors contributing to the prevalence of diabe
 
 
  ## Potential Datasets
+We brainstormed several options, which are listed below:
 
 - These are listed separately in [datasets](data_sets.md)
+- 
+We have chosen the topic of diabetes.
+[CDC Diabetes Health Indicators](https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators)
+
 
 ## Project Overview
 
