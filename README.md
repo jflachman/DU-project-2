@@ -33,7 +33,7 @@ The Diabetes Health Indicators Dataset contains healthcare statistics and lifest
 The selected dataset is the 2021 CDC dataset.
 We have concentrated our efforts on the following risk factors for diabetes.
 
-***__Risk Factors__***
+<u>***Risk Factors***</u>
  There are many risk factors for developing type 2 diabetes, including:
 
 ${\color{blue}Age}$ Being over 40 increases your risk.    
