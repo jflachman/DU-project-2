@@ -20,12 +20,12 @@ We have chosen the topic of diabetes.
 
 
 ## Project Overview
-The Diabetes Health Indicators Dataset contains healthcare statistics and lifestyle survey information about people, along with their diabetes diagnosis. It includes 35 features such as demographics, lab test results, and answers to survey questions for each patient. The target variable for classification indicates whether a patient has diabetes, is pre-diabetic, or is healthy.
+The Diabetes Health Indicators Dataset contains healthcare statistics and lifestyle survey information about people and their diabetes diagnosis. It includes 35 features, such as demographics, lab test results, and answers to survey questions for each patient. The target variable for classification indicates whether a patient has diabetes, is pre-diabetic, or is healthy.
 ### Executive Summary
 
 
 ### Selected Dataset
-
+The selected dataset is the 2021 CDC dataset.
 
 ### Approach
 
