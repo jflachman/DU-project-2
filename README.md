@@ -14,13 +14,13 @@ This project aims to analyze the factors contributing to the prevalence of diabe
 We brainstormed several options, which are listed below:
 
 - These are listed separately in [datasets](data_sets.md)
-- 
+  
 We have chosen the topic of diabetes.
 [CDC Diabetes Health Indicators](https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators)
 
 
 ## Project Overview
-
+The Diabetes Health Indicators Dataset contains healthcare statistics and lifestyle survey information about people, along with their diabetes diagnosis. It includes 35 features such as demographics, lab test results, and answers to survey questions for each patient. The target variable for classification indicates whether a patient has diabetes, is pre-diabetic, or is healthy.
 ### Executive Summary
 
 
