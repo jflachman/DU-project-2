@@ -23,5 +23,22 @@
 
 ### Approach
 
+### DataCleaning 
+
+- Jeff will write
 
 
+
+# What can we write on:
+
+- Selected features
+    - [data_cleaning.md](data_cleaning.md)
+    - Printed selected features in [diabetes_features.md](diabetes_features.md)
+
+    For Analysis you can look at [analysis.md](analysis.md)
+
+
+
+- The Plan
+    - Run models on basic data
+    - 
