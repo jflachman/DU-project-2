@@ -74,8 +74,12 @@ ${\color{blue}Skin}$ Itchy skin or genital itching
 ${\color{blue}Infections}$ Urinary tract infections (UTIs) or yeast infections
 
 ${\color{blue}Sensations}$ Unusual sensations like tingling, burning, or prickling
+
+- Please see the following link for more details: [data_cleaning.md](data_cleaning.md)
 ### Approach
 
+We focused on the following risk factors for diabetes in our efforts. Below are the selected feature descriptions.
+[diabetes_features.md](diabetes_features.md)
 ### DataCleaning 
 
 - Jeff will write
@@ -84,9 +88,8 @@ ${\color{blue}Sensations}$ Unusual sensations like tingling, burning, or prickli
 
 # What can we write on:
 
-- Selected features
-    - [data_cleaning.md](data_cleaning.md)
-    - Printed selected features in [diabetes_features.md](diabetes_features.md)
+
+    
 
     For Analysis you can look at [analysis.md](analysis.md)
 
