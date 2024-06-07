@@ -1,5 +1,5 @@
 # DU-project-2
-
+## Diabetes
 This project aims to analyze the factors contributing to the prevalence of diabetes in the United States in 2021.
 
 - [Project Instructions](project-2-overview.md)
