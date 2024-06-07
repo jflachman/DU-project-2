@@ -1,9 +1,10 @@
 # DU-project-2
 
+This project aims to analyze the factors contributing to the prevalence of diabetes in the United States in 2021.
+
 - [Project Instructions](project-2-overview.md)
 
 ## Team
- - Michael Bolens
  - Jeff Flachman
  - Ava Lee
  - Elia Porter
