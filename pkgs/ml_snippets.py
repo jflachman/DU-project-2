@@ -478,6 +478,7 @@ models = {'train_score': [], 'test_score': [], 'max_depth': []}
 
 for depth in range(1,10):
     models['max_depth'].append(depth)
+    
     model = RandomForestClassifier(n_estimators=500, max_depth=depth)
     model.fit(X_train_encoded, y_train_encoded)
     y_test_pred = model.predict(X_test_encoded)
