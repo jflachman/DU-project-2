@@ -14,11 +14,13 @@ This project aims to analyze the factors contributing to the prevalence of diabe
 
  ## Potential Datasets
 
-We brainstormed several options, which are listed below:
+We brainstormed multiple dataset options for this project.  Some of the datasets reviewed are listed the the data_sets file below:
 
 - These are listed separately in [datasets](data_sets.md)
   
-We have chosen the topic of diabetes.
+The team was interested in diabetes predictions using data from the The CDC Behavioral Risk Factor Surveillance System (BRFSS).  A dataset pulled from the 2015 BRFSS was available on the [**UC Irvine Machine Learning Repository**](https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators).  This dataset was pulled from the 2015 BRFSS survey data.
+
+the the We have chose the topic of diabetes.
 [CDC Diabetes Health Indicators](https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators)
 
 
@@ -33,58 +35,36 @@ The Diabetes Health Indicators Dataset contains healthcare statistics and lifest
 The selected dataset is the 2021 CDC dataset.
 We have concentrated our efforts on the following risk factors for diabetes.
 
-  ***Risk Factors*** 
+***Risk Factors*** 
  
    There are many risk factors for developing type 2 diabetes, including:
 
-   ${\color{blue}Age}$ - Being over 40 increases your risk.   
-   
-   ${\color{blue}Family history}$ - A parent, sibling, or other relative with type 1 or 2 diabetes increases your   
-                                    risk.
-       
-   ${\color{blue}Ethnicity}$ - People of certain races and ethnicities, including African Americans, Hispanics,  
-                               American Indians, and Asian Americans, are more likely to develop type 2 diabetes.
-     
-   ${\color{blue}Inactivity}$ - The less active you are, the greater your risk.
+-   ${\color{blue}Age}$ - Being over 40 increases your risk.   
+-   ${\color{blue}Family history}$ - A parent, sibling, or other relative with type 1 or 2 diabetes increases your risk.
+-   ${\color{blue}Ethnicity}$ - People of certain races and ethnicities, including African Americans, Hispanics, American Indians, and Asian Americans, are more likely to develop type 2 diabetes.
+-   ${\color{blue}Inactivity}$ - The less active you are, the greater your risk.
+-   ${\color{blue}Weight}$ - Being overweight or obese increases your risk. You can estimate your risk by measuring your waist circumference. Men have a higher risk if their waist circumference is more than 40 inches, while women who are not pregnant have a higher risk if their waist circumference is more than 35 inches.
+-   ${\color{blue}Blood pressure}$ - High blood pressure can lead to insulin resistance and eventually type 2 diabetes.
+-   ${\color{blue}Cholesterol}$ - High cholesterol can raise your risk for diabetes and heart disease.
+-   ${\color{blue}Smoking}$ - Smokers are 30-40% more likely than non-smokers to develop type 2 diabetes.
 
-   ${\color{blue}Weight}$ - Being overweight or obese increases your risk. You can estimate your risk by measuring   
-                            your waist circumference. Men have a higher risk if their waist circumference is more 
-                            than 40 inches, while women who are not pregnant have a higher risk if their waist 
-                            circumference is more than 35 inches.
+***Indicators***
 
-   ${\color{blue}Blood pressure}$ - High blood pressure can lead to insulin resistance and eventually type 2   
-                                    diabetes.
+Diabetes is a chronic condition that can be diagnosed by a medical professional. While it often has no symptoms, some indicators include:
 
-   ${\color{blue}Cholesterol}$ - High cholesterol can raise your risk for diabetes and heart disease.
+-   ${\color{blue}Urination}$ Frequent urination, especially at night
+-   ${\color{blue}Thirst}$ Excessive thirst
+-   ${\color{blue}Hunger}$ Increased hunger, even when eating
+-   ${\color{blue}Weight loss}$ Unintentional weight loss
+-   ${\color{blue}Fatigue}$ Feeling more tired than usual
+-   ${\color{blue}Vision}$ Blurred vision
+-   ${\color{blue}Wounds}$ Cuts and bruises that take longer to heal
+-   ${\color{blue}Skin}$ Itchy skin or genital itching
+-   ${\color{blue}Infections}$ Urinary tract infections (UTIs) or yeast infections
+-   ${\color{blue}Sensations}$ Unusual sensations like tingling, burning, or prickling
 
-   ${\color{blue}Smoking}$ - Smokers are 30-40% more likely than non-smokers to develop type 2 diabetes.
+Please see the following link for more details: [data_cleaning.md](data_cleaning.md)
 
-   ***Indicators***
- 
-   Diabetes is a chronic condition that can be diagnosed by a medical professional. While it often has no symptoms, 
-    some indicators include:
-
-   ${\color{blue}Urination}$ Frequent urination, especially at night
-
-   ${\color{blue}Thirst}$ Excessive thirst
-
-   ${\color{blue}Hunger}$ Increased hunger, even when eating
-
-   ${\color{blue}Weight loss}$ Unintentional weight loss
-
-   ${\color{blue}Fatigue}$ Feeling more tired than usual
-
-   ${\color{blue}Vision}$ Blurred vision
-
-   ${\color{blue}Wounds}$ Cuts and bruises that take longer to heal
-
-   ${\color{blue}Skin}$ Itchy skin or genital itching
-
-   ${\color{blue}Infections}$ Urinary tract infections (UTIs) or yeast infections
-
-   ${\color{blue}Sensations}$ Unusual sensations like tingling, burning, or prickling
-
-- Please see the following link for more details: [data_cleaning.md](data_cleaning.md)
 ### Approach
 
 In our efforts, we focused on the following risk factors for diabetes. Below are the selected feature abbreviations.

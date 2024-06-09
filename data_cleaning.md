@@ -1,17 +1,16 @@
 ## BRFSS Data Cleaning
 
-### 2022 Files:
-- [BFRSS Files](https://www.cdc.gov/brfss/annual_data/annual_2022.html)
-- [2022 BRFSS Overview CDC](https://www.cdc.gov/brfss/annual_data/2022/pdf/Overview_2022-508.pdf)
-- [2022 BRFSS Codebook CDC](https://www.cdc.gov/brfss/annual_data/2022/zip/codebook22_llcp-v2-508.zip)
-- [Calculated Variables in Data Files CDC](https://www.cdc.gov/brfss/annual_data/2022/pdf/2022-calculated-variables-version4-508.pdf)
-- [Summary Matrix of Calculated Variables (CV) in the 2022 Data File](https://www.cdc.gov/brfss/annual_data/2022/summary_matrix_22.html)
-- [Variable Layout](https://www.cdc.gov/brfss/annual_data/2022/llcp_varlayout_22_onecolumn.html)
-- [Building Risk Prediction Models for Type 2 Diabetes Using Machine Learning Techniques](https://www.cdc.gov/pcd/issues/2019/19_0109.htm)
+### 2021 Files:
+- [BFRSS Files](https://www.cdc.gov/brfss/annual_data/annual_2021.html)
+- [2021 BRFSS Overview CDC](https://www.cdc.gov/brfss/annual_data/2021/pdf/Overview_2021-508.pdf)
+- [2021 BRFSS Codebook CDC](https://www.cdc.gov/brfss/annual_data/2021/pdf/codebook21_llcp-v2-508.pdf)
+- [Calculated Variables in Data Files CDC](https://www.cdc.gov/brfss/annual_data/2021/pdf/2021-calculated-variables-version4-508.pdf)
+- [Summary Matrix of Calculated Variables (CV) in the 2021 Data File](https://www.cdc.gov/brfss/annual_data/2021/summary_matrix_21.html)
+- [Variable Layout](https://www.cdc.gov/brfss/annual_data/2021/llcp_varlayout_21_onecolumn.html)
 
-Other analysis:
-- [CDC Diabetes Health Indicators](https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators)
-- [Diabetes Health Indicators Dataset](https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset)
+Other analysis - Cleaned 2015 files:
+- [CDC Diabetes Health Indicators (2015)](https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators)
+    - [Diabetes Health Indicators Dataset (2015)](https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset)
 
 
 References:
