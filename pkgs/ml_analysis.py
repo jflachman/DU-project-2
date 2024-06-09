@@ -157,7 +157,6 @@ def modify_base_dataset(df, operation_dict):
                         X_train, X_test, y_train, y_test = data
                         # Instantiate a ClusterCentroids instance
                         cc_sampler = ClusterCentroids(random_state=1)
-                        rus = RandomUnderSampler(random_state=1)
                         # Fit the training data to the cluster centroids model
                         X_resampled, y_resampled = cc_sampler.fit_resample(X_train, y_train)
                         data = X_resampled, X_test, y_resampled, y_test
@@ -382,6 +381,47 @@ def model_performance(model, data, datalabel):
 
     return {'model': type(model).__name__, 'slice': datalabel,'score':score_model, 'balanced_accuracy': score_ba, 'roc_auc_score':score_roc_auc}
 
+
+
+# --------------------------------------
+# ------- model_performance
+# ---------- 
+# --------------------------------------
+def model_performance_details(model, data, datalabel):
+    # Expand the model data
+    X, y, y_pred = data
+
+    # -------------------------------------- Model Performance
+    print(f'---------- {datalabel}ing Data Performance\n------------------------------------')
+    # -----  Create a confusion matrix
+    # if len(y.value_counts()) > 2:
+    #     print(f"Confusion Matrix\n{multilabel_confusion_matrix(y, y_pred)}")
+    # else:
+    conf_matrix = confusion_matrix(y, y_pred)
+    print(f"Confusion Matrix\n{conf_matrix}")
+#        print(f"Confusion Matrix\n{confusion_matrix(y, y_pred, labels = [1,0])}")
+    
+    # -----  Score
+    score_model = model.score(X, y)
+    print(f'\n-----------------------\n{datalabel} score: {score_model}')
+
+    # -----  Balanced Accuracy
+    score_ba = balanced_accuracy_score(y, y_pred)
+    print(f"Balanced Accuracy Score: {score_ba}")
+
+    # -----  ROC AUC Score
+    if len(y.value_counts())>2:
+        score_roc_auc = roc_auc_score(y, model.predict_proba(X), multi_class='ovr')
+    else:
+        score_roc_auc = roc_auc_score(y, model.predict_proba(X)[:, 1])
+
+    print(f"ROC AUC Score: {score_roc_auc}")
+
+    # -----  Create a classification report
+    class_report = classification_report(y, y_pred)
+    print(f"\n-----------------------\nClassification Report\n{class_report}")
+
+    return {'model': type(model).__name__, 'slice': datalabel,'score':score_model, 'balanced_accuracy': score_ba, 'roc_auc_score':score_roc_auc, 'confusion_matrix': conf_matrix,'classification_report':class_report}
 
 # --------------------------------------
 # ------- knn_plot()

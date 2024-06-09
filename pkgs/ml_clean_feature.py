@@ -139,6 +139,7 @@ def clean_features_list(feature_df, clean_configs):
                     print(f"  {'scale'}: ********* NO Parameters were specified *********")
                 else:
                     print(f"  {'scale'}: {params}")
+                feature_df[column] = feature_df[column].div(params['div']).round(params['round'])
 
             feature_list = feature_df[feature].unique()
             feature_list = np.sort(feature_list)
