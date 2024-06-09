@@ -1,0 +1,187 @@
+**********************************************************
+Diabetes Predictions Performance Summary Report
+**********************************************************
+----------------------------------------
+Report Summary
+----------------------------------------
+Performance for: RandomUndersampled Dataset
+Performance for: Binary Dataset
+Performance for: Standard Scaled Dataset
+Performance for: Cluster Dataset
+Performance for: Base Dataset
+Performance for: RandomOverSample Dataset
+Performance for: SMOTEEN Dataset
+Performance for: MinMax Scaled Dataset
+Performance for: SMOTE Dataset
+----------------------------------------
+----------------------------------------
+Performance for: RandomUndersampled Dataset
+Dataset Size:    253680 Rows, 22 Columns
+----------------------------------------
+                     model slice    score  balanced_accuracy  roc_auc_score
+      KNeighborsClassifier Train 0.830986           0.830986       0.913746
+      KNeighborsClassifier  Test 0.680921           0.692573       0.738510
+    DecisionTreeClassifier Train 0.994633           0.994633       0.999941
+    DecisionTreeClassifier  Test 0.660107           0.657310       0.657569
+    RandomForestClassifier Train 0.994633           0.994633       0.999762
+    RandomForestClassifier  Test 0.707915           0.736624       0.808041
+      ExtraTreesClassifier Train 0.994633           0.994633       0.999941
+      ExtraTreesClassifier  Test 0.696736           0.723504       0.789293
+GradientBoostingClassifier Train 0.755904           0.755904       0.836019
+GradientBoostingClassifier  Test 0.720719           0.749684       0.827735
+        AdaBoostClassifier Train 0.749576           0.749576       0.829611
+        AdaBoostClassifier  Test 0.731331           0.748928       0.825186
+        LogisticRegression Train 0.747109           0.747109       0.825369
+        LogisticRegression  Test 0.729076           0.744472       0.821738
+----------------------------------------
+Performance for: Binary Dataset
+Dataset Size:    253680 Rows, 22 Columns
+----------------------------------------
+                     model slice    score  balanced_accuracy  roc_auc_score
+      KNeighborsClassifier Train 0.902502           0.723728       0.933827
+      KNeighborsClassifier  Test 0.834059           0.585721       0.680944
+    DecisionTreeClassifier Train 0.994560           0.980745       0.999854
+    DecisionTreeClassifier  Test 0.794686           0.597220       0.595167
+    RandomForestClassifier Train 0.994508           0.982004       0.999429
+    RandomForestClassifier  Test 0.856433           0.569750       0.795920
+      ExtraTreesClassifier Train 0.994560           0.980745       0.999854
+      ExtraTreesClassifier  Test 0.848549           0.566224       0.776421
+GradientBoostingClassifier Train 0.867644           0.575049       0.832179
+GradientBoostingClassifier  Test 0.863813           0.573446       0.828299
+        AdaBoostClassifier Train 0.865841           0.581502       0.827209
+        AdaBoostClassifier  Test 0.862378           0.580964       0.824593
+        LogisticRegression Train 0.864559           0.566889       0.822441
+        LogisticRegression  Test 0.860896           0.565805       0.821372
+----------------------------------------
+Performance for: Standard Scaled Dataset
+Dataset Size:    253680 Rows, 22 Columns
+----------------------------------------
+                     model slice    score  balanced_accuracy  roc_auc_score
+      KNeighborsClassifier Train 0.885699           0.499870       0.947173
+      KNeighborsClassifier  Test 0.820940           0.392788       0.630468
+    DecisionTreeClassifier Train 0.993446           0.968265       0.999873
+    DecisionTreeClassifier  Test 0.769915           0.409026       0.572309
+    RandomForestClassifier Train 0.993404           0.968803       0.999524
+    RandomForestClassifier  Test 0.843456           0.387473       0.746139
+      ExtraTreesClassifier Train 0.993446           0.968265       0.999873
+      ExtraTreesClassifier  Test 0.834626           0.387458       0.723080
+GradientBoostingClassifier Train 0.850110           0.391492       0.795637
+GradientBoostingClassifier  Test 0.850473           0.389160       0.788657
+        AdaBoostClassifier Train 0.848260           0.393030       0.776731
+        AdaBoostClassifier  Test 0.848817           0.391139       0.774037
+        LogisticRegression Train 0.846153           0.383676       0.781878
+        LogisticRegression  Test 0.847509           0.382973       0.780888
+----------------------------------------
+Performance for: Cluster Dataset
+Dataset Size:    247076 Rows, 37 Columns
+----------------------------------------
+                     model slice    score  balanced_accuracy  roc_auc_score
+      KNeighborsClassifier Train 0.806288           0.806288       0.886491
+      KNeighborsClassifier  Test 0.687643           0.647024       0.695948
+    DecisionTreeClassifier Train 1.000000           1.000000       1.000000
+    DecisionTreeClassifier  Test 0.381373           0.588382       0.588382
+    RandomForestClassifier Train 1.000000           1.000000       1.000000
+    RandomForestClassifier  Test 0.389208           0.620974       0.663821
+      ExtraTreesClassifier Train 1.000000           1.000000       1.000000
+      ExtraTreesClassifier  Test 0.412148           0.628580       0.691199
+GradientBoostingClassifier Train 0.923215           0.923215       0.979970
+GradientBoostingClassifier  Test 0.350580           0.601143       0.677725
+        AdaBoostClassifier Train 0.913677           0.913677       0.974349
+        AdaBoostClassifier  Test 0.336350           0.591954       0.684541
+        LogisticRegression Train 0.757971           0.757971       0.840733
+        LogisticRegression  Test 0.643672           0.713743       0.779676
+----------------------------------------
+Performance for: Base Dataset
+Dataset Size:    253680 Rows, 22 Columns
+----------------------------------------
+                     model slice    score  balanced_accuracy  roc_auc_score
+      KNeighborsClassifier Train 0.884868           0.495953       0.947302
+      KNeighborsClassifier  Test 0.822091           0.391571       0.620085
+    DecisionTreeClassifier Train 0.993667           0.969152       0.999884
+    DecisionTreeClassifier  Test 0.768291           0.401532       0.566468
+    RandomForestClassifier Train 0.993625           0.969980       0.999544
+    RandomForestClassifier  Test 0.843173           0.389135       0.739109
+      ExtraTreesClassifier Train 0.993667           0.969152       0.999884
+      ExtraTreesClassifier  Test 0.835147           0.387982       0.715327
+GradientBoostingClassifier Train 0.849417           0.391345       0.795706
+GradientBoostingClassifier  Test 0.852381           0.393922       0.788652
+        AdaBoostClassifier Train 0.847750           0.392354       0.778420
+        AdaBoostClassifier  Test 0.850205           0.394622       0.777727
+        LogisticRegression Train 0.842910           0.377913       0.760368
+        LogisticRegression  Test 0.845948           0.381667       0.757859
+----------------------------------------
+Performance for: RandomOverSample Dataset
+Dataset Size:    253680 Rows, 22 Columns
+----------------------------------------
+                     model slice    score  balanced_accuracy  roc_auc_score
+      KNeighborsClassifier Train 0.938321           0.938321       0.994424
+      KNeighborsClassifier  Test 0.761779           0.644843       0.680667
+    DecisionTreeClassifier Train 0.994408           0.994408       0.999863
+    DecisionTreeClassifier  Test 0.796436           0.586173       0.586651
+    RandomForestClassifier Train 0.994408           0.994408       0.999837
+    RandomForestClassifier  Test 0.843220           0.619147       0.798282
+      ExtraTreesClassifier Train 0.994408           0.994408       0.999863
+      ExtraTreesClassifier  Test 0.848139           0.564076       0.777653
+GradientBoostingClassifier Train 0.753463           0.753463       0.830783
+GradientBoostingClassifier  Test 0.722201           0.756250       0.834944
+        AdaBoostClassifier Train 0.747224           0.747224       0.825216
+        AdaBoostClassifier  Test 0.734090           0.753768       0.831591
+        LogisticRegression Train 0.744051           0.744051       0.821036
+        LogisticRegression  Test 0.733680           0.752482       0.827742
+----------------------------------------
+Performance for: SMOTEEN Dataset
+Dataset Size:    247076 Rows, 37 Columns
+----------------------------------------
+                     model slice    score  balanced_accuracy  roc_auc_score
+      KNeighborsClassifier Train 0.992683           0.990819       0.999991
+      KNeighborsClassifier  Test 0.652722           0.698526       0.729162
+    DecisionTreeClassifier Train 1.000000           1.000000       1.000000
+    DecisionTreeClassifier  Test 0.754213           0.681234       0.681234
+    RandomForestClassifier Train 1.000000           1.000000       1.000000
+    RandomForestClassifier  Test 0.788000           0.729354       0.825065
+      ExtraTreesClassifier Train 1.000000           1.000000       1.000000
+      ExtraTreesClassifier  Test 0.779112           0.734830       0.821417
+GradientBoostingClassifier Train 0.932059           0.927449       0.982773
+GradientBoostingClassifier  Test 0.755395           0.745872       0.827321
+        AdaBoostClassifier Train 0.915559           0.908767       0.974429
+        AdaBoostClassifier  Test 0.726011           0.744548       0.822680
+        LogisticRegression Train 0.859832           0.849090       0.929194
+        LogisticRegression  Test 0.648027           0.744161       0.824984
+----------------------------------------
+Performance for: MinMax Scaled Dataset
+Dataset Size:    253680 Rows, 22 Columns
+----------------------------------------
+                     model slice    score  balanced_accuracy  roc_auc_score
+      KNeighborsClassifier Train 0.885336           0.502229       0.946552
+      KNeighborsClassifier  Test 0.820356           0.389082       0.621951
+    DecisionTreeClassifier Train 0.993388           0.967280       0.999874
+    DecisionTreeClassifier  Test 0.769915           0.410463       0.572212
+    RandomForestClassifier Train 0.993356           0.968289       0.999535
+    RandomForestClassifier  Test 0.842558           0.387290       0.742351
+      ExtraTreesClassifier Train 0.993388           0.967280       0.999874
+      ExtraTreesClassifier  Test 0.836582           0.390821       0.719384
+GradientBoostingClassifier Train 0.850095           0.393911       0.796418
+GradientBoostingClassifier  Test 0.850615           0.391176       0.786475
+        AdaBoostClassifier Train 0.847651           0.392598       0.778744
+        AdaBoostClassifier  Test 0.849480           0.391562       0.772299
+        LogisticRegression Train 0.846026           0.384268       0.781892
+        LogisticRegression  Test 0.847619           0.381558       0.779582
+----------------------------------------
+Performance for: SMOTE Dataset
+Dataset Size:    247076 Rows, 37 Columns
+----------------------------------------
+                     model slice    score  balanced_accuracy  roc_auc_score
+      KNeighborsClassifier Train 0.928015           0.928015       0.998975
+      KNeighborsClassifier  Test 0.731419           0.663109       0.706056
+    DecisionTreeClassifier Train 1.000000           1.000000       1.000000
+    DecisionTreeClassifier  Test 0.798345           0.601000       0.601000
+    RandomForestClassifier Train 0.999994           0.999994       1.000000
+    RandomForestClassifier  Test 0.865321           0.601661       0.821956
+      ExtraTreesClassifier Train 1.000000           1.000000       1.000000
+      ExtraTreesClassifier  Test 0.861338           0.607400       0.816480
+GradientBoostingClassifier Train 0.905259           0.905259       0.968821
+GradientBoostingClassifier  Test 0.848581           0.656501       0.821694
+        AdaBoostClassifier Train 0.863351           0.863351       0.947297
+        AdaBoostClassifier  Test 0.805420           0.697236       0.808877
+        LogisticRegression Train 0.761868           0.761868       0.837497
+        LogisticRegression  Test 0.732681           0.747134       0.821808

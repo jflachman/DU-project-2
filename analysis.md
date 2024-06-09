@@ -124,5 +124,37 @@
         - average_precision_score
         - f1_score
         - precision_score
-    - [Validation curves: plotting scores to evaluate models)
+    - Validation curves: plotting scores to evaluate models
 
+## ToDo
+
+#### Balance data using RandomUndersampling
+- May need to use 0/1 diabetes instead of 0/1/2 diabetes as values of 2 will only be 3970.
+
+#### Evaluate overfitting
+- Review scores from above
+- see if balance helped with overfitting.
+
+#### Improve scores with Hyperparameter Tuning
+- Pick best model
+- Try GridSearchCV and RandomizedSearchCV
+
+
+#### Other
+
+- correlation work in features (inter-corrlation)
+- handle unbalanced data
+    - split the data into equal size for has and does not have diabetes ()
+- automate the model
+- scaling
+- optimization
+    - ????????
+
+- Encoding
+    from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder
+
+- sklearn - Model Evaluation
+    - [Cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html)
+    - [metrics](https://scikit-learn.org/stable/modules/model_evaluation.html)
+
+    
