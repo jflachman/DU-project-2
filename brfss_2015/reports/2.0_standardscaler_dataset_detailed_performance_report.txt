@@ -1,0 +1,724 @@
+
+*************************************************************************************
+********* Classification Models
+*************************************************************************************
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+Model: KNeighborsClassifier
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+------------------------------------------------------------------------
+---------- Training Data Performance
+------------------------------------------------------------------------
+Confusion Matrix
+[[155789     47   4549]
+ [  3016    207    237]
+ [ 13717     15  12683]]
+
+-----------------------
+Train score: 0.8866
+Balanced Accuracy Score: 0.5038
+ROC AUC Score: 0.9481
+Mean Squared Error: 0.4014
+------------------------------
+--- Classification values
+------------------------------
+Accuracy: 0.9027
+Precision: 0.726
+Recall: 0.4801
+F1-score: 0.578
+Specificity: 0.9708
+False Positive Rate: 0.0292
+Matthews Correlation Coefficient: nan
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.90      0.97      0.94    160385
+         1.0       0.77      0.06      0.11      3460
+         2.0       0.73      0.48      0.58     26415
+
+    accuracy                           0.89    190260
+   macro avg       0.80      0.50      0.54    190260
+weighted avg       0.88      0.89      0.87    190260
+
+------------------------------------------------------------------------
+---------- Testing Data Performance
+------------------------------------------------------------------------
+Confusion Matrix
+[[49838    54  3426]
+ [  971     3   197]
+ [ 6787    20  2124]]
+
+-----------------------
+Test score: 0.8194
+Balanced Accuracy Score: 0.3917
+ROC AUC Score: 0.6253
+Mean Squared Error: 0.6637
+------------------------------
+--- Classification values
+------------------------------
+Accuracy: 0.8355
+Precision: 0.3696
+Recall: 0.2378
+F1-score: 0.2894
+Specificity: 0.9335
+False Positive Rate: 0.0665
+Matthews Correlation Coefficient: 0.2076
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.87      0.93      0.90     53318
+         1.0       0.04      0.00      0.00      1171
+         2.0       0.37      0.24      0.29      8931
+
+    accuracy                           0.82     63420
+   macro avg       0.42      0.39      0.40     63420
+weighted avg       0.78      0.82      0.80     63420
+
+-------------------------------------------------------
+KNeighborsClassifier Performance Summary:
+-------------------------------------------------------
+                  model  slice   score  balanced_accuracy  roc_auc_score  \
+0  KNeighborsClassifier  Train  0.8866             0.5038         0.9481   
+1  KNeighborsClassifier   Test  0.8194             0.3917         0.6253   
+
+   Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  \
+0              0.4014    0.9027     0.7260  0.4801    0.5780       0.9708   
+1              0.6637    0.8355     0.3696  0.2378    0.2894       0.9335   
+
+   False Positive Rate  Matthews Correlation Coefficient  
+0               0.0292                               NaN  
+1               0.0665                            0.2076  
+-----------------------------------------------------------------------------------------
+Model: KNeighborsClassifier  --- Completed: Execution Time 219.03899502754211 seconds:
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+Model: DecisionTreeClassifier
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+------------------------------------------------------------------------
+---------- Training Data Performance
+------------------------------------------------------------------------
+Confusion Matrix
+[[160368      0     17]
+ [   189   3269      2]
+ [  1026     14  25375]]
+
+-----------------------
+Train score: 0.9934
+Balanced Accuracy Score: 0.9684
+ROC AUC Score: 0.9999
+Mean Squared Error: 0.023
+------------------------------
+--- Classification values
+------------------------------
+Accuracy: 0.9944
+Precision: 0.9993
+Recall: 0.9606
+F1-score: 0.9796
+Specificity: 0.9999
+False Positive Rate: 0.0001
+Matthews Correlation Coefficient: nan
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.99      1.00      1.00    160385
+         1.0       1.00      0.94      0.97      3460
+         2.0       1.00      0.96      0.98     26415
+
+    accuracy                           0.99    190260
+   macro avg       1.00      0.97      0.98    190260
+weighted avg       0.99      0.99      0.99    190260
+
+------------------------------------------------------------------------
+---------- Testing Data Performance
+------------------------------------------------------------------------
+Confusion Matrix
+[[45633  1209  6476]
+ [  856    40   275]
+ [ 5717   365  2849]]
+
+-----------------------
+Test score: 0.7651
+Balanced Accuracy Score: 0.403
+ROC AUC Score: 0.5675
+Mean Squared Error: 0.8117
+------------------------------
+--- Classification values
+------------------------------
+Accuracy: 0.7977
+Precision: 0.2968
+Recall: 0.319
+F1-score: 0.3075
+Specificity: 0.8761
+False Positive Rate: 0.1239
+Matthews Correlation Coefficient: 0.1893
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.87      0.86      0.86     53318
+         1.0       0.02      0.03      0.03      1171
+         2.0       0.30      0.32      0.31      8931
+
+    accuracy                           0.77     63420
+   macro avg       0.40      0.40      0.40     63420
+weighted avg       0.78      0.77      0.77     63420
+
+-------------------------------------------------------
+DecisionTreeClassifier Performance Summary:
+-------------------------------------------------------
+                    model  slice   score  balanced_accuracy  roc_auc_score  \
+0  DecisionTreeClassifier  Train  0.9934             0.9684         0.9999   
+1  DecisionTreeClassifier   Test  0.7651             0.4030         0.5675   
+
+   Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  \
+0              0.0230    0.9944     0.9993  0.9606    0.9796       0.9999   
+1              0.8117    0.7977     0.2968  0.3190    0.3075       0.8761   
+
+   False Positive Rate  Matthews Correlation Coefficient  
+0               0.0001                               NaN  
+1               0.1239                            0.1893  
+-----------------------------------------------------------------------------------------
+Model: DecisionTreeClassifier  --- Completed: Execution Time 2.4737462997436523 seconds:
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+Model: RandomForestClassifier
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+------------------------------------------------------------------------
+---------- Training Data Performance
+------------------------------------------------------------------------
+Confusion Matrix
+[[160251      6    128]
+ [   183   3261     16]
+ [   920      2  25493]]
+
+-----------------------
+Train score: 0.9934
+Balanced Accuracy Score: 0.9689
+ROC AUC Score: 0.9995
+Mean Squared Error: 0.0231
+------------------------------
+--- Classification values
+------------------------------
+Accuracy: 0.9944
+Precision: 0.9944
+Recall: 0.9651
+F1-score: 0.9795
+Specificity: 0.9991
+False Positive Rate: 0.0009
+Matthews Correlation Coefficient: nan
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.99      1.00      1.00    160385
+         1.0       1.00      0.94      0.97      3460
+         2.0       0.99      0.97      0.98     26415
+
+    accuracy                           0.99    190260
+   macro avg       1.00      0.97      0.98    190260
+weighted avg       0.99      0.99      0.99    190260
+
+------------------------------------------------------------------------
+---------- Testing Data Performance
+------------------------------------------------------------------------
+Confusion Matrix
+[[51601    49  1668]
+ [ 1056     0   115]
+ [ 7160     8  1763]]
+
+-----------------------
+Test score: 0.8414
+Balanced Accuracy Score: 0.3884
+ROC AUC Score: 0.7386
+Mean Squared Error: 0.5762
+------------------------------
+--- Classification values
+------------------------------
+Accuracy: 0.8589
+Precision: 0.4972
+Recall: 0.1974
+F1-score: 0.2826
+Specificity: 0.9673
+False Positive Rate: 0.0327
+Matthews Correlation Coefficient: 0.2493
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.86      0.97      0.91     53318
+         1.0       0.00      0.00      0.00      1171
+         2.0       0.50      0.20      0.28      8931
+
+    accuracy                           0.84     63420
+   macro avg       0.45      0.39      0.40     63420
+weighted avg       0.80      0.84      0.81     63420
+
+-------------------------------------------------------
+RandomForestClassifier Performance Summary:
+-------------------------------------------------------
+                    model  slice   score  balanced_accuracy  roc_auc_score  \
+0  RandomForestClassifier  Train  0.9934             0.9689         0.9995   
+1  RandomForestClassifier   Test  0.8414             0.3884         0.7386   
+
+   Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  \
+0              0.0231    0.9944     0.9944  0.9651    0.9795       0.9991   
+1              0.5762    0.8589     0.4972  0.1974    0.2826       0.9673   
+
+   False Positive Rate  Matthews Correlation Coefficient  
+0               0.0009                               NaN  
+1               0.0327                            0.2493  
+-----------------------------------------------------------------------------------------
+Model: RandomForestClassifier  --- Completed: Execution Time 38.34437108039856 seconds:
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+Model: ExtraTreesClassifier
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+------------------------------------------------------------------------
+---------- Training Data Performance
+------------------------------------------------------------------------
+Confusion Matrix
+[[160368      0     17]
+ [   189   3269      2]
+ [  1026     14  25375]]
+
+-----------------------
+Train score: 0.9934
+Balanced Accuracy Score: 0.9684
+ROC AUC Score: 0.9999
+Mean Squared Error: 0.023
+------------------------------
+--- Classification values
+------------------------------
+Accuracy: 0.9944
+Precision: 0.9993
+Recall: 0.9606
+F1-score: 0.9796
+Specificity: 0.9999
+False Positive Rate: 0.0001
+Matthews Correlation Coefficient: nan
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.99      1.00      1.00    160385
+         1.0       1.00      0.94      0.97      3460
+         2.0       1.00      0.96      0.98     26415
+
+    accuracy                           0.99    190260
+   macro avg       1.00      0.97      0.98    190260
+weighted avg       0.99      0.99      0.99    190260
+
+------------------------------------------------------------------------
+---------- Testing Data Performance
+------------------------------------------------------------------------
+Confusion Matrix
+[[51065   130  2123]
+ [ 1036     5   130]
+ [ 7150    25  1756]]
+
+-----------------------
+Test score: 0.833
+Balanced Accuracy Score: 0.3862
+ROC AUC Score: 0.717
+Mean Squared Error: 0.6057
+------------------------------
+--- Classification values
+------------------------------
+Accuracy: 0.8513
+Precision: 0.438
+Recall: 0.1966
+F1-score: 0.2714
+Specificity: 0.9587
+False Positive Rate: 0.0413
+Matthews Correlation Coefficient: 0.2219
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.86      0.96      0.91     53318
+         1.0       0.03      0.00      0.01      1171
+         2.0       0.44      0.20      0.27      8931
+
+    accuracy                           0.83     63420
+   macro avg       0.44      0.39      0.40     63420
+weighted avg       0.79      0.83      0.80     63420
+
+-------------------------------------------------------
+ExtraTreesClassifier Performance Summary:
+-------------------------------------------------------
+                  model  slice   score  balanced_accuracy  roc_auc_score  \
+0  ExtraTreesClassifier  Train  0.9934             0.9684         0.9999   
+1  ExtraTreesClassifier   Test  0.8330             0.3862         0.7170   
+
+   Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  \
+0              0.0230    0.9944     0.9993  0.9606    0.9796       0.9999   
+1              0.6057    0.8513     0.4380  0.1966    0.2714       0.9587   
+
+   False Positive Rate  Matthews Correlation Coefficient  
+0               0.0001                               NaN  
+1               0.0413                            0.2219  
+-----------------------------------------------------------------------------------------
+Model: ExtraTreesClassifier  --- Completed: Execution Time 46.89691877365112 seconds:
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+Model: GradientBoostingClassifier
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+------------------------------------------------------------------------
+---------- Training Data Performance
+------------------------------------------------------------------------
+Confusion Matrix
+[[156702      0   3683]
+ [  3119      5    336]
+ [ 21251      0   5164]]
+
+-----------------------
+Train score: 0.8508
+Balanced Accuracy Score: 0.3913
+ROC AUC Score: 0.7957
+Mean Squared Error: 0.5424
+------------------------------
+--- Classification values
+------------------------------
+Accuracy: 0.8672
+Precision: 0.5623
+Recall: 0.1955
+F1-score: 0.2901
+Specificity: 0.9755
+False Positive Rate: 0.0245
+Matthews Correlation Coefficient: 0.2758
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.87      0.98      0.92    160385
+         1.0       1.00      0.00      0.00      3460
+         2.0       0.56      0.20      0.29     26415
+
+    accuracy                           0.85    190260
+   macro avg       0.81      0.39      0.40    190260
+weighted avg       0.83      0.85      0.81    190260
+
+------------------------------------------------------------------------
+---------- Testing Data Performance
+------------------------------------------------------------------------
+Confusion Matrix
+[[52117     1  1200]
+ [ 1069     0   102]
+ [ 7204     0  1727]]
+
+-----------------------
+Test score: 0.849
+Balanced Accuracy Score: 0.3903
+ROC AUC Score: 0.7885
+Mean Squared Error: 0.5485
+------------------------------
+--- Classification values
+------------------------------
+Accuracy: 0.8659
+Precision: 0.5702
+Recall: 0.1934
+F1-score: 0.2888
+Specificity: 0.9761
+False Positive Rate: 0.0239
+Matthews Correlation Coefficient: 0.2764
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.86      0.98      0.92     53318
+         1.0       0.00      0.00      0.00      1171
+         2.0       0.57      0.19      0.29      8931
+
+    accuracy                           0.85     63420
+   macro avg       0.48      0.39      0.40     63420
+weighted avg       0.81      0.85      0.81     63420
+
+-------------------------------------------------------
+GradientBoostingClassifier Performance Summary:
+-------------------------------------------------------
+                        model  slice   score  balanced_accuracy  \
+0  GradientBoostingClassifier  Train  0.8508             0.3913   
+1  GradientBoostingClassifier   Test  0.8490             0.3903   
+
+   roc_auc_score  Mean Squared Error  Accuracy  Precision  Recall  F1-score  \
+0         0.7957              0.5424    0.8672     0.5623  0.1955    0.2901   
+1         0.7885              0.5485    0.8659     0.5702  0.1934    0.2888   
+
+   Specificity  False Positive Rate  Matthews Correlation Coefficient  
+0       0.9755               0.0245                            0.2758  
+1       0.9761               0.0239                            0.2764  
+-----------------------------------------------------------------------------------------
+Model: GradientBoostingClassifier  --- Completed: Execution Time 54.82603311538696 seconds:
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+Model: AdaBoostClassifier
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+------------------------------------------------------------------------
+---------- Training Data Performance
+------------------------------------------------------------------------
+Confusion Matrix
+[[156119      0   4266]
+ [  3086      0    374]
+ [ 21068      0   5347]]
+
+-----------------------
+Train score: 0.8487
+Balanced Accuracy Score: 0.3919
+ROC AUC Score: 0.7764
+Mean Squared Error: 0.5508
+------------------------------
+--- Classification values
+------------------------------
+Accuracy: 0.8649
+Precision: 0.5354
+Recall: 0.2024
+F1-score: 0.2938
+Specificity: 0.9717
+False Positive Rate: 0.0283
+Matthews Correlation Coefficient: 0.2699
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.87      0.97      0.92    160385
+         1.0       0.00      0.00      0.00      3460
+         2.0       0.54      0.20      0.29     26415
+
+    accuracy                           0.85    190260
+   macro avg       0.47      0.39      0.40    190260
+weighted avg       0.80      0.85      0.81    190260
+
+------------------------------------------------------------------------
+---------- Testing Data Performance
+------------------------------------------------------------------------
+Confusion Matrix
+[[51937     0  1381]
+ [ 1054     0   117]
+ [ 7122     0  1809]]
+
+-----------------------
+Test score: 0.8475
+Balanced Accuracy Score: 0.3922
+ROC AUC Score: 0.7712
+Mean Squared Error: 0.5548
+------------------------------
+--- Classification values
+------------------------------
+Accuracy: 0.8641
+Precision: 0.547
+Recall: 0.2026
+F1-score: 0.2957
+Specificity: 0.9725
+False Positive Rate: 0.0275
+Matthews Correlation Coefficient: 0.2739
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.86      0.97      0.92     53318
+         1.0       0.00      0.00      0.00      1171
+         2.0       0.55      0.20      0.30      8931
+
+    accuracy                           0.85     63420
+   macro avg       0.47      0.39      0.40     63420
+weighted avg       0.80      0.85      0.81     63420
+
+-------------------------------------------------------
+AdaBoostClassifier Performance Summary:
+-------------------------------------------------------
+                model  slice   score  balanced_accuracy  roc_auc_score  \
+0  AdaBoostClassifier  Train  0.8487             0.3919         0.7764   
+1  AdaBoostClassifier   Test  0.8475             0.3922         0.7712   
+
+   Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  \
+0              0.5508    0.8649     0.5354  0.2024    0.2938       0.9717   
+1              0.5548    0.8641     0.5470  0.2026    0.2957       0.9725   
+
+   False Positive Rate  Matthews Correlation Coefficient  
+0               0.0283                            0.2699  
+1               0.0275                            0.2739  
+-----------------------------------------------------------------------------------------
+Model: AdaBoostClassifier  --- Completed: Execution Time 7.699764013290405 seconds:
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+Model: LogisticRegression
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+------------------------------------------------------------------------
+---------- Training Data Performance
+------------------------------------------------------------------------
+Confusion Matrix
+[[156549      0   3836]
+ [  3149      0    311]
+ [ 21821      0   4594]]
+
+-----------------------
+Train score: 0.847
+Balanced Accuracy Score: 0.3833
+ROC AUC Score: 0.7817
+Mean Squared Error: 0.5576
+------------------------------
+--- Classification values
+------------------------------
+Accuracy: 0.8635
+Precision: 0.5256
+Recall: 0.1739
+F1-score: 0.2613
+Specificity: 0.9747
+False Positive Rate: 0.0253
+Matthews Correlation Coefficient: 0.2454
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.86      0.98      0.92    160385
+         1.0       0.00      0.00      0.00      3460
+         2.0       0.53      0.17      0.26     26415
+
+    accuracy                           0.85    190260
+   macro avg       0.46      0.38      0.39    190260
+weighted avg       0.80      0.85      0.81    190260
+
+------------------------------------------------------------------------
+---------- Testing Data Performance
+------------------------------------------------------------------------
+Confusion Matrix
+[[52070     0  1248]
+ [ 1079     0    92]
+ [ 7410     0  1521]]
+
+-----------------------
+Test score: 0.845
+Balanced Accuracy Score: 0.3823
+ROC AUC Score: 0.7826
+Mean Squared Error: 0.5645
+------------------------------
+--- Classification values
+------------------------------
+Accuracy: 0.862
+Precision: 0.5316
+Recall: 0.1703
+F1-score: 0.258
+Specificity: 0.9754
+False Positive Rate: 0.0246
+Matthews Correlation Coefficient: 0.2442
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.86      0.98      0.91     53318
+         1.0       0.00      0.00      0.00      1171
+         2.0       0.53      0.17      0.26      8931
+
+    accuracy                           0.85     63420
+   macro avg       0.46      0.38      0.39     63420
+weighted avg       0.80      0.85      0.81     63420
+
+-------------------------------------------------------
+LogisticRegression Performance Summary:
+-------------------------------------------------------
+                model  slice  score  balanced_accuracy  roc_auc_score  \
+0  LogisticRegression  Train  0.847             0.3833         0.7817   
+1  LogisticRegression   Test  0.845             0.3823         0.7826   
+
+   Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  \
+0              0.5576    0.8635     0.5256  0.1739    0.2613       0.9747   
+1              0.5645    0.8620     0.5316  0.1703    0.2580       0.9754   
+
+   False Positive Rate  Matthews Correlation Coefficient  
+0               0.0253                            0.2454  
+1               0.0246                            0.2442  
+-----------------------------------------------------------------------------------------
+Model: LogisticRegression  --- Completed: Execution Time 3.7953507900238037 seconds:
+-----------------------------------------------------------------------------------------
+
+************************************************
+****** Classification Models Performance Summary
+************************************************
+                         model  slice   score  balanced_accuracy  \
+0         KNeighborsClassifier  Train  0.8866             0.5038   
+1         KNeighborsClassifier   Test  0.8194             0.3917   
+2       DecisionTreeClassifier  Train  0.9934             0.9684   
+3       DecisionTreeClassifier   Test  0.7651             0.4030   
+4       RandomForestClassifier  Train  0.9934             0.9689   
+5       RandomForestClassifier   Test  0.8414             0.3884   
+6         ExtraTreesClassifier  Train  0.9934             0.9684   
+7         ExtraTreesClassifier   Test  0.8330             0.3862   
+8   GradientBoostingClassifier  Train  0.8508             0.3913   
+9   GradientBoostingClassifier   Test  0.8490             0.3903   
+10          AdaBoostClassifier  Train  0.8487             0.3919   
+11          AdaBoostClassifier   Test  0.8475             0.3922   
+12          LogisticRegression  Train  0.8470             0.3833   
+13          LogisticRegression   Test  0.8450             0.3823   
+
+    roc_auc_score  Mean Squared Error  Accuracy  Precision  Recall  F1-score  \
+0          0.9481              0.4014    0.9027     0.7260  0.4801    0.5780   
+1          0.6253              0.6637    0.8355     0.3696  0.2378    0.2894   
+2          0.9999              0.0230    0.9944     0.9993  0.9606    0.9796   
+3          0.5675              0.8117    0.7977     0.2968  0.3190    0.3075   
+4          0.9995              0.0231    0.9944     0.9944  0.9651    0.9795   
+5          0.7386              0.5762    0.8589     0.4972  0.1974    0.2826   
+6          0.9999              0.0230    0.9944     0.9993  0.9606    0.9796   
+7          0.7170              0.6057    0.8513     0.4380  0.1966    0.2714   
+8          0.7957              0.5424    0.8672     0.5623  0.1955    0.2901   
+9          0.7885              0.5485    0.8659     0.5702  0.1934    0.2888   
+10         0.7764              0.5508    0.8649     0.5354  0.2024    0.2938   
+11         0.7712              0.5548    0.8641     0.5470  0.2026    0.2957   
+12         0.7817              0.5576    0.8635     0.5256  0.1739    0.2613   
+13         0.7826              0.5645    0.8620     0.5316  0.1703    0.2580   
+
+    Specificity  False Positive Rate  Matthews Correlation Coefficient  
+0        0.9708               0.0292                               NaN  
+1        0.9335               0.0665                            0.2076  
+2        0.9999               0.0001                               NaN  
+3        0.8761               0.1239                            0.1893  
+4        0.9991               0.0009                               NaN  
+5        0.9673               0.0327                            0.2493  
+6        0.9999               0.0001                               NaN  
+7        0.9587               0.0413                            0.2219  
+8        0.9755               0.0245                            0.2758  
+9        0.9761               0.0239                            0.2764  
+10       0.9717               0.0283                            0.2699  
+11       0.9725               0.0275                            0.2739  
+12       0.9747               0.0253                            0.2454  
+13       0.9754               0.0246                            0.2442  
+
+*************************************************************************************
+********* Classification Models  **************** Completed: Execution Time 373.09835863113403 seconds:
+*************************************************************************************

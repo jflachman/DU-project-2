@@ -182,7 +182,7 @@ Using the following sampling methods improved the metric results:
 **Metric Evaluation**
 
 The metrics for all the `modified datasets` and `models` are provided in the [reports directory](reports/).  The [performance summary](reports/performance_report.txt) shows the performance of all model executions.  The detailed reports are listed below:
-- The details of the runs are contained in these file:
+- The details of the 2015 dataset runs are contained in these file:
     - [base_dataset_detailed_performance_report.txt](reports/base_dataset_detailed_performance_report.txt)
     - [binary_dataset_detailed_performance_report.txt](reports/binary_dataset_detailed_performance_report.txt)
     - [standard_scaled_dataset_detailed_performance_report.txt](reports/standard_scaled_dataset_detailed_performance_report.txt)
@@ -193,6 +193,16 @@ The metrics for all the `modified datasets` and `models` are provided in the [re
     - [smote_dataset_detailed_performance_report.txt](reports/smote_dataset_detailed_performance_report.txt)
     - [smoteen_dataset_detailed_performance_report.txt](reports/smoteen_dataset_detailed_performance_report.txt)
 
+- The details of the 2015 dataset runs are contained in these file:
+    - [base_dataset_detailed_performance_report.txt](reports/base_dataset_detailed_performance_report.txt)
+    - [binary_dataset_detailed_performance_report.txt](reports/binary_dataset_detailed_performance_report.txt)
+    - [standard_scaled_dataset_detailed_performance_report.txt](reports/standard_scaled_dataset_detailed_performance_report.txt)
+    - [minmax_scaled_dataset_detailed_performance_report.txt](reports/minmax_scaled_dataset_detailed_performance_report.txt)
+    - [randomundersampled_dataset_detailed_performance_report.txt](reports/randomundersampled_dataset_detailed_performance_report.txt)
+    - [randomoversample_dataset_detailed_performance_report.txt](reports/randomoversample_dataset_detailed_performance.txt)
+    - [cluster_dataset_detailed_performance_report.txt](reports/cluster_dataset_detailed_performance_report.txt)
+    - [smote_dataset_detailed_performance_report.txt](reports/smote_dataset_detailed_performance_report.txt)
+    - [smoteen_dataset_detailed_performance_report.txt](reports/smoteen_dataset_detailed_performance_report.txt)
 
 
 
