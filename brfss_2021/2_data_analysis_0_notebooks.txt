@@ -1,0 +1,10 @@
+2_data_analysis_1_base_data.ipynb
+2_data_analysis_2.0_standard_scaled_data.ipynb
+2_data_analysis_2.1_minmax_scaled_data.ipynb
+2_data_analysis_3_ss_binary_data.ipynb
+2_data_analysis_4_ss_b_random_undersample.ipynb
+2_data_analysis_5_ss_b_random_oversample.ipynb
+2_data_analysis_6_sb_cluster.ipynb
+2_data_analysis_7_sb_smote.ipynb
+2_data_analysis_8_sb_smoteen.ipynb
+3_performance_report.ipynb

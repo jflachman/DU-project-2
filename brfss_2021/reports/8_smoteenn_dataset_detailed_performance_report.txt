@@ -1,0 +1,528 @@
+
+*************************************************************************************
+********* Classification Models
+*************************************************************************************
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+Model: KNeighborsClassifier
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+---------- Training Data Performance
+------------------------------------
+Confusion Matrix
+[[100675   1915]
+ [    20 155694]]
+
+-----------------------
+Train score: 0.9925088268087215
+Balanced Accuracy Score: 0.9906025113489367
+ROC AUC Score: 0.9999886950923419
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       1.00      0.98      0.99    102590
+         1.0       0.99      1.00      0.99    155714
+
+    accuracy                           0.99    258304
+   macro avg       0.99      0.99      0.99    258304
+weighted avg       0.99      0.99      0.99    258304
+
+---------- Testing Data Performance
+------------------------------------
+Confusion Matrix
+[[33880 19648]
+ [ 1905  6336]]
+
+-----------------------
+Test score: 0.6510709255451764
+Balanced Accuracy Score: 0.7008892515017674
+ROC AUC Score: 0.729361872440075
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.95      0.63      0.76     53528
+         1.0       0.24      0.77      0.37      8241
+
+    accuracy                           0.65     61769
+   macro avg       0.60      0.70      0.56     61769
+weighted avg       0.85      0.65      0.71     61769
+
+-------------------------------------------------------
+KNeighborsClassifier Performance Summary:
+-------------------------------------------------------
+                  model  slice     score  balanced_accuracy  roc_auc_score  \
+0  KNeighborsClassifier  Train  0.992509           0.990603       0.999989   
+1  KNeighborsClassifier   Test  0.651071           0.700889       0.729362   
+
+                 confusion_matrix  \
+0  [[100675, 1915], [20, 155694]]   
+1  [[33880, 19648], [1905, 6336]]   
+
+                               classification_report  
+0                precision    recall  f1-score   ...  
+1                precision    recall  f1-score   ...  
+-----------------------------------------------------------------------------------------
+Model: KNeighborsClassifier  --- Completed: Execution Time 593.3990271091461 seconds:
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+Model: DecisionTreeClassifier
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+---------- Training Data Performance
+------------------------------------
+Confusion Matrix
+[[102590      0]
+ [     0 155714]]
+
+-----------------------
+Train score: 1.0
+Balanced Accuracy Score: 1.0
+ROC AUC Score: 1.0
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       1.00      1.00      1.00    102590
+         1.0       1.00      1.00      1.00    155714
+
+    accuracy                           1.00    258304
+   macro avg       1.00      1.00      1.00    258304
+weighted avg       1.00      1.00      1.00    258304
+
+---------- Testing Data Performance
+------------------------------------
+Confusion Matrix
+[[42010 11518]
+ [ 3568  4673]]
+
+-----------------------
+Test score: 0.7557674561673331
+Balanced Accuracy Score: 0.6759328655177441
+ROC AUC Score: 0.6759328655177441
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.92      0.78      0.85     53528
+         1.0       0.29      0.57      0.38      8241
+
+    accuracy                           0.76     61769
+   macro avg       0.61      0.68      0.62     61769
+weighted avg       0.84      0.76      0.79     61769
+
+-------------------------------------------------------
+DecisionTreeClassifier Performance Summary:
+-------------------------------------------------------
+                    model  slice     score  balanced_accuracy  roc_auc_score  \
+0  DecisionTreeClassifier  Train  1.000000           1.000000       1.000000   
+1  DecisionTreeClassifier   Test  0.755767           0.675933       0.675933   
+
+                 confusion_matrix  \
+0      [[102590, 0], [0, 155714]]   
+1  [[42010, 11518], [3568, 4673]]   
+
+                               classification_report  
+0                precision    recall  f1-score   ...  
+1                precision    recall  f1-score   ...  
+-----------------------------------------------------------------------------------------
+Model: DecisionTreeClassifier  --- Completed: Execution Time 17.201274156570435 seconds:
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+Model: RandomForestClassifier
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+---------- Training Data Performance
+------------------------------------
+Confusion Matrix
+[[102590      0]
+ [     1 155713]]
+
+-----------------------
+Train score: 0.999996128592666
+Balanced Accuracy Score: 0.9999967889849339
+ROC AUC Score: 0.9999999999061016
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       1.00      1.00      1.00    102590
+         1.0       1.00      1.00      1.00    155714
+
+    accuracy                           1.00    258304
+   macro avg       1.00      1.00      1.00    258304
+weighted avg       1.00      1.00      1.00    258304
+
+---------- Testing Data Performance
+------------------------------------
+Confusion Matrix
+[[43030 10498]
+ [ 2806  5435]]
+
+-----------------------
+Test score: 0.7846168790169826
+Balanced Accuracy Score: 0.7316928426931544
+ROC AUC Score: 0.8240280649908865
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.94      0.80      0.87     53528
+         1.0       0.34      0.66      0.45      8241
+
+    accuracy                           0.78     61769
+   macro avg       0.64      0.73      0.66     61769
+weighted avg       0.86      0.78      0.81     61769
+
+-------------------------------------------------------
+RandomForestClassifier Performance Summary:
+-------------------------------------------------------
+                    model  slice     score  balanced_accuracy  roc_auc_score  \
+0  RandomForestClassifier  Train  0.999996           0.999997       1.000000   
+1  RandomForestClassifier   Test  0.784617           0.731693       0.824028   
+
+                 confusion_matrix  \
+0      [[102590, 0], [1, 155713]]   
+1  [[43030, 10498], [2806, 5435]]   
+
+                               classification_report  
+0                precision    recall  f1-score   ...  
+1                precision    recall  f1-score   ...  
+-----------------------------------------------------------------------------------------
+Model: RandomForestClassifier  --- Completed: Execution Time 126.83505821228027 seconds:
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+Model: ExtraTreesClassifier
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+---------- Training Data Performance
+------------------------------------
+Confusion Matrix
+[[102590      0]
+ [     0 155714]]
+
+-----------------------
+Train score: 1.0
+Balanced Accuracy Score: 1.0
+ROC AUC Score: 1.0
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       1.00      1.00      1.00    102590
+         1.0       1.00      1.00      1.00    155714
+
+    accuracy                           1.00    258304
+   macro avg       1.00      1.00      1.00    258304
+weighted avg       1.00      1.00      1.00    258304
+
+---------- Testing Data Performance
+------------------------------------
+Confusion Matrix
+[[42273 11255]
+ [ 2661  5580]]
+
+-----------------------
+Test score: 0.7747089964221535
+Balanced Accuracy Score: 0.7334192531170945
+ROC AUC Score: 0.8204275159229061
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.94      0.79      0.86     53528
+         1.0       0.33      0.68      0.45      8241
+
+    accuracy                           0.77     61769
+   macro avg       0.64      0.73      0.65     61769
+weighted avg       0.86      0.77      0.80     61769
+
+-------------------------------------------------------
+ExtraTreesClassifier Performance Summary:
+-------------------------------------------------------
+                  model  slice     score  balanced_accuracy  roc_auc_score  \
+0  ExtraTreesClassifier  Train  1.000000           1.000000       1.000000   
+1  ExtraTreesClassifier   Test  0.774709           0.733419       0.820428   
+
+                 confusion_matrix  \
+0      [[102590, 0], [0, 155714]]   
+1  [[42273, 11255], [2661, 5580]]   
+
+                               classification_report  
+0                precision    recall  f1-score   ...  
+1                precision    recall  f1-score   ...  
+-----------------------------------------------------------------------------------------
+Model: ExtraTreesClassifier  --- Completed: Execution Time 94.16055035591125 seconds:
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+Model: GradientBoostingClassifier
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+---------- Training Data Performance
+------------------------------------
+Confusion Matrix
+[[ 92978   9612]
+ [  7701 148013]]
+
+-----------------------
+Train score: 0.932974324826561
+Balanced Accuracy Score: 0.9284253017605791
+ROC AUC Score: 0.9830210032385924
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.92      0.91      0.91    102590
+         1.0       0.94      0.95      0.94    155714
+
+    accuracy                           0.93    258304
+   macro avg       0.93      0.93      0.93    258304
+weighted avg       0.93      0.93      0.93    258304
+
+---------- Testing Data Performance
+------------------------------------
+Confusion Matrix
+[[40461 13067]
+ [ 2164  6077]]
+
+-----------------------
+Test score: 0.753420000323787
+Balanced Accuracy Score: 0.7466476395103994
+ROC AUC Score: 0.8265037189703524
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.95      0.76      0.84     53528
+         1.0       0.32      0.74      0.44      8241
+
+    accuracy                           0.75     61769
+   macro avg       0.63      0.75      0.64     61769
+weighted avg       0.86      0.75      0.79     61769
+
+-------------------------------------------------------
+GradientBoostingClassifier Performance Summary:
+-------------------------------------------------------
+                        model  slice     score  balanced_accuracy  \
+0  GradientBoostingClassifier  Train  0.932974           0.928425   
+1  GradientBoostingClassifier   Test  0.753420           0.746648   
+
+   roc_auc_score                 confusion_matrix  \
+0       0.983021  [[92978, 9612], [7701, 148013]]   
+1       0.826504   [[40461, 13067], [2164, 6077]]   
+
+                               classification_report  
+0                precision    recall  f1-score   ...  
+1                precision    recall  f1-score   ...  
+-----------------------------------------------------------------------------------------
+Model: GradientBoostingClassifier  --- Completed: Execution Time 375.08259677886963 seconds:
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+Model: AdaBoostClassifier
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+---------- Training Data Performance
+------------------------------------
+Confusion Matrix
+[[ 89753  12837]
+ [  8905 146809]]
+
+-----------------------
+Train score: 0.9158278617443013
+Balanced Accuracy Score: 0.9088413333923383
+ROC AUC Score: 0.9746521234353427
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.91      0.87      0.89    102590
+         1.0       0.92      0.94      0.93    155714
+
+    accuracy                           0.92    258304
+   macro avg       0.91      0.91      0.91    258304
+weighted avg       0.92      0.92      0.92    258304
+
+---------- Testing Data Performance
+------------------------------------
+Confusion Matrix
+[[38346 15182]
+ [ 1835  6406]]
+
+-----------------------
+Test score: 0.724505820071557
+Balanced Accuracy Score: 0.7468527937280836
+ROC AUC Score: 0.821461659935774
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.95      0.72      0.82     53528
+         1.0       0.30      0.78      0.43      8241
+
+    accuracy                           0.72     61769
+   macro avg       0.63      0.75      0.62     61769
+weighted avg       0.87      0.72      0.77     61769
+
+-------------------------------------------------------
+AdaBoostClassifier Performance Summary:
+-------------------------------------------------------
+                model  slice     score  balanced_accuracy  roc_auc_score  \
+0  AdaBoostClassifier  Train  0.915828           0.908841       0.974652   
+1  AdaBoostClassifier   Test  0.724506           0.746853       0.821462   
+
+                   confusion_matrix  \
+0  [[89753, 12837], [8905, 146809]]   
+1    [[38346, 15182], [1835, 6406]]   
+
+                               classification_report  
+0                precision    recall  f1-score   ...  
+1                precision    recall  f1-score   ...  
+-----------------------------------------------------------------------------------------
+Model: AdaBoostClassifier  --- Completed: Execution Time 84.14477801322937 seconds:
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+Model: LogisticRegression
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+---------- Training Data Performance
+------------------------------------
+Confusion Matrix
+[[ 82102  20488]
+ [ 15454 140260]]
+
+-----------------------
+Train score: 0.8608538776015857
+Balanced Accuracy Score: 0.8505231862499552
+ROC AUC Score: 0.9306901333177273
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.84      0.80      0.82    102590
+         1.0       0.87      0.90      0.89    155714
+
+    accuracy                           0.86    258304
+   macro avg       0.86      0.85      0.85    258304
+weighted avg       0.86      0.86      0.86    258304
+
+---------- Testing Data Performance
+------------------------------------
+Confusion Matrix
+[[32488 21040]
+ [ 1010  7231]]
+
+-----------------------
+Test score: 0.6430248182745391
+Balanced Accuracy Score: 0.7421883731950278
+ROC AUC Score: 0.822334720080951
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.97      0.61      0.75     53528
+         1.0       0.26      0.88      0.40      8241
+
+    accuracy                           0.64     61769
+   macro avg       0.61      0.74      0.57     61769
+weighted avg       0.87      0.64      0.70     61769
+
+-------------------------------------------------------
+LogisticRegression Performance Summary:
+-------------------------------------------------------
+                model  slice     score  balanced_accuracy  roc_auc_score  \
+0  LogisticRegression  Train  0.860854           0.850523       0.930690   
+1  LogisticRegression   Test  0.643025           0.742188       0.822335   
+
+                    confusion_matrix  \
+0  [[82102, 20488], [15454, 140260]]   
+1     [[32488, 21040], [1010, 7231]]   
+
+                               classification_report  
+0                precision    recall  f1-score   ...  
+1                precision    recall  f1-score   ...  
+-----------------------------------------------------------------------------------------
+Model: LogisticRegression  --- Completed: Execution Time 4.583808422088623 seconds:
+-----------------------------------------------------------------------------------------
+
+************************************************
+****** Classification Models Performance Summary
+************************************************
+                         model  slice     score  balanced_accuracy  \
+0         KNeighborsClassifier  Train  0.992509           0.990603   
+1         KNeighborsClassifier   Test  0.651071           0.700889   
+2       DecisionTreeClassifier  Train  1.000000           1.000000   
+3       DecisionTreeClassifier   Test  0.755767           0.675933   
+4       RandomForestClassifier  Train  0.999996           0.999997   
+5       RandomForestClassifier   Test  0.784617           0.731693   
+6         ExtraTreesClassifier  Train  1.000000           1.000000   
+7         ExtraTreesClassifier   Test  0.774709           0.733419   
+8   GradientBoostingClassifier  Train  0.932974           0.928425   
+9   GradientBoostingClassifier   Test  0.753420           0.746648   
+10          AdaBoostClassifier  Train  0.915828           0.908841   
+11          AdaBoostClassifier   Test  0.724506           0.746853   
+12          LogisticRegression  Train  0.860854           0.850523   
+13          LogisticRegression   Test  0.643025           0.742188   
+
+    roc_auc_score                   confusion_matrix  \
+0        0.999989     [[100675, 1915], [20, 155694]]   
+1        0.729362     [[33880, 19648], [1905, 6336]]   
+2        1.000000         [[102590, 0], [0, 155714]]   
+3        0.675933     [[42010, 11518], [3568, 4673]]   
+4        1.000000         [[102590, 0], [1, 155713]]   
+5        0.824028     [[43030, 10498], [2806, 5435]]   
+6        1.000000         [[102590, 0], [0, 155714]]   
+7        0.820428     [[42273, 11255], [2661, 5580]]   
+8        0.983021    [[92978, 9612], [7701, 148013]]   
+9        0.826504     [[40461, 13067], [2164, 6077]]   
+10       0.974652   [[89753, 12837], [8905, 146809]]   
+11       0.821462     [[38346, 15182], [1835, 6406]]   
+12       0.930690  [[82102, 20488], [15454, 140260]]   
+13       0.822335     [[32488, 21040], [1010, 7231]]   
+
+                                classification_report  
+0                 precision    recall  f1-score   ...  
+1                 precision    recall  f1-score   ...  
+2                 precision    recall  f1-score   ...  
+3                 precision    recall  f1-score   ...  
+4                 precision    recall  f1-score   ...  
+5                 precision    recall  f1-score   ...  
+6                 precision    recall  f1-score   ...  
+7                 precision    recall  f1-score   ...  
+8                 precision    recall  f1-score   ...  
+9                 precision    recall  f1-score   ...  
+10                precision    recall  f1-score   ...  
+11                precision    recall  f1-score   ...  
+12                precision    recall  f1-score   ...  
+13                precision    recall  f1-score   ...  
+
+*************************************************************************************
+********* Classification Models  **************** Completed: Execution Time 1295.4256613254547 seconds:
+*************************************************************************************
