@@ -38,15 +38,23 @@ In all, 63 configurations of binary/012, scaling & sampling method, and models w
 
 The metrics were evaluated and a few targeted dataset configurations were selected to optimize.
 
-## Potential Datasets Evaluated
-
-The team brainstormed multiple dataset options for this project.  Some of the datasets reviewed are listed in the [datasets](data_sets.md) files.
 
 # Project Details:
 
 ## Ideation
 
+### Potential Datasets Evaluated
+
+The team brainstormed multiple dataset options for this project.  Some of the datasets reviewed are listed in the [datasets](data_sets.md) files.
+
+The team was interested in diabetes predictions using data from the The CDC Behavioral Risk Factor Surveillance System (BRFSS). The BRFSS is an annual phone survey of 300K-400K respondents.
+
 ## Feature Selection
+
+
+### Understanding Diabetes
+---
+I order to understand the features, it is important to understand the risks and indicators of diabetes.
 
 **Risk Factors**
 
@@ -76,9 +84,26 @@ Diabetes is a chronic condition that can be diagnosed by a medical professional.
 - **Infections**: Urinary tract infections (UTIs) or yeast infections
 - **Sensations**: Unusual sensations like tingling, burning, or pricklin
 
+### Features
+
+A list of features was pulled from the UCI/Kaggle documentation on the 2015 dataset.  In addition, the [2021 codebook](https://www.cdc.gov/brfss/annual_data/2021/pdf/codebook21_llcp-v2-508.pdf) was imported and parsed.  See the work in [data_cleaning](data_cleaning).  The features in the codebook were evaluated, selected and a summare of the selected [2021 features](docs/diabetes_features_2021.md) was written to a file.
+
 ## Data Cleaning
 
+A contributing factor to including 2021 data was that the features on 2015 data on UCI/Kaggle were already selected and cleaned.  Therefore, the team put in a considerable effort to automate including other CDC BRFSS survy years and clean the data.  Post 2015, 2021 had the most features related to the risk factors for diabetes.  Thus 2021 was selected as the best year to clean.  A list of years and features counts pulled from the CDC website is recorded in the [CDC - BRFSS Datasets by year](docs/CDC_BRFSS_Datasets_by_year.md) file.
+
+The CDC also has a list of [Diabetes indicators for machine learning](https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators)
+
+The files [ml_clean_config.py](pkgs/ml_clean_config.py) and [ml_clean_features.py](pkgs/ml_clean_features.py) contain the functions written to handle processing the codebooks, selecting features and cleaning the data.
+
+**Cleaning**
+The CDC BRFSS Survery data responses were already provided a numeric values.  Therefore, Get_dummies, OneHotEncoder and OrdinalEncoder were not required.  However, it was necessary to do some cleaning.  Some responses were unknown or refused and neede to be dropped.  Other values needed to be scaled (i.e. weight of 4015 kg needed to be scaled to 40.15 kg).  Finally, the numeric values for some responses needed to be transformed.  i.e. 88, no days transformed to 0 days. where 1-30 was number of days of month of an response.  
+
+Substantial time was spent productionizing the processing of the CDC Codebooks, simplifying feature extraction and feature cleaning.  The fules supporting processing the codebooks and cleaning the data can be found in the [data_cleaning](data_cleaning) directory.
+
 ## Data Analysis
+
+
 
 ## Initial Conclusions
 
@@ -86,7 +111,11 @@ Diabetes is a chronic condition that can be diagnosed by a medical professional.
 ## Optimization / Hyperparameter tuning
 
 
+# Conclusions
 
+---
+---
+---
 
 
 
