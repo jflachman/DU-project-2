@@ -205,15 +205,19 @@ def run_random_search(model, o_params, data):
     import pickle
 
     # Generate the Performance Report and send prints to osc.stdout
-    with OutStreamCapture() as osc:
-        perf_df = random_search(model, o_params['param_distributions'], data, o_params['scoring'], o_params['verbose'])
-
+    if o_params['verbose'] > 0:
+            perf_df = random_search(model, o_params['param_distributions'], data, o_params['scoring'], o_params['verbose'])
+    else:
+        with OutStreamCapture() as osc:
+            perf_df = random_search(model, o_params['param_distributions'], data, o_params['scoring'], o_params['verbose'])
+    
     optimize_report_file    = o_params['optimize_path'] + o_params['dataset'] + '_' + type(model).__name__ + '.txt'
 
     # osc.stdout contains the details of the performance report
     # write the performance report to the optimize_report_file
-    with open(optimize_report_file, "w") as file:
-        file.write(osc.stdout)
+    if o_params['verbose'] == 0:
+        with open(optimize_report_file, "w") as file:
+            file.write(osc.stdout)
 
     performance_report    = o_params['optimization_report']
 
@@ -235,16 +239,18 @@ def run_random_search(model, o_params, data):
     else:
 #        print(f"The file {performance_report} does not exist.")
         perf_report = {}
-        
-    perf_report[dataset] = analysis_perf_summary
+    
+    per_report_key = 'RandomizedSearchCV_' + dataset + '_' + type(model).__name__
+    perf_report[per_report_key] = analysis_perf_summary
 
     # Save Performance Report
     with open(performance_report, 'wb') as file: pickle.dump(perf_report, file)
 
 #----------------------------------------------------------------------------------------------------
     # Display the performance report here:
-    if o_params['print_results']:
-        print(osc.stdout)
+    if o_params['verbose'] == 0:
+        if o_params['print_results']:
+            print(osc.stdout)
 
     return perf_df
 
@@ -300,13 +306,16 @@ def random_search(model, param_dist, data, scoring='accuracy', verbose=0):
     best_params_random = random_search.best_params_
     best_model_random = random_search.best_estimator_
 
+    print(f"Best Parameters: Model: {type(model).__name__}: Parameters: {best_params_random}")
+
     # # Make predictions on the test set using the best model
     y_pred_best_random = best_model_random.predict(X_test)
 
     test_data = [ X_test, y_test, y_pred_best_random]
 
     random_search_performance = model_performance_metrics(best_model_random, test_data, 'optimized' )
-
+    random_search_performance['Optimizer'] = 'RandomizedSearchCV'
+    random_search_performance['best_parameters'] = best_params_random
     # ----------------------------------------------------- Optimization
 
     # X_train, X_test, y_train, y_test = data should be unchanged
@@ -320,7 +329,8 @@ def random_search(model, param_dist, data, scoring='accuracy', verbose=0):
     test_data = [ X_test, y_test, y_test_pred]
 
     original_performance = model_performance_metrics(model, test_data, "un-optimized" )
-
+    original_performance['Optimizer'] = 'RandomizedSearchCV'
+    original_performance['best_parameters'] = 'None'
     # ----------------------------------------------------- Pass back performance metrics
     
     performance_df = pd.DataFrame([original_performance, random_search_performance])
