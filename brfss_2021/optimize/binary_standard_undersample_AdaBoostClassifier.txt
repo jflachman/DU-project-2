@@ -1,0 +1,68 @@
+------------------------------------------------------------------------
+---------- optimizeding Data Performance
+------------------------------------------------------------------------
+Confusion Matrix
+[[38430 14985]
+ [ 1673  6681]]
+
+-----------------------
+optimized score: 0.7303
+Balanced Accuracy Score: 0.7596
+ROC AUC Score: 0.8371
+Mean Squared Error: 0.2697
+------------------------------
+--- Classification values
+------------------------------
+Accuracy: 0.7303
+Precision: 0.3084
+Recall: 0.7997
+F1-score: 0.4451
+Specificity: 0.7195
+False Positive Rate: 0.2805
+Matthews Correlation Coefficient: 0.3721
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.96      0.72      0.82     53415
+         1.0       0.31      0.80      0.45      8354
+
+    accuracy                           0.73     61769
+   macro avg       0.63      0.76      0.63     61769
+weighted avg       0.87      0.73      0.77     61769
+
+------------------------------------------------------------------------
+---------- un-optimizeding Data Performance
+------------------------------------------------------------------------
+Confusion Matrix
+[[38992 14423]
+ [ 1829  6525]]
+
+-----------------------
+un-optimized score: 0.7369
+Balanced Accuracy Score: 0.7555
+ROC AUC Score: 0.8341
+Mean Squared Error: 0.2631
+------------------------------
+--- Classification values
+------------------------------
+Accuracy: 0.7369
+Precision: 0.3115
+Recall: 0.7811
+F1-score: 0.4454
+Specificity: 0.73
+False Positive Rate: 0.27
+Matthews Correlation Coefficient: 0.3692
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.96      0.73      0.83     53415
+         1.0       0.31      0.78      0.45      8354
+
+    accuracy                           0.74     61769
+   macro avg       0.63      0.76      0.64     61769
+weighted avg       0.87      0.74      0.78     61769
+

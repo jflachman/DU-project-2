@@ -1,0 +1,68 @@
+------------------------------------------------------------------------
+---------- optimizeding Data Performance
+------------------------------------------------------------------------
+Confusion Matrix
+[[37349 16293]
+ [ 1863  6264]]
+
+-----------------------
+optimized score: 0.7061
+Balanced Accuracy Score: 0.7335
+ROC AUC Score: 0.7975
+Mean Squared Error: 0.2939
+------------------------------
+--- Classification values
+------------------------------
+Accuracy: 0.7061
+Precision: 0.2777
+Recall: 0.7708
+F1-score: 0.4083
+Specificity: 0.6963
+False Positive Rate: 0.3037
+Matthews Correlation Coefficient: 0.3279
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.95      0.70      0.80     53642
+         1.0       0.28      0.77      0.41      8127
+
+    accuracy                           0.71     61769
+   macro avg       0.62      0.73      0.61     61769
+weighted avg       0.86      0.71      0.75     61769
+
+------------------------------------------------------------------------
+---------- un-optimizeding Data Performance
+------------------------------------------------------------------------
+Confusion Matrix
+[[35547 18095]
+ [ 2833  5294]]
+
+-----------------------
+un-optimized score: 0.6612
+Balanced Accuracy Score: 0.657
+ROC AUC Score: 0.657
+Mean Squared Error: 0.3388
+------------------------------
+--- Classification values
+------------------------------
+Accuracy: 0.6612
+Precision: 0.2263
+Recall: 0.6514
+F1-score: 0.3359
+Specificity: 0.6627
+False Positive Rate: 0.3373
+Matthews Correlation Coefficient: 0.2189
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.93      0.66      0.77     53642
+         1.0       0.23      0.65      0.34      8127
+
+    accuracy                           0.66     61769
+   macro avg       0.58      0.66      0.55     61769
+weighted avg       0.83      0.66      0.72     61769
+

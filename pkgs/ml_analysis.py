@@ -189,6 +189,146 @@ def test_model(model, data):
 
 
 # --------------------------------------
+# ------- Random Search
+# ---------- 
+# --------------------------------------
+# optimize_report_params = {
+#     param_distributions: param_distributions,
+#     optimize_path: config.optimize_path,
+#     dataset: dataset_label,
+#     scoring: 'accuracy',
+#     verbose: 0,
+#     print_results: True
+#     }
+def run_random_search(model, o_params, data):
+    import os
+    import pickle
+
+    # Generate the Performance Report and send prints to osc.stdout
+    with OutStreamCapture() as osc:
+        perf_df = random_search(model, o_params['param_distributions'], data, o_params['scoring'], o_params['verbose'])
+
+    optimize_report_file    = o_params['optimize_path'] + o_params['dataset'] + '_' + type(model).__name__ + '.txt'
+
+    # osc.stdout contains the details of the performance report
+    # write the performance report to the optimize_report_file
+    with open(optimize_report_file, "w") as file:
+        file.write(osc.stdout)
+
+    performance_report    = o_params['optimization_report']
+
+#----------------------------------------------------------------------------------------------------
+
+    # perf_df is a dataframe of performance statistics
+    dataset = o_params['dataset']
+    # Add the dataset label as the first column in perf_df
+    dataset_column = pd.Series([dataset] * len(perf_df), name=dataset)
+    perf_df.insert(0, 'dataset', dataset_column)
+
+    analysis_perf_summary = { 'dataset_size': list(perf_df.shape), 'report': perf_df}
+
+    # Performance_report is a file containing all the performance summary statistics
+    if os.path.exists(performance_report):
+#        print(f"The file {performance_report} exists.")
+        # Load Performance Report
+        with open(performance_report, 'rb') as file: perf_report = pickle.load(file)
+    else:
+#        print(f"The file {performance_report} does not exist.")
+        perf_report = {}
+        
+    perf_report[dataset] = analysis_perf_summary
+
+    # Save Performance Report
+    with open(performance_report, 'wb') as file: pickle.dump(perf_report, file)
+
+#----------------------------------------------------------------------------------------------------
+    # Display the performance report here:
+    if o_params['print_results']:
+        print(osc.stdout)
+
+    return perf_df
+
+# --------------------------------------
+# ------- Random Search
+# ---------- 
+# --------------------------------------
+
+def random_search(model, param_dist, data, scoring='accuracy', verbose=0):
+    from sklearn.model_selection import RandomizedSearchCV
+
+    import numpy as np
+    # Classification Options:
+    #   'accuracy', 'balanced_accuracy', 'top_k_accuracy', 'average_precision', 
+    #   'neg_brier_score', 'f1', 'f1_micro', 'f1_macro', 'f1_weighted', 'f1_samples', 
+    #   'neg_log_loss', 'precision' etc., 'recall' etc., 'jaccard' etc., 'roc_auc', 
+    #   'roc_auc_ovr', 'roc_auc_ovo', 'roc_auc_ovr_weighted', 'roc_auc_ovo_weighted', 
+    #   'd2_log_loss_score', 
+    # Clustering Options:
+    #   'adjusted_mutual_info_score', 'adjusted_rand_score', 'completeness_score', 
+    #   'fowlkes_mallows_score', 'homogeneity_score', 'mutual_info_score', 
+    #   'normalized_mutual_info_score', 'rand_score', 'v_measure_score',
+    # Regresson Options:
+    #   'explained_variance', 'max_error', 'neg_mean_absolute_error', 'neg_mean_squared_error', 
+    #   'neg_root_mean_squared_error', 'neg_mean_squared_log_error', 'neg_root_mean_squared_log_error', 
+    #   'neg_median_absolute_error', 'r2', 'neg_mean_poisson_deviance', 'neg_mean_gamma_deviance', 
+    #   'neg_mean_absolute_percentage_error', 'd2_absolute_error_score', , 
+
+    # verbose =0 : No display
+    # verbose >1 : the computation time for each fold and parameter candidate is displayed
+    # verbose >2 : the score is also displayed;
+    # verbose >3 : the fold and candidate parameter indexes are also displayed together with the starting time of the computation.
+
+    # ----------------------------------------------------- Optimization
+    # Expand Data
+    X_train, X_test, y_train, y_test = data
+
+    # Initialize RandomizedSearchCV
+    random_search = RandomizedSearchCV(
+        estimator=model, 
+        param_distributions=param_dist, 
+        n_iter=100,         # Number of parameter settings that are sampled
+        cv=5,               # 5-fold cross-validation
+        verbose=verbose,          # Verbosity mode
+        scoring=scoring,    # Scoring Mode
+        random_state=42,    # Seed for reproducibility
+        n_jobs=-1 )
+
+    # Fit the model to the training data using RandomizedSearchCV
+    random_search.fit(X_train, y_train)
+
+    # Get the best parameters and best model
+    best_params_random = random_search.best_params_
+    best_model_random = random_search.best_estimator_
+
+    # # Make predictions on the test set using the best model
+    y_pred_best_random = best_model_random.predict(X_test)
+
+    test_data = [ X_test, y_test, y_pred_best_random]
+
+    random_search_performance = model_performance_metrics(best_model_random, test_data, 'optimized' )
+
+    # ----------------------------------------------------- Optimization
+
+    # X_train, X_test, y_train, y_test = data should be unchanged
+
+    # Train the model
+    model = model.fit(X_train, y_train)
+
+#    y_train_pred = model.predict(X_train)
+    y_test_pred = model.predict(X_test)
+
+    test_data = [ X_test, y_test, y_test_pred]
+
+    original_performance = model_performance_metrics(model, test_data, "un-optimized" )
+
+    # ----------------------------------------------------- Pass back performance metrics
+    
+    performance_df = pd.DataFrame([original_performance, random_search_performance])
+
+    return performance_df
+
+
+# --------------------------------------
 # ------- model_performance_metrics
 # ---------- 
 # --------------------------------------

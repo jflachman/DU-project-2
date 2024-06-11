@@ -4,21 +4,40 @@ Diabetes Predictions Performance Summary Report
 ----------------------------------------
 Report Summary
 ----------------------------------------
+Performance for: 1 Base Dataset
 Performance for: 2.0 StandardScaler Dataset
 Performance for: 2.1 MinMaxScaler Dataset
 Performance for: 3 Binary Dataset
 Performance for: 4 RandomUnderSampler Dataset
 Performance for: 5 RandomOverSampler Dataset
+Performance for: 6 ClusterCentroids Dataset
 Performance for: 7 SMOTE Dataset
 Performance for: 8 SMOTEENN Dataset
-Performance for: 1 Base Dataset
-Performance for: 6 ClusterCentroids Dataset
 ----------------------------------------
+----------------------------------------
+Performance for: 1 Base Dataset
+Dataset Size:    253680 Rows, 22 Columns
+----------------------------------------
+       dataset                      model slice  score  balanced_accuracy  roc_auc_score  Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  False Positive Rate  Matthews Correlation Coefficient
+1 Base Dataset       KNeighborsClassifier Train 0.8859             0.4969         0.9473              0.4034    0.9021     0.7339  0.4703    0.5732       0.9723               0.0277                               NaN
+1 Base Dataset       KNeighborsClassifier  Test 0.8205             0.3899         0.6198              0.6582    0.8370     0.3587  0.2303    0.2805       0.9341               0.0659                            0.1995
+1 Base Dataset     DecisionTreeClassifier Train 0.9935             0.9687         0.9999              0.0227    0.9945     0.9988  0.9616    0.9798       0.9998               0.0002                               NaN
+1 Base Dataset     DecisionTreeClassifier  Test 0.7671             0.4068         0.5691              0.8074    0.7980     0.2897  0.3194    0.3038       0.8747               0.1253                            0.1864
+1 Base Dataset     RandomForestClassifier Train 0.9935             0.9695         0.9995              0.0228    0.9944     0.9942  0.9659    0.9798       0.9991               0.0009                           19.5698
+1 Base Dataset     RandomForestClassifier  Test 0.8422             0.3868         0.7381              0.5726    0.8597     0.4795  0.1924    0.2746       0.9666               0.0334                            0.2398
+1 Base Dataset       ExtraTreesClassifier Train 0.9935             0.9687         0.9999              0.0227    0.9945     0.9988  0.9616    0.9798       0.9998               0.0002                               NaN
+1 Base Dataset       ExtraTreesClassifier  Test 0.8340             0.3855         0.7191              0.6017    0.8521     0.4228  0.1964    0.2682       0.9571               0.0429                            0.2161
+1 Base Dataset GradientBoostingClassifier Train 0.8503             0.3926         0.7952              0.5447    0.8666     0.5638  0.2006    0.2959       0.9748               0.0252                            0.2797
+1 Base Dataset GradientBoostingClassifier  Test 0.8502             0.3895         0.7893              0.5431    0.8671     0.5533  0.1916    0.2846       0.9752               0.0248                            0.2698
+1 Base Dataset         AdaBoostClassifier Train 0.8480             0.3934         0.7770              0.5537    0.8642     0.5371  0.2077    0.2996       0.9709               0.0291                            0.2739
+1 Base Dataset         AdaBoostClassifier  Test 0.8491             0.3921         0.7727              0.5477    0.8656     0.5347  0.2026    0.2939       0.9718               0.0282                            0.2702
+1 Base Dataset         LogisticRegression Train 0.8438             0.3781         0.7585              0.5705    0.8604     0.5020  0.1587    0.2412       0.9744               0.0256                            0.2246
+1 Base Dataset         LogisticRegression  Test 0.8453             0.3791         0.7606              0.5628    0.8622     0.5025  0.1614    0.2443       0.9744               0.0256                            0.2276
 ----------------------------------------
 Performance for: 2.0 StandardScaler Dataset
 Dataset Size:    253680 Rows, 22 Columns
 ----------------------------------------
-                new_column                      model slice  score  balanced_accuracy  roc_auc_score  Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  False Positive Rate  Matthews Correlation Coefficient
+                   dataset                      model slice  score  balanced_accuracy  roc_auc_score  Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  False Positive Rate  Matthews Correlation Coefficient
 2.0 StandardScaler Dataset       KNeighborsClassifier Train 0.8866             0.5038         0.9481              0.4014    0.9027     0.7260  0.4801    0.5780       0.9708               0.0292                               NaN
 2.0 StandardScaler Dataset       KNeighborsClassifier  Test 0.8194             0.3917         0.6253              0.6637    0.8355     0.3696  0.2378    0.2894       0.9335               0.0665                            0.2076
 2.0 StandardScaler Dataset     DecisionTreeClassifier Train 0.9934             0.9684         0.9999              0.0230    0.9944     0.9993  0.9606    0.9796       0.9999               0.0001                               NaN
@@ -37,7 +56,7 @@ Dataset Size:    253680 Rows, 22 Columns
 Performance for: 2.1 MinMaxScaler Dataset
 Dataset Size:    253680 Rows, 22 Columns
 ----------------------------------------
-              new_column                      model slice  score  balanced_accuracy  roc_auc_score  Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  False Positive Rate  Matthews Correlation Coefficient
+                 dataset                      model slice  score  balanced_accuracy  roc_auc_score  Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  False Positive Rate  Matthews Correlation Coefficient
 2.1 MinMaxScaler Dataset       KNeighborsClassifier Train 0.8850             0.4980         0.9466              0.4065    0.9015     0.7246  0.4699    0.5701       0.9712               0.0288                               NaN
 2.1 MinMaxScaler Dataset       KNeighborsClassifier  Test 0.8169             0.3854         0.6223              0.6750    0.8328     0.3479  0.2189    0.2687       0.9330               0.0670                            0.1859
 2.1 MinMaxScaler Dataset     DecisionTreeClassifier Train 0.9938             0.9699         0.9999              0.0215    0.9948     0.9988  0.9635    0.9808       0.9998               0.0002                               NaN
@@ -56,7 +75,7 @@ Dataset Size:    253680 Rows, 22 Columns
 Performance for: 3 Binary Dataset
 Dataset Size:    253680 Rows, 22 Columns
 ----------------------------------------
-      new_column                      model slice  score  balanced_accuracy  roc_auc_score  Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  False Positive Rate  Matthews Correlation Coefficient
+         dataset                      model slice  score  balanced_accuracy  roc_auc_score  Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  False Positive Rate  Matthews Correlation Coefficient
 3 Binary Dataset       KNeighborsClassifier Train 0.9024             0.7268         0.9340              0.0976    0.9024     0.7276  0.4831    0.5807       0.9706               0.0294                               NaN
 3 Binary Dataset       KNeighborsClassifier  Test 0.8371             0.5851         0.6772              0.1629    0.8371     0.3619  0.2370    0.2864       0.9331               0.0669                            0.2047
 3 Binary Dataset     DecisionTreeClassifier Train 0.9944             0.9805         0.9998              0.0056    0.9944     0.9991  0.9611    0.9797       0.9999               0.0001                               NaN
@@ -75,7 +94,7 @@ Dataset Size:    253680 Rows, 22 Columns
 Performance for: 4 RandomUnderSampler Dataset
 Dataset Size:    253680 Rows, 22 Columns
 ----------------------------------------
-                  new_column                      model slice  score  balanced_accuracy  roc_auc_score  Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  False Positive Rate  Matthews Correlation Coefficient
+                     dataset                      model slice  score  balanced_accuracy  roc_auc_score  Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  False Positive Rate  Matthews Correlation Coefficient
 4 RandomUnderSampler Dataset       KNeighborsClassifier Train 0.8302             0.8302         0.9117              0.1698    0.8302     0.8190  0.8476    0.8331       0.8127               0.1873                            0.6607
 4 RandomUnderSampler Dataset       KNeighborsClassifier  Test 0.6848             0.6960         0.7436              0.3152    0.6848     0.2626  0.7114    0.3836       0.6806               0.3194                            0.2794
 4 RandomUnderSampler Dataset     DecisionTreeClassifier Train 0.9949             0.9949         0.9999              0.0051    0.9949     0.9994  0.9903    0.9948       0.9994               0.0006                            0.9898
@@ -94,7 +113,7 @@ Dataset Size:    253680 Rows, 22 Columns
 Performance for: 5 RandomOverSampler Dataset
 Dataset Size:    253680 Rows, 22 Columns
 ----------------------------------------
-                 new_column                      model slice  score  balanced_accuracy  roc_auc_score  Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  False Positive Rate  Matthews Correlation Coefficient
+                    dataset                      model slice  score  balanced_accuracy  roc_auc_score  Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  False Positive Rate  Matthews Correlation Coefficient
 5 RandomOverSampler Dataset       KNeighborsClassifier Train 0.9386             0.9386         0.9946              0.0614    0.9386     0.9010  0.9855    0.9414       0.8917               0.1083                               NaN
 5 RandomOverSampler Dataset       KNeighborsClassifier  Test 0.7615             0.6397         0.6752              0.2385    0.7615     0.2899  0.4697    0.3585       0.8097               0.1903                            0.2317
 5 RandomOverSampler Dataset     DecisionTreeClassifier Train 0.9944             0.9944         0.9999              0.0056    0.9944     0.9912  0.9977    0.9944       0.9911               0.0089                           17.0640
@@ -110,10 +129,29 @@ Dataset Size:    253680 Rows, 22 Columns
 5 RandomOverSampler Dataset         LogisticRegression Train 0.7470             0.7470         0.8243              0.2530    0.7470     0.7373  0.7674    0.7520       0.7266               0.2734                           11.8617
 5 RandomOverSampler Dataset         LogisticRegression  Test 0.7319             0.7439         0.8193              0.2681    0.7319     0.3155  0.7606    0.4460       0.7272               0.2728                            0.3588
 ----------------------------------------
+Performance for: 6 ClusterCentroids Dataset
+Dataset Size:    253680 Rows, 22 Columns
+----------------------------------------
+                   dataset                      model slice  score  balanced_accuracy  roc_auc_score  Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  False Positive Rate  Matthews Correlation Coefficient
+6 ClusterCentroids Dataset       KNeighborsClassifier Train 0.7675             0.7675         0.8507              0.2325    0.7675     0.7336  0.8399    0.7832       0.6950               0.3050                            0.5406
+6 ClusterCentroids Dataset       KNeighborsClassifier  Test 0.6232             0.6403         0.6788              0.3768    0.6232     0.2191  0.6641    0.3295       0.6166               0.3834                            0.1968
+6 ClusterCentroids Dataset     DecisionTreeClassifier Train 1.0000             1.0000         1.0000              0.0000    1.0000     1.0000  1.0000    1.0000       1.0000               0.0000                            1.0000
+6 ClusterCentroids Dataset     DecisionTreeClassifier  Test 0.3344             0.5387         0.5387              0.6656    0.3344     0.1517  0.8220    0.2561       0.2554               0.7446                            0.0624
+6 ClusterCentroids Dataset     RandomForestClassifier Train 1.0000             1.0000         1.0000              0.0000    1.0000     1.0000  1.0000    1.0000       1.0000               0.0000                            1.0000
+6 ClusterCentroids Dataset     RandomForestClassifier  Test 0.3309             0.5646         0.5631              0.6691    0.3309     0.1594  0.8886    0.2703       0.2405               0.7595                            0.1076
+6 ClusterCentroids Dataset       ExtraTreesClassifier Train 1.0000             1.0000         1.0000              0.0000    1.0000     1.0000  1.0000    1.0000       1.0000               0.0000                            1.0000
+6 ClusterCentroids Dataset       ExtraTreesClassifier  Test 0.4310             0.6056         0.6317              0.5690    0.4310     0.1775  0.8478    0.2935       0.3634               0.6366                            0.1551
+6 ClusterCentroids Dataset GradientBoostingClassifier Train 0.8777             0.8777         0.9540              0.1223    0.8777     0.8576  0.9059    0.8811       0.8496               0.1504                            0.7566
+6 ClusterCentroids Dataset GradientBoostingClassifier  Test 0.3397             0.5752         0.6168              0.6603    0.3397     0.1628  0.9016    0.2758       0.2487               0.7513                            0.1242
+6 ClusterCentroids Dataset         AdaBoostClassifier Train 0.8580             0.8580         0.9364              0.1420    0.8580     0.8335  0.8948    0.8631       0.8213               0.1787                            0.7180
+6 ClusterCentroids Dataset         AdaBoostClassifier  Test 0.4017             0.6062         0.6695              0.5983    0.4017     0.1755  0.8898    0.2932       0.3227               0.6773                            0.1617
+6 ClusterCentroids Dataset         LogisticRegression Train 0.7159             0.7159         0.7872              0.2841    0.7159     0.6986  0.7595    0.7278       0.6723               0.3277                            0.4335
+6 ClusterCentroids Dataset         LogisticRegression  Test 0.6585             0.6968         0.7630              0.3415    0.6585     0.2543  0.7499    0.3798       0.6437               0.3563                            0.2771
+----------------------------------------
 Performance for: 7 SMOTE Dataset
 Dataset Size:    253680 Rows, 22 Columns
 ----------------------------------------
-     new_column                      model slice  score  balanced_accuracy  roc_auc_score  Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  False Positive Rate  Matthews Correlation Coefficient
+        dataset                      model slice  score  balanced_accuracy  roc_auc_score  Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  False Positive Rate  Matthews Correlation Coefficient
 7 SMOTE Dataset       KNeighborsClassifier Train 0.9295             0.9295         0.9938              0.0705    0.9295     0.8841  0.9886    0.9334       0.8704               0.1296                            8.4044
 7 SMOTE Dataset       KNeighborsClassifier  Test 0.7447             0.6584         0.6992              0.2553    0.7447     0.2812  0.5389    0.3696       0.7778               0.2222                            0.2479
 7 SMOTE Dataset     DecisionTreeClassifier Train 0.9968             0.9968         1.0000              0.0032    0.9968     0.9995  0.9941    0.9968       0.9995               0.0005                               NaN
@@ -132,7 +170,7 @@ Dataset Size:    253680 Rows, 22 Columns
 Performance for: 8 SMOTEENN Dataset
 Dataset Size:    253680 Rows, 22 Columns
 ----------------------------------------
-        new_column                      model slice  score  balanced_accuracy  roc_auc_score  Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  False Positive Rate  Matthews Correlation Coefficient
+           dataset                      model slice  score  balanced_accuracy  roc_auc_score  Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  False Positive Rate  Matthews Correlation Coefficient
 8 SMOTEENN Dataset       KNeighborsClassifier Train 0.9022             0.7247         0.9334              0.0978    0.9022     0.7290  0.4784    0.5777       0.9711               0.0289                               NaN
 8 SMOTEENN Dataset       KNeighborsClassifier  Test 0.8370             0.5887         0.6828              0.1630    0.8370     0.3638  0.2460    0.2935       0.9313               0.0687                            0.2103
 8 SMOTEENN Dataset     DecisionTreeClassifier Train 0.9947             0.9814         0.9999              0.0053    0.9947     0.9992  0.9628    0.9807       0.9999               0.0001                               NaN
@@ -147,41 +185,3 @@ Dataset Size:    253680 Rows, 22 Columns
 8 SMOTEENN Dataset         AdaBoostClassifier  Test 0.8655             0.5822         0.8259              0.1345    0.8655     0.5320  0.1913    0.2814       0.9731               0.0269                            0.2612
 8 SMOTEENN Dataset         LogisticRegression Train 0.8634             0.5684         0.8222              0.1366    0.8634     0.5400  0.1588    0.2454       0.9780               0.0220                            0.2389
 8 SMOTEENN Dataset         LogisticRegression  Test 0.8641             0.5665         0.8217              0.1359    0.8641     0.5219  0.1559    0.2401       0.9772               0.0228                            0.2309
-----------------------------------------
-Performance for: 1 Base Dataset
-Dataset Size:    253680 Rows, 22 Columns
-----------------------------------------
-    new_column                      model slice  score  balanced_accuracy  roc_auc_score  Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  False Positive Rate  Matthews Correlation Coefficient
-1 Base Dataset       KNeighborsClassifier Train 0.8859             0.4969         0.9473              0.4034    0.9021     0.7339  0.4703    0.5732       0.9723               0.0277                               NaN
-1 Base Dataset       KNeighborsClassifier  Test 0.8205             0.3899         0.6198              0.6582    0.8370     0.3587  0.2303    0.2805       0.9341               0.0659                            0.1995
-1 Base Dataset     DecisionTreeClassifier Train 0.9935             0.9687         0.9999              0.0227    0.9945     0.9988  0.9616    0.9798       0.9998               0.0002                               NaN
-1 Base Dataset     DecisionTreeClassifier  Test 0.7671             0.4068         0.5691              0.8074    0.7980     0.2897  0.3194    0.3038       0.8747               0.1253                            0.1864
-1 Base Dataset     RandomForestClassifier Train 0.9935             0.9695         0.9995              0.0228    0.9944     0.9942  0.9659    0.9798       0.9991               0.0009                           19.5698
-1 Base Dataset     RandomForestClassifier  Test 0.8422             0.3868         0.7381              0.5726    0.8597     0.4795  0.1924    0.2746       0.9666               0.0334                            0.2398
-1 Base Dataset       ExtraTreesClassifier Train 0.9935             0.9687         0.9999              0.0227    0.9945     0.9988  0.9616    0.9798       0.9998               0.0002                               NaN
-1 Base Dataset       ExtraTreesClassifier  Test 0.8340             0.3855         0.7191              0.6017    0.8521     0.4228  0.1964    0.2682       0.9571               0.0429                            0.2161
-1 Base Dataset GradientBoostingClassifier Train 0.8503             0.3926         0.7952              0.5447    0.8666     0.5638  0.2006    0.2959       0.9748               0.0252                            0.2797
-1 Base Dataset GradientBoostingClassifier  Test 0.8502             0.3895         0.7893              0.5431    0.8671     0.5533  0.1916    0.2846       0.9752               0.0248                            0.2698
-1 Base Dataset         AdaBoostClassifier Train 0.8480             0.3934         0.7770              0.5537    0.8642     0.5371  0.2077    0.2996       0.9709               0.0291                            0.2739
-1 Base Dataset         AdaBoostClassifier  Test 0.8491             0.3921         0.7727              0.5477    0.8656     0.5347  0.2026    0.2939       0.9718               0.0282                            0.2702
-1 Base Dataset         LogisticRegression Train 0.8438             0.3781         0.7585              0.5705    0.8604     0.5020  0.1587    0.2412       0.9744               0.0256                            0.2246
-1 Base Dataset         LogisticRegression  Test 0.8453             0.3791         0.7606              0.5628    0.8622     0.5025  0.1614    0.2443       0.9744               0.0256                            0.2276
-----------------------------------------
-Performance for: 6 ClusterCentroids Dataset
-Dataset Size:    253680 Rows, 22 Columns
-----------------------------------------
-                new_column                      model slice  score  balanced_accuracy  roc_auc_score  Mean Squared Error  Accuracy  Precision  Recall  F1-score  Specificity  False Positive Rate  Matthews Correlation Coefficient
-6 ClusterCentroids Dataset       KNeighborsClassifier Train 0.7675             0.7675         0.8507              0.2325    0.7675     0.7336  0.8399    0.7832       0.6950               0.3050                            0.5406
-6 ClusterCentroids Dataset       KNeighborsClassifier  Test 0.6232             0.6403         0.6788              0.3768    0.6232     0.2191  0.6641    0.3295       0.6166               0.3834                            0.1968
-6 ClusterCentroids Dataset     DecisionTreeClassifier Train 1.0000             1.0000         1.0000              0.0000    1.0000     1.0000  1.0000    1.0000       1.0000               0.0000                            1.0000
-6 ClusterCentroids Dataset     DecisionTreeClassifier  Test 0.3344             0.5387         0.5387              0.6656    0.3344     0.1517  0.8220    0.2561       0.2554               0.7446                            0.0624
-6 ClusterCentroids Dataset     RandomForestClassifier Train 1.0000             1.0000         1.0000              0.0000    1.0000     1.0000  1.0000    1.0000       1.0000               0.0000                            1.0000
-6 ClusterCentroids Dataset     RandomForestClassifier  Test 0.3309             0.5646         0.5631              0.6691    0.3309     0.1594  0.8886    0.2703       0.2405               0.7595                            0.1076
-6 ClusterCentroids Dataset       ExtraTreesClassifier Train 1.0000             1.0000         1.0000              0.0000    1.0000     1.0000  1.0000    1.0000       1.0000               0.0000                            1.0000
-6 ClusterCentroids Dataset       ExtraTreesClassifier  Test 0.4310             0.6056         0.6317              0.5690    0.4310     0.1775  0.8478    0.2935       0.3634               0.6366                            0.1551
-6 ClusterCentroids Dataset GradientBoostingClassifier Train 0.8777             0.8777         0.9540              0.1223    0.8777     0.8576  0.9059    0.8811       0.8496               0.1504                            0.7566
-6 ClusterCentroids Dataset GradientBoostingClassifier  Test 0.3397             0.5752         0.6168              0.6603    0.3397     0.1628  0.9016    0.2758       0.2487               0.7513                            0.1242
-6 ClusterCentroids Dataset         AdaBoostClassifier Train 0.8580             0.8580         0.9364              0.1420    0.8580     0.8335  0.8948    0.8631       0.8213               0.1787                            0.7180
-6 ClusterCentroids Dataset         AdaBoostClassifier  Test 0.4017             0.6062         0.6695              0.5983    0.4017     0.1755  0.8898    0.2932       0.3227               0.6773                            0.1617
-6 ClusterCentroids Dataset         LogisticRegression Train 0.7159             0.7159         0.7872              0.2841    0.7159     0.6986  0.7595    0.7278       0.6723               0.3277                            0.4335
-6 ClusterCentroids Dataset         LogisticRegression  Test 0.6585             0.6968         0.7630              0.3415    0.6585     0.2543  0.7499    0.3798       0.6437               0.3563                            0.2771

@@ -1,13 +1,16 @@
 year = 2021
 package_path    = '../pkgs'
-source_path = 'data/brfss/'
-data_path   = 'data/'
-report_path = 'reports/'
+source_path     = 'data/brfss/'
+data_path       = 'data/'
+report_path     = 'reports/'
+optimize_path   = 'optimize/'
 
 source_file                 = source_path + 'archive.zip'
 clean_file                  = data_path + 'brfss_' + str(year) + '_clean.parquet.gzip'
 performance_report          = report_path + 'performance_report.pkl'
+optimization_report         = optimize_path + 'optimization_report.pkl'
 
+target                      = 'diabetes'
 
 # # Config Settings
 # year = year         = config.year
