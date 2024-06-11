@@ -238,179 +238,33 @@ The metrics for all the `modified datasets` and `models` are provided in the [re
     - [smoteen_dataset_detailed_performance_report.txt](reports/smoteen_dataset_detailed_performance_report.txt)
 
 
-
-
-## Initial Conclusions
-
-
 ## Optimization / Hyperparameter tuning
-
-
-# Conclusions
-
-
-#### Data Cleaning and Initial Exploration
-
-
-
-#### Handling Unbalanced Data
-
-1. **Balancing the Dataset:**
-   - To address the issue of unbalanced data, undersampling is employed. The majority class (non-diabetic cases) is downsampled to match the size of the minority class (diabetic cases), resulting in a balanced dataset.
-
-#### Evaluating Overfitting
-
-1. **Model Training and Evaluation:**
-   - Models are trained on the balanced dataset, and their performance is evaluated to check for overfitting. Key metrics include accuracy, precision, recall, and F1 score.
-   - Cross-validation is used to evaluate model performance more robustly.
-
-2. **Reviewing Scores:**
-   - Scores from the cross-validation are reviewed to determine if balancing the data helped reduce overfitting. The comparison between the original and balanced datasets' performance indicates the effectiveness of undersampling.
 
 #### Hyperparameter Tuning
 
-1. **Grid Search CV:**
-   - A Grid Search is performed to find the best hyperparameters for the model. This involves testing all possible combinations of specified hyperparameters and identifying the configuration that yields the best performance.
+1. **Decision Tree Classifier + Randomized Search CV:**
+   - We sampled a fixed number of parameter settings from specified ranges for efficiency
+   - The optimization helped but not a substantial amount on this dataset
+   - We sorted the highest F1 score, precision, and accuracy
+   - The results were these 4 data sets:
+imgs/2021_best_models.png
+   - The final parameters and scores reflect the optimized model's ability to predict diabetes with higher accuracy and reliability.
+  
+# Conclusions
 
-2. **Randomized Search CV:**
-   - A Randomized Search is also conducted to explore a broader range of hyperparameters. Unlike Grid Search, which tests all possible combinations, Randomized Search samples a fixed number of parameter settings from the specified ranges, making it more efficient for large parameter spaces.
+**Conclusion:**
+   - Conclusions from 63 Model/Dataset Runs for each year (126 total dataset/model combinations)
+   - We achieved good accuracy; but because of imbalance struggled with Precision Optimization helped some, but did not make large gains for most models.
 
-3. **Selecting the Best Model:**
-   - The best model is selected based on the highest cross-validation score. The final parameters and their corresponding scores are documented.
+# Top Models
+GradientBoostingClassifier
+AdaBoostClassifier
+LogisticRegression
 
-#### Final Parameter Settings and Score
+# Top Datasets
+Binary dataset with StandardScalar
+Binary, Standard Scalar & SMOTEEN sampling.
 
-1. **Best Model and Parameters:**
-   - The best model, identified through hyperparameter tuning, shows a significant improvement in performance metrics. The final parameters and scores reflect the optimized model's ability to predict diabetes with higher accuracy and reliability.
-
-2. **Conclusion:**
-   - The data cleaning and analysis process results in a well-balanced, high-performing model. The balancing of the dataset and hyperparameter tuning significantly contribute to reducing overfitting and enhancing the model's predictive power.
-
-
-
----
----
----
-
-
-
-## CDC Diabetes data selected
-
-
-## Project Approach:
-
-- Look at diabetes data from 2015 with 21 different features to see how well it predicts diabetes
-- Check to see if the data is imbalanced; and see how different balancing methods work 
-- Evaluate the dataset that has prediabetes and see if prediabetes can also be predicted from the features
-- ** if time allows we will look at original source CDC data for different years and see if we can repeat that analysis** (bonus)
-
-**See** the more detailed [project plan](project_plan.md)
-
-
-
----
----
----
----
-
-- Project ideation – due by: 05/30/24
-    - We looked at abalone, mushroom, bike sharing, and diabetes;
-    - We decided to dig deeper in diabetes research looking into what early factors could cause diabetes 
-    - Data fetching 
-    - 06/03/24
-    - Pull data sets in each of our machines and start basis analysis
-- Data exploration
-- 06/03/24 – rough draft 
-- Data transformation & automation
-- 06/04 – 06/06/24 
-- Creating functions and stringing them all together 
-- Data analysis
-    - 06/06/24
-        - Review what features have the most impact
-        - Testing
-- 06/08/24
-    - Creating documentation
-- 06/08 – 06/09
-    - Creating the presentation
-
-It was determined that the 2015 data had already been cleaned.  Discussions with the instructor would 
-
-
-
-
-
-
-
-the the We have chose the topic of diabetes.
-[CDC Diabetes Health Indicators](https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators)
-
-
-## Project Overview
-
-The Diabetes Health Indicators Dataset contains healthcare statistics and lifestyle survey information about people and their diabetes diagnosis. It includes 35 features, such as demographics, lab test results, and answers to survey questions for each patient. The target variable for classification indicates whether a patient has diabetes, is pre-diabetic, or is healthy.
-### Executive Summary
-
-
-### Selected Dataset
-
-The selected dataset is the 2021 CDC dataset.
-We have concentrated our efforts on the following risk factors for diabetes.
-
-***Risk Factors*** 
- 
-   There are many risk factors for developing type 2 diabetes, including:
-
-
-There are many risk factors for developing type 2 diabetes, including:
-- **Age:** Being over 40 increases your risk.
-- **Family history**: Having a parent, sibling, or other relative with type 1 or type 2 diabetes increases your risk.
-- **Ethnicity**: People of certain races and ethnicities, including African Americans, Hispanics, American Indians, and Asian-Americans, are more likely to develop type 2 diabetes.
-- **Inactivity**: The less active you are, the greater your risk.
-- **Weight**: Being overweight or obese increases your risk. You can estimate your risk by measuring your waist circumference. Men have a higher risk if their waist circumference is more than 40 inches, while women who are not pregnant have a higher risk if their waist circumference is more than 35 inches.
-- **Blood pressure**: High blood pressure can lead to insulin resistance and eventually type 2 diabetes.
-- **Cholesterol**: High cholesterol can raise your risk for diabetes and heart disease.
-- **Smoking**: Smokers are more 30-40% more likely than non-smokers to develop type 2 diabetes. 
-
-### Indicators
-
-Diabetes is a chronic condition that can be diagnosed by a medical professional. While it often has no symptoms, some indicators include:
-- **Urination**: Frequent urination, especially at night
-- **Thirst**: Excessive thirst
-- **Hunger**: Increased hunger, even when eating
-- **Weight loss**: Unintentional weight loss
-- **Fatigue**: Feeling more tired than usual
-- **Vision**: Blurred vision
-- **Wounds**: Cuts and bruises that take longer to heal
-- **Skin**: Itchy skin or genital itching
-- **Infections**: Urinary tract infections (UTIs) or yeast infections
-- **Sensations**: Unusual sensations like tingling, burning, or pricklin
-
-
-
-Please see the following link for more details: [data_cleaning.md](data_cleaning.md)
-
-### Approach
-
-In our efforts, we focused on the following risk factors for diabetes. Below are the selected feature abbreviations.
-[diabetes_features.md](diabetes_features.md)
-
-### DataCleaning 
-
-- Jeff will write
-
-### Metrics
-
-![Metrics](https://images.datacamp.com/image/upload/v1701364260/image_d6ced554a1.png)
-
-# What can we write on:
-
-
-    
-
-    For Analysis you can look at [analysis.md](analysis.md)
-
-
-
-- The Plan
-    - Run models on basic data
-    - 
+# Project Goal: Achieved
+- Successfully identified key factors contributing to diabetes prevalence.
+- Developed predictive models with significant accuracy and reliability.Strong Predictive performance through application of pipelines, optimized datasets, advanced classification models, model performance ranking, and model optimization.
