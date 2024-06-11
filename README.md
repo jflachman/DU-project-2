@@ -57,6 +57,29 @@ The team was most interested in diabetes predictions using data from the The CDC
 
 As a starting point, a dataset pulled from the 2015 BRFSS was used from the [**UC Irvine Machine Learning Repository**](https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators)
 
+## Project directory structure
+
+README.md - This file provides a description of the project
+
+Directories:
+
+**Note:** The project ***classification analysis and results*** of the CDC Behavioral Risk Factor Surveillance System (BRFSS) Survey data are contained in the `brfss_2015` and `brfss_2021` directories.
+
+| directory | description |
+| --------- | ----------- |
+| `brfss_2015` | Contains all the anlaysis of the 2015 BRFSS data.  A description of the files in this directory can be found in the [brfss_2015 README](brfss_2015/README.md) |
+| `brfss_2021` | Contains all the anlaysis of the 2021 BRFSS data.  A description of the files in this directory can be found in the [brfss_2021 README](brfss_2021/README.md) |
+| `data_cleaning` | Contains all the work the read codebooks, refine features, transform and modify feature values.  This work was then moved into the brfss_2015 and brfss_2021 directories as signle 1_....ipynb files which pulled and cleaned the data for each year|
+|`pkgs` | python files containing pipline code writting for data | data | files used by the notebooks in data_cleaning |
+| `docs` | other markdown files referenced by this README and other docs |
+|`imgs` | graphics included in documentation markdowns |
+| `prototype_ava` | Prototype code written by Ava Lee |
+| `prototype_elia` | Prototype code written by Elia Porter |
+| `prototype_jeff` | Prototype code written by Jeff Flachman |
+
+**Note:** Additonal READMEs are available in some subdirectories.
+
+
 ## Feature Engineering
 
 
