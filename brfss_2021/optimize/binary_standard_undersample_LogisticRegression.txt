@@ -1,32 +1,33 @@
+Best Parameters: Model: LogisticRegression: Parameters: {'C': 0.2059150049999574, 'penalty': 'l1', 'solver': 'saga'}
 ------------------------------------------------------------------------
 ---------- optimizeding Data Performance
 ------------------------------------------------------------------------
 Confusion Matrix
-[[38896 14746]
- [ 1784  6343]]
+[[38584 14886]
+ [ 1887  6412]]
 
 -----------------------
-optimized score: 0.7324
-Balanced Accuracy Score: 0.7528
-ROC AUC Score: 0.8271
-Mean Squared Error: 0.2676
+optimized score: 0.7285
+Balanced Accuracy Score: 0.7471
+ROC AUC Score: 0.824
+Mean Squared Error: 0.2715
 ------------------------------
 --- Classification values
 ------------------------------
-Accuracy: 0.7324
-Precision: 0.3008
-Recall: 0.7805
-F1-score: 0.4342
-Specificity: 0.7251
-False Positive Rate: 0.2749
-Matthews Correlation Coefficient: 0.3604
+Accuracy: 0.7285
+Precision: 0.3011
+Recall: 0.7726
+F1-score: 0.4333
+Specificity: 0.7216
+False Positive Rate: 0.2784
+Matthews Correlation Coefficient: 0.3546
 
 -----------------------
 Classification Report
               precision    recall  f1-score   support
 
-         0.0       0.96      0.73      0.82     53642
-         1.0       0.30      0.78      0.43      8127
+         0.0       0.95      0.72      0.82     53470
+         1.0       0.30      0.77      0.43      8299
 
     accuracy                           0.73     61769
    macro avg       0.63      0.75      0.63     61769
@@ -36,31 +37,31 @@ weighted avg       0.87      0.73      0.77     61769
 ---------- un-optimizeding Data Performance
 ------------------------------------------------------------------------
 Confusion Matrix
-[[38890 14752]
- [ 1784  6343]]
+[[38592 14878]
+ [ 1891  6408]]
 
 -----------------------
-un-optimized score: 0.7323
-Balanced Accuracy Score: 0.7527
-ROC AUC Score: 0.8271
-Mean Squared Error: 0.2677
+un-optimized score: 0.7285
+Balanced Accuracy Score: 0.7469
+ROC AUC Score: 0.824
+Mean Squared Error: 0.2715
 ------------------------------
 --- Classification values
 ------------------------------
-Accuracy: 0.7323
-Precision: 0.3007
-Recall: 0.7805
-F1-score: 0.4341
-Specificity: 0.725
-False Positive Rate: 0.275
-Matthews Correlation Coefficient: 0.3603
+Accuracy: 0.7285
+Precision: 0.301
+Recall: 0.7721
+F1-score: 0.4331
+Specificity: 0.7218
+False Positive Rate: 0.2782
+Matthews Correlation Coefficient: 0.3544
 
 -----------------------
 Classification Report
               precision    recall  f1-score   support
 
-         0.0       0.96      0.72      0.82     53642
-         1.0       0.30      0.78      0.43      8127
+         0.0       0.95      0.72      0.82     53470
+         1.0       0.30      0.77      0.43      8299
 
     accuracy                           0.73     61769
    macro avg       0.63      0.75      0.63     61769
