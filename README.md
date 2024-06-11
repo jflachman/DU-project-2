@@ -10,6 +10,16 @@
  - Ava Lee
  - Elia Porter
 
+## Project Checklist:
+
+<hr color="red">
+<span style="color: red;">
+
+***Please see the [project checklist](project-2-checklist.md)*** for artifacts supporting the project objectives.
+
+</span>
+<hr color="red">
+
 # Executive Summary
 
 This project aims to analyze the factors contributing to the prevalence of diabetes in the United State and determine if they provide some predictive value in determining a diagnosis of diabetes.
