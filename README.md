@@ -247,24 +247,25 @@ The metrics for all the `modified datasets` and `models` are provided in the [re
    - The optimization helped but not a substantial amount on this dataset
    - We sorted the highest F1 score, precision, and accuracy
    - The results were these 4 data sets:
-imgs/2021_best_models.png
+(imgs/2021_best_models.png)
+
    - The final parameters and scores reflect the optimized model's ability to predict diabetes with higher accuracy and reliability.
   
-# Conclusions
+# Conclusions - Project Goal Achievement?
 
 **Conclusion:**
    - Conclusions from 63 Model/Dataset Runs for each year (126 total dataset/model combinations)
    - We achieved good accuracy; but because of imbalance struggled with Precision Optimization helped some, but did not make large gains for most models.
 
-# Top Models
-GradientBoostingClassifier
-AdaBoostClassifier
-LogisticRegression
+**Top Models**
+ - GradientBoostingClassifier
+ - AdaBoostClassifier
+ - LogisticRegression
 
-# Top Datasets
-Binary dataset with StandardScalar
-Binary, Standard Scalar & SMOTEEN sampling.
+**Top Datasets**
+- Binary dataset with StandardScalar
+- Binary, Standard Scalar & SMOTEEN sampling.
 
-# Project Goal: Achieved
+**Project Goal: Achieved**
 - Successfully identified key factors contributing to diabetes prevalence.
 - Developed predictive models with significant accuracy and reliability.Strong Predictive performance through application of pipelines, optimized datasets, advanced classification models, model performance ranking, and model optimization.
