@@ -9,6 +9,7 @@ source_file                 = source_path + 'archive.zip'
 clean_file                  = data_path + 'brfss_' + str(year) + '_clean.parquet.gzip'
 performance_report          = report_path + 'performance_report.pkl'
 optimization_report         = optimize_path + 'optimization_report.pkl'
+optimization_report_text_file = optimize_path + 'optimization_report.txt'
 
 target                      = 'diabetes'
 
