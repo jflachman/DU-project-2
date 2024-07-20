@@ -1,0 +1,70 @@
+Fitting 5 folds for each of 100 candidates, totalling 500 fits
+Best Parameters: Model: GradientBoostingClassifier: Parameters: {'subsample': 0.6346103310437, 'n_estimators': 176, 'min_samples_split': 13, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 5, 'learning_rate': 0.06097002206781559}
+------------------------------------------------------------------------
+---------- optimizeding Data Performance
+------------------------------------------------------------------------
+Confusion Matrix
+[[38325 15075]
+ [ 1658  6711]]
+
+-----------------------
+optimized score: 0.7291
+Balanced Accuracy Score: 0.7598
+ROC AUC Score: 0.8382
+Mean Squared Error: 0.2709
+------------------------------
+--- Classification values
+------------------------------
+Accuracy: 0.7291
+Precision: 0.308
+Recall: 0.8019
+F1-score: 0.4451
+Specificity: 0.7177
+False Positive Rate: 0.2823
+Matthews Correlation Coefficient: 0.3722
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.96      0.72      0.82     53400
+         1.0       0.31      0.80      0.45      8369
+
+    accuracy                           0.73     61769
+   macro avg       0.63      0.76      0.63     61769
+weighted avg       0.87      0.73      0.77     61769
+
+------------------------------------------------------------------------
+---------- un-optimizeding Data Performance
+------------------------------------------------------------------------
+Confusion Matrix
+[[38354 15046]
+ [ 1671  6698]]
+
+-----------------------
+un-optimized score: 0.7294
+Balanced Accuracy Score: 0.7593
+ROC AUC Score: 0.8366
+Mean Squared Error: 0.2706
+------------------------------
+--- Classification values
+------------------------------
+Accuracy: 0.7294
+Precision: 0.308
+Recall: 0.8003
+F1-score: 0.4448
+Specificity: 0.7182
+False Positive Rate: 0.2818
+Matthews Correlation Coefficient: 0.3716
+
+-----------------------
+Classification Report
+              precision    recall  f1-score   support
+
+         0.0       0.96      0.72      0.82     53400
+         1.0       0.31      0.80      0.44      8369
+
+    accuracy                           0.73     61769
+   macro avg       0.63      0.76      0.63     61769
+weighted avg       0.87      0.73      0.77     61769
+

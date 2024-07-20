@@ -3,6 +3,7 @@
 ## Diabetes Prediction from CDC Behavioral Risk Factor Surveillance System (BRFSS) Survey data
 - See the [Project Instructions](project-2-overview.md) for more details about the project requirements
 
+- Please see the **class presentation** on [Diabetes Predictions from CDC 2015 & 2021 BRFSS Survey Data](Project_2_Presentation_Jeff-Ava-Elia_2024-06-06.pdf)
 
 ## Team
  
@@ -184,7 +185,7 @@ Several [pipelines](docs/pipelines.md) were used to streamline the analysis.
 
 All the models were greatly overfit with the base dataset.
 
-All models were then run against each modified dataset.  The metrics were prepared and archived in the [reports/](reports/) directory.
+All models were then run against each modified dataset.  The metrics were prepared and archived in the [brfss_2021/reports/](brfss_2021/reports/) directory.
 
 It was determined that overfitting occured in most cases.  However, it was minimized by using the `binary` target feature, scaling with `StandardScaler` or `MinMaxScaler` and resampled using `RandomOverSampling` or `RandomUnderSampling`.
 
@@ -214,29 +215,39 @@ Using the following sampling methods improved the metric results:
 
 **Metric Evaluation**
 
-The metrics for all the `modified datasets` and `models` are provided in the [reports directory](reports/).  The [performance summary](reports/performance_report.txt) shows the performance of all model executions.  The detailed reports are listed below:
+The metrics for all the `modified datasets` and `models` are provided in the [reports directory](brfss_2021/reports).  The [performance summary](brfss_2021/reports/performance_report.txt) shows the performance of all model executions.  The detailed reports are listed below:
 - The details of the 2015 dataset runs are contained in these file:
-    - [base_dataset_detailed_performance_report.txt](reports/base_dataset_detailed_performance_report.txt)
-    - [binary_dataset_detailed_performance_report.txt](reports/binary_dataset_detailed_performance_report.txt)
-    - [standard_scaled_dataset_detailed_performance_report.txt](reports/standard_scaled_dataset_detailed_performance_report.txt)
-    - [minmax_scaled_dataset_detailed_performance_report.txt](reports/minmax_scaled_dataset_detailed_performance_report.txt)
-    - [randomundersampled_dataset_detailed_performance_report.txt](reports/randomundersampled_dataset_detailed_performance_report.txt)
-    - [randomoversample_dataset_detailed_performance_report.txt](reports/randomoversample_dataset_detailed_performance.txt)
-    - [cluster_dataset_detailed_performance_report.txt](reports/cluster_dataset_detailed_performance_report.txt)
-    - [smote_dataset_detailed_performance_report.txt](reports/smote_dataset_detailed_performance_report.txt)
-    - [smoteen_dataset_detailed_performance_report.txt](reports/smoteen_dataset_detailed_performance_report.txt)
+    - [base_dataset_detailed_performance_report.txt](brfss_2021/reports/1_base_dataset_detailed_performance_report.txt)
+    - [binary_dataset_detailed_performance_report.txt](brfss_2021/reports/3_binary_dataset_detailed_performance_report.txt)
+    - [standard_scaled_dataset_detailed_performance_report.txt](brfss_2021/reports/2.0_standard_scaled_dataset_detailed_performance_report.txt)
+    - [minmax_scaled_dataset_detailed_performance_report.txt](brfss_2021/reports/2.1_minmax_scaled_dataset_detailed_performance_report.txt)
+    - [randomundersampled_dataset_detailed_performance_report.txt](brfss_2021/reports/4_randomundersampled_dataset_detailed_performance_report.txt)
+    - [randomoversample_dataset_detailed_performance_report.txt](brfss_2021/reports/5_randomoversample_dataset_detailed_performance.txt)
+    - [cluster_dataset_detailed_performance_report.txt](brfss_2021/reports/6_cluster_dataset_detailed_performance_report.txt)
+    - [smote_dataset_detailed_performance_report.txt](brfss_2021/reports/7_smote_dataset_detailed_performance_report.txt)
+    - [smoteen_dataset_detailed_performance_report.txt](brfss_2021/reports/8_smoteen_dataset_detailed_performance_report.txt)
 
 - The details of the 2015 dataset runs are contained in these file:
-    - [base_dataset_detailed_performance_report.txt](reports/base_dataset_detailed_performance_report.txt)
-    - [binary_dataset_detailed_performance_report.txt](reports/binary_dataset_detailed_performance_report.txt)
-    - [standard_scaled_dataset_detailed_performance_report.txt](reports/standard_scaled_dataset_detailed_performance_report.txt)
-    - [minmax_scaled_dataset_detailed_performance_report.txt](reports/minmax_scaled_dataset_detailed_performance_report.txt)
-    - [randomundersampled_dataset_detailed_performance_report.txt](reports/randomundersampled_dataset_detailed_performance_report.txt)
-    - [randomoversample_dataset_detailed_performance_report.txt](reports/randomoversample_dataset_detailed_performance.txt)
-    - [cluster_dataset_detailed_performance_report.txt](reports/cluster_dataset_detailed_performance_report.txt)
-    - [smote_dataset_detailed_performance_report.txt](reports/smote_dataset_detailed_performance_report.txt)
-    - [smoteen_dataset_detailed_performance_report.txt](reports/smoteen_dataset_detailed_performance_report.txt)
+    - [base_dataset_detailed_performance_report.txt](brfss_2015/reports/1_base_dataset_detailed_performance_report.txt)
+    - [binary_dataset_detailed_performance_report.txt](brfss_2015/reports/3_binary_dataset_detailed_performance_report.txt)
+    - [standard_scaled_dataset_detailed_performance_report.txt](brfss_2015/reports/2.0_standard_scaled_dataset_detailed_performance_report.txt)
+    - [minmax_scaled_dataset_detailed_performance_report.txt](brfss_2015/reports/2.1_minmax_scaled_dataset_detailed_performance_report.txt)
+    - [randomundersampled_dataset_detailed_performance_report.txt](brfss_2015/reports/4_randomundersampled_dataset_detailed_performance_report.txt)
+    - [randomoversample_dataset_detailed_performance_report.txt](brfss_2015/reports/5_randomoversample_dataset_detailed_performance.txt)
+    - [cluster_dataset_detailed_performance_report.txt](brfss_2015/reports/6_cluster_dataset_detailed_performance_report.txt)
+    - [smote_dataset_detailed_performance_report.txt](brfss_2015/reports/7_smote_dataset_detailed_performance_report.txt)
+    - [smoteen_dataset_detailed_performance_report.txt](brfss_2015/reports/8_smoteen_dataset_detailed_performance_report.txt)
 
+#### Initial Results of the 7 models * 9 Permulations of the data (datasets) for 63 total runs.
+
+- We Sorted the top 20 accuracy results, top 20 Presion and top 20 F1 scores. The we performed an inner join on the result and the models that performed best from other three lists are:
+
+![2021 Best Models](imgs/2021_best_models.png)
+
+Addressing imbalanced data with **RandomOversampler** or **SMOTE** worked best with the **RandomForestClassifier**, **ExtraTreesClassifier**, and **GrandientBoostingClassier** models.
+
+However, the top models based on accuracy are: **GradientBoostingClassifier**, 
+**AdaBoostClassifier**, and **LogisticRegression** with the **binary data** (0/1: no diabetes/diabetes) and **standardScaler** applied to the dataset.
 
 ## Optimization / Hyperparameter tuning
 
@@ -246,8 +257,8 @@ The metrics for all the `modified datasets` and `models` are provided in the [re
    - We sampled a fixed number of parameter settings from specified ranges for efficiency
    - The optimization helped but not a substantial amount on this dataset
    - We sorted the highest F1 score, precision, and accuracy
-   - The results were these 4 data sets:
-(imgs/2021_best_models.png)
+   - The results were these 4 data sets: 
+
 
    - The final parameters and scores reflect the optimized model's ability to predict diabetes with higher accuracy and reliability.
   
@@ -257,7 +268,7 @@ The metrics for all the `modified datasets` and `models` are provided in the [re
    - Conclusions from 63 Model/Dataset Runs for each year (126 total dataset/model combinations)
    - We achieved good accuracy; but because of imbalance struggled with Precision Optimization helped some, but did not make large gains for most models.
 
-**Top Models**
+**Top Models** based on accuracy
  - GradientBoostingClassifier
  - AdaBoostClassifier
  - LogisticRegression
@@ -269,3 +280,32 @@ The metrics for all the `modified datasets` and `models` are provided in the [re
 **Project Goal: Achieved**
 - Successfully identified key factors contributing to diabetes prevalence.
 - Developed predictive models with significant accuracy and reliability.Strong Predictive performance through application of pipelines, optimized datasets, advanced classification models, model performance ranking, and model optimization.
+
+<br>
+<br>
+<br>
+
+---
+---
+
+# Files and Directories
+
+
+## data cleaning
+
+Intial data exploration and cleaning work.  These two directories are related to the initial evaluation of all the BRFSS dataset for 2019 to 2022, reading of the codebooks, and evaluating and selecting features.  The results were applied to the data_cleaning file listed below under files: Data Cleaning
+
+- **data:** :  Data pulled for the initial feature analysis and data cleaning research
+- **data_cleaning** Notebooks and files for the initial feature analysis and data cleaning research
+
+## Analysis
+
+Two full analysis were run: One for brfss 2015 and the other for brfss 2021 dataset.  These analysis are self contained in the following directories
+
+- **brfss_2015** 2015 analysi and optimizations
+- **brfss_2021** 2021 analysis and optimizations
+
+## Documenation
+
+- **docs** Other descriptive markdown documents 
+- **imgs** Images to support this readme

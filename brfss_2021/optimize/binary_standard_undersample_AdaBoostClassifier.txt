@@ -1,67 +1,67 @@
-Fitting 5 folds for each of 100 candidates, totalling 500 fits
-Best Parameters: Model: LogisticRegression: Parameters: {'C': 0.027808522124762813, 'penalty': 'l2', 'solver': 'sag'}
+Fitting 5 folds for each of 18 candidates, totalling 90 fits
+Best Parameters: Model: AdaBoostClassifier: Parameters: {'n_estimators': 200, 'learning_rate': 1.0, 'estimator': DecisionTreeClassifier(max_depth=1)}
 ------------------------------------------------------------------------
 ---------- optimizeding Data Performance
 ------------------------------------------------------------------------
 Confusion Matrix
-[[38726 14674]
- [ 1885  6484]]
+[[39068 14332]
+ [ 1817  6552]]
 
 -----------------------
-optimized score: 0.7319
-Balanced Accuracy Score: 0.75
-ROC AUC Score: 0.8257
-Mean Squared Error: 0.2681
+optimized score: 0.7386
+Balanced Accuracy Score: 0.7572
+ROC AUC Score: 0.8347
+Mean Squared Error: 0.2614
 ------------------------------
 --- Classification values
 ------------------------------
-Accuracy: 0.7319
-Precision: 0.3065
-Recall: 0.7748
-F1-score: 0.4392
-Specificity: 0.7252
-False Positive Rate: 0.2748
-Matthews Correlation Coefficient: 0.3606
+Accuracy: 0.7386
+Precision: 0.3137
+Recall: 0.7829
+F1-score: 0.4479
+Specificity: 0.7316
+False Positive Rate: 0.2684
+Matthews Correlation Coefficient: 0.3722
 
 -----------------------
 Classification Report
               precision    recall  f1-score   support
 
-         0.0       0.95      0.73      0.82     53400
-         1.0       0.31      0.77      0.44      8369
+         0.0       0.96      0.73      0.83     53400
+         1.0       0.31      0.78      0.45      8369
 
-    accuracy                           0.73     61769
-   macro avg       0.63      0.75      0.63     61769
-weighted avg       0.87      0.73      0.77     61769
+    accuracy                           0.74     61769
+   macro avg       0.63      0.76      0.64     61769
+weighted avg       0.87      0.74      0.78     61769
 
 ------------------------------------------------------------------------
 ---------- un-optimizeding Data Performance
 ------------------------------------------------------------------------
 Confusion Matrix
-[[38731 14669]
- [ 1882  6487]]
+[[38565 14835]
+ [ 1856  6513]]
 
 -----------------------
-un-optimized score: 0.7321
+un-optimized score: 0.7298
 Balanced Accuracy Score: 0.7502
-ROC AUC Score: 0.8256
-Mean Squared Error: 0.2679
+ROC AUC Score: 0.8286
+Mean Squared Error: 0.2702
 ------------------------------
 --- Classification values
 ------------------------------
-Accuracy: 0.7321
-Precision: 0.3066
-Recall: 0.7751
-F1-score: 0.4394
-Specificity: 0.7253
-False Positive Rate: 0.2747
-Matthews Correlation Coefficient: 0.3609
+Accuracy: 0.7298
+Precision: 0.3051
+Recall: 0.7782
+F1-score: 0.4383
+Specificity: 0.7222
+False Positive Rate: 0.2778
+Matthews Correlation Coefficient: 0.3601
 
 -----------------------
 Classification Report
               precision    recall  f1-score   support
 
-         0.0       0.95      0.73      0.82     53400
+         0.0       0.95      0.72      0.82     53400
          1.0       0.31      0.78      0.44      8369
 
     accuracy                           0.73     61769

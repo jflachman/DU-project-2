@@ -205,19 +205,15 @@ def run_random_search(model, o_params, data):
     import pickle
 
     # Generate the Performance Report and send prints to osc.stdout
-    if o_params['verbose'] > 0:
-            perf_df = random_search(model, o_params['param_distributions'], data, o_params['scoring'], o_params['verbose'])
-    else:
-        with OutStreamCapture() as osc:
-            perf_df = random_search(model, o_params['param_distributions'], data, o_params['scoring'], o_params['verbose'])
+    with OutStreamCapture_stdout() as osc:
+        perf_df = random_search(model, o_params['param_distributions'], data, o_params['scoring'], o_params['verbose'])
     
     optimize_report_file    = o_params['optimize_path'] + o_params['dataset'] + '_' + type(model).__name__ + '.txt'
 
     # osc.stdout contains the details of the performance report
     # write the performance report to the optimize_report_file
-    if o_params['verbose'] == 0:
-        with open(optimize_report_file, "w") as file:
-            file.write(osc.stdout)
+    with open(optimize_report_file, "w") as file:
+        file.write(osc.stdout)
 
     performance_report    = o_params['optimization_report']
 
@@ -248,9 +244,8 @@ def run_random_search(model, o_params, data):
 
 #----------------------------------------------------------------------------------------------------
     # Display the performance report here:
-    if o_params['verbose'] == 0:
-        if o_params['print_results']:
-            print(osc.stdout)
+    if o_params['print_results']:
+        print(osc.stdout)
 
     return perf_df
 
@@ -292,7 +287,7 @@ def random_search(model, param_dist, data, scoring='accuracy', verbose=0):
     random_search = RandomizedSearchCV(
         estimator=model, 
         param_distributions=param_dist, 
-        n_iter=100,         # Number of parameter settings that are sampled
+        n_iter=50,         # Number of parameter settings that are sampled
         cv=5,               # 5-fold cross-validation
         verbose=verbose,          # Verbosity mode
         scoring=scoring,    # Scoring Mode
@@ -671,6 +666,31 @@ class OutStreamCapture(object):
         self.stderr = sys.stderr.getvalue()
         sys.stdout = self._stdout
         sys.stderr = self._stderr
+
+
+class OutStreamCapture_stdout(object):
+    """
+    A context manager to replace stdout and stderr with StringIO objects and
+    cache all output.
+    """
+
+    def __init__(self):
+        self._stdout = None
+        self.stdout = None
+
+    def __enter__(self):
+        self._stdout = sys.stdout
+        sys.stdout = StringIO()
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        """
+        Restore original values of stdout.
+        The captured contents are stored as strings in the stdout and stderr
+        members.
+        """
+        self.stdout = sys.stdout.getvalue()
+        sys.stdout = self._stdout
 
 
 
