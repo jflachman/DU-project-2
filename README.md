@@ -1,4 +1,4 @@
-# DU-project-2
+# Diabetes Prediction Project
 
 ## Diabetes Prediction from CDC Behavioral Risk Factor Surveillance System (BRFSS) Survey data
 - See the [Project Instructions](project-2-overview.md) for more details about the project requirements

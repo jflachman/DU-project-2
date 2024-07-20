@@ -1,6 +1,6 @@
-# DU-project-2
+# Project Plan
 
-- [Project Instructions](project-2-overview.md)
+- [Project Instructions](project-overview.md)
 
 ## Team
  - Michael Bolens
